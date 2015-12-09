@@ -24,7 +24,7 @@ COPY run.sh /run.sh
 RUN wget https://www.phpbb.com/files/release/phpBB-3.1.6.zip
 RUN unzip phpBB-3.1.6.zip
 RUN rm -fr /var/www/html/*
-RUN mv phpBB3/ /var/www/html/
+RUN mv phpBB3/* /var/www/html/
 #RUN chown -R www-data:www-data .
 
 # Add volumes for MySQL and the application
