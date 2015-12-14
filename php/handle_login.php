@@ -3,11 +3,14 @@
 
 <?php
 if($_POST["username"] == 'Test' && $_POST["password"] == 'Test01'){
+    echo $_POST["password"];
     session_start();
     $_SESSION['username'] = $_POST["username"];
 } else {
     echo "Password did not match Username!";
-    header("refresh:2;url=../login.html");
+    var_dump($_POST["password"]);
+    phpinfo();
+    #header("refresh:2;url=../login.html");
     exit();
 }
 ?>
