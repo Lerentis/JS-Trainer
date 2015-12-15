@@ -18,6 +18,14 @@ imports:
     - { resource: parameters.yml }
 
 services:
+	
+	auth.provider.db2:
+        class: phpBB_custom_login
+        arguments:
+            - @dbal.conn
+        tags:
+            - { name: auth.provider }
+            
     cache:
         class: phpbb\cache\service
         arguments:
