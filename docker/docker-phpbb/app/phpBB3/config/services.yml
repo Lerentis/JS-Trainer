@@ -17,15 +17,7 @@ imports:
     - { resource: tables.yml }
     - { resource: parameters.yml }
 
-services:
-	
-	auth.provider.db2:
-        class: phpBB_custom_login
-        arguments:
-            - @dbal.conn
-        tags:
-            - { name: auth.provider }
-            
+services:            
     cache:
         class: phpbb\cache\service
         arguments:
