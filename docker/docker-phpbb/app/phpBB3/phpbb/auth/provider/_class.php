@@ -1,4 +1,6 @@
 <?php
+namespace phpbb\auth\provider;
+
 /**
 *
 * @package auth
@@ -22,7 +24,16 @@ if (!defined('IN_PHPBB'))
  *
  * @package auth
  */
-class phpBB_custom_login implements phpbb_auth_provider_base
+
+$phpbb_root_path = '/usr/share/nginx/html/docker/docker-phpbb/app/phpBB3/';
+$phpEx = substr(strrchr(__FILE__, '.'), 1);
+echo $phpbb_root_path;
+echo $phpEx;
+include($phpbb_root_path . 'common.' . $phpEx);
+
+
+
+class phpBB_custom_login extends base
 {
 
     /**
