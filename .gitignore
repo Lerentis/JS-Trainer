@@ -47,3 +47,6 @@ crashlytics-build.properties
 
 #wiki
 wiki/
+
+#phpBB
+phpBB3/cache
