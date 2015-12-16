@@ -66,8 +66,12 @@ ADD ./supervisord.conf /etc/supervisord.conf
 ADD ./start.sh /start.sh
 RUN chmod 755 /start.sh
 
+# Prepare Volumes
+RUN mkdir /usr/share/phpBB3
+
 # Setup Volume
 VOLUME ["/usr/share/nginx/html"]
+VOLUME ["/usr/share/phpBB3"]
 
 # change user:group to www-data
 RUN chown -Rf www-data:www-data /usr/share/nginx/html/
