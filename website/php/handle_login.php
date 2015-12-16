@@ -1,34 +1,34 @@
 <?php
-		ini_set('display_errors',1); ini_set('display_startup_errors',1);
+ini_set('display_errors',1); ini_set('display_startup_errors',1);
 
-		define('IN_PHPBB', true);
-		$phpbb_root_path = '/usr/share/phpBB3/';
-		$phpEx = substr(strrchr(__FILE__, '.'), 1);
-		include($phpbb_root_path . 'common.' . $phpEx);
+define('IN_PHPBB', true);
+$phpbb_root_path = '/usr/share/phpBB3/';
+$phpEx = substr(strrchr(__FILE__, '.'), 1);
+include($phpbb_root_path . 'common.' . $phpEx);
 
-		// Start session management
+// Start session management
 
-		$user->session_begin();
-		$auth->acl($user->data);
-		$user->setup();
+$user->session_begin();
+$auth->acl($user->data);
+$user->setup();
 
 
-		$username=request_var('username','');
+$username=request_var('username','');
 
-		$password=request_var('password','');
+$password=request_var('password','');
 
-		$result=$auth->login($username,$password , true);
+$result=$auth->login($username,$password , true);
 
-		$state = null;
+$state = null;
 
-		if($result['status'] == LOGIN_SUCCESS ){
-			$state = "login success";
-			header('refresh:2,../user.html');
-		}
-		else{
-			$state = "login failed";
-			header('refresh:2,../login.html');
-		}
+if($result['status'] == LOGIN_SUCCESS ){
+    $state = "login success";
+    header('refresh:2,../user.html');
+}
+else{
+    $state = "login failed";
+    header('refresh:2,../login.html');
+}
 ?>
 
 <html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
@@ -48,7 +48,7 @@
                 <nav class="top-bar" data-topbar>
                     <ul class="title-area">
                         <li class="name">
-                            <h1><a href="index.html">Learn JavaScript and QT5 within minutes</a></h1>
+                            <h1><a href="../index.html">Learn JavaScript and QT5 within minutes</a></h1>
                         </li>
                         <li class="toggle-topbar menu-icon">
                             <a href="#"><span>menu</span></a>
@@ -175,4 +175,4 @@
 <script src="../js/vendor/jquery.js"></script>
 <script src="../js/foundation.min.js"></script>
 </html>
-		
+

@@ -1,13 +1,65 @@
-<!doctype html>
-<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<?php
+ini_set('display_errors',1); ini_set('display_startup_errors',1);
+
+define('IN_PHPBB', true);
+define('FORUM_ADD',TRUE);
+define('IN_PORTAL',TRUE);
+$phpbb_root_path = '/usr/share/phpBB3/';
+$phpEx = substr(strrchr(__FILE__, '.'), 1);
+include($phpbb_root_path . 'common.' . $phpEx);
+include($phpbb_root_path . '/includes/functions_user.' . $phpEx);
+
+// Start session management
+
+$user->session_begin();
+$auth->acl($user->data);
+$user->setup();
+
+$state = null;
+
+$data = array(
+    #'username'              => request_var('username',''),
+    'firstname'             => request_var('firstname',''),
+    'lastname'              => request_var('lastname',''),
+    'password'              => request_var('password',''),
+    'email'                 => request_var('email','')
+);
+
+
+$user_row = array(
+    'username'              => $data['firstname'],
+    'user_password'         => phpbb_hash($data['password']),
+    'user_email'            => $data['email'],
+    'group_id'              => 2, // by default, the REGISTERED user group is id
+    'user_type'             => USER_NORMAL,
+    'user_ip'               => $user->ip,
+    'user_regdate'          => time()
+);
+
+//
+//// Register user...
+
+
+
+    if($user_id = user_add($user_row,$cp_data=false)){
+        $state = "user successfully registered";
+        $auth->login($data['firstname'],$data['password']);
+        header('refresh:2,../user.html');
+    }
+    else{
+        $state = "registration faild";
+        header('refresh:2,../register.html');
+    }
+?>
+
 <html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-    <title>Register</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../css/foundation.css" />
-    <script src="js/vendor/modernizr.js"></script>
+    <!--<script src="../js/vendor/modernizr.js"></script>-->
 </head>
 <body>
 <div class="row">
@@ -17,7 +69,7 @@
                 <nav class="top-bar" data-topbar>
                     <ul class="title-area">
                         <li class="name">
-                            <h1><a href="index.html">Learn JavaScript and QT5 within minutes</a></h1>
+                            <h1><a href="../index.html">Learn JavaScript and QT5 within minutes</a></h1>
                         </li>
                         <li class="toggle-topbar menu-icon">
                             <a href="#"><span>menu</span></a>
@@ -107,10 +159,10 @@
         <div class="split">
             <br>
         </div>
-        <div class="container">
-        <?php
-        echo 'hier koennte ihre Werbung stehen';
-        ?>
+        <div class="large-3 large-centered columns">
+            <?php
+            echo $state;
+            ?>
         </div>
         <footer class="row">
             <div class="large-12 columns">
@@ -139,12 +191,8 @@
         </footer>
     </div>
 </div>
-<script src="js/vendor/jquery.js"></script>
-<script src="js/foundation.min.js"></script>
-<script>
-    $(document).foundation();
-    var doc = document.documentElement;
-    doc.setAttribute('data-useragent', navigator.userAgent);
-</script>
+
 </body>
+<script src="../js/vendor/jquery.js"></script>
+<script src="../js/foundation.min.js"></script>
 </html>

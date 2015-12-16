@@ -1,7 +1,7 @@
 <?php
 // phpBB 3.1.x auto-generated configuration file
 // Do not change anything in this file!
-$dbms = 'phpbb\\db\\driver\\mysqli';
+$dbms = 'phpbb\\db\\driver\\mysql';
 $dbhost = 'js_trainer_mysql';
 $dbport = '3306';
 $dbname = 'phpbb';
