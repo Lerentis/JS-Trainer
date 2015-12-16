@@ -8,6 +8,7 @@ $phpbb_root_path = '/usr/share/phpBB3/';
 $phpEx = substr(strrchr(__FILE__, '.'), 1);
 include($phpbb_root_path . 'common.' . $phpEx);
 include($phpbb_root_path . '/includes/functions_user.' . $phpEx);
+include($phpbb_root_path . '/phpbb/passwords/manager.' . $phpEx);
 
 // Start session management
 
@@ -25,10 +26,13 @@ $data = array(
     'email'                 => request_var('email','')
 );
 
+$passwords_manager = $phpbb_container->get('passwords.manager');
+$hashPass = $passwords_manager->hash($data['password']);
+
 
 $user_row = array(
     'username'              => $data['firstname'],
-    'user_password'         => phpbb_hash($data['password']),
+    'user_password'         => $hashPass,
     'user_email'            => $data['email'],
     'group_id'              => 2, // by default, the REGISTERED user group is id
     'user_type'             => USER_NORMAL,
