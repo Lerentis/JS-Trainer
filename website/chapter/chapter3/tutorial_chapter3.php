@@ -125,12 +125,114 @@ if($user->data['is_registered']){
         <div class="split">
             <br>
         </div>
-        <h1>Fuctions, the big sibling of a variable</h1>
+        <h1>Javascript operators</h1>
         <div class="split">
             <br>
         </div>
         <article>
+            Now we are starting to make some stuff with the number type we've learn. We can assign a value to a variable but maybe we want to to modify this variable. No long words and starting manipulating numbers wa are jumping in the water.
 
+            <h3>What we have to play around</h3>
+
+            <table style="width:30%">
+                <tr>
+                    <th>Operator</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>Addition</td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>Subtraction</td>
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>Multiplication</td>
+                </tr>
+                <tr>
+                    <td>/</td>
+                    <td>Division</td>
+                </tr>
+                <tr>
+                    <td>%</td>
+                    <td>Modulus</td>
+                </tr>
+                <tr>
+                    <td>++</td>
+                    <td>Increment</td>
+                </tr>
+                <tr>
+                    <td>--</td>
+                    <td>Decrement</td>
+                </tr>
+            </table>
+            If you haven't sleep the whole class 1-4 in your school time, you possibly can guess the first four operators. The last three are a little bit more tricky.
+            <article>
+            <h3>Modulus or thou shall have the rest</h3>
+            At fist, there were only whole numbers and than there was the little point (or in germany comma) which made things complicated. Guess you had slept very well in school and can't remember how division works. You can still divide 6/2 because this is equal to 3. But if you try to divide 7 you can only divide 6/2 but don't know what to do with the remaining one. That's pretty much the modulus operator. It tries how much it can divide the whole numbers and gives you back the rest.
+
+            CODE GOES HERE
+            </article>
+            <article>
+                <h3>Increment and decrement or up and down</h3>
+                Well, coding is much about loops which we discuss later. Loops need a counter and this is where these two operators enter the scene. You'll need a lot of operators. That means you will type this line of code a lot. Programmers are lazy and instead of typing x = x + 1 you simply type x++. Of course you first initialise x ;)
+
+                CODE GOES HERE
+
+            </article>
+            <h3>When the assignment with the operator</h3>
+            There can be times when adding or subtracting 1 isn't enough any more. Maybe you want to at 2 every round or even multiply with 2. In this case of emergency there is a whole bunlde of assignment operator combinations which makes your life a little bit easier.
+
+            <table style="width:50%">
+                <tr>
+                    <th>Operator</th>
+                    <th>Example</th>
+                    <th>Equal to</th>
+                </tr>
+                <tr>
+                    <td>=</td>
+                    <td>x=y</td>
+                    <td>x=y</td>
+                </tr>
+                <tr>
+                    <td>+=</td>
+                    <td>x+=y</td>
+                    <td>x=x+y</td>
+                </tr>
+                <tr>
+                    <td>-=</td>
+                    <td>x-=y</td>
+                    <td>x=x-y</td>
+                </tr>
+                <tr>
+                    <td>*=</td>
+                    <td>x*=y</td>
+                    <td>x=x*y</td>
+                </tr>
+                <tr>
+                    <td>/=</td>
+                    <td>x/=y</td>
+                    <td>x=x/y</td>
+                </tr>
+                <tr>
+                    <td>%=</td>
+                    <td>x%=y</td>
+                    <td>x=x%y</td>
+                </tr>
+            </table>
+
+            <article>
+                <h3>String Operators</h3>
+            </article>
+
+            <article>
+                <h3>Strings, Numbers and the + Operator</h3>
+            </article>
+            <article>
+                <h3>Comparison and Logical Operators</h3>
+            </article>
 
         </article>
         <footer class="row">
