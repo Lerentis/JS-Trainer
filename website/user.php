@@ -102,20 +102,16 @@ if($user->data['is_registered']){
                             </li>
                             <li class="divider"></li>
                             <li class="has-dropdown">
-                                <a href="#">Main Item 3</a>
+                                <a href="#"> <?php echo $user->data['username']; ?> </a>
                                 <ul class="dropdown">
                                     <li>
-                                        <a href="#">Dropdown Option</a>
+                                        <a href="http://127.0.0.1:80/memberlist.php?mode=viewprofile&u=<?php echo $user->data['user_id'] ?>">Profile</a>
                                     </li>
                                     <li>
-                                        <a href="#">Dropdown Option</a>
+                                        <a href="http://127.0.0.1:80/ucp.php?i=pm&folder=inbox">Inbox</a>
                                     </li>
                                     <li>
-                                        <a href="#">Dropdown Option</a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <a href="#">See all →</a>
+                                        <a href="php/handle_logout.php">Logout</a>
                                     </li>
                                 </ul>
                             </li>
