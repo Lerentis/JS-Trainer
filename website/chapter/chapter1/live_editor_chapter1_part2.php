@@ -1,4 +1,19 @@
-<!doctype html>
+<?php
+ini_set('display_errors',1); ini_set('display_startup_errors',1);
+
+define('IN_PHPBB', true);
+$phpbb_root_path = '/usr/share/phpBB3/';
+$phpEx = substr(strrchr(__FILE__, '.'), 1);
+include($phpbb_root_path . 'common.' . $phpEx);
+
+// Start session management
+$user->session_begin();
+$auth->acl($user->data);
+$user->setup();
+
+if($user->data['is_registered']){
+
+?>
 <!--[if IE 9]>
 <html class="lt-ie10" lang="en"> <![endif]-->
 <html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
@@ -106,6 +121,11 @@
     var doc = document.documentElement;
     doc.setAttribute('data-useragent', navigator.userAgent);
 </script>
-<iframe class="mainContent" src="../../js/liveeditor/chapter_one/part_one/live_editor_frame.html" width="100%" height="80%" style="float:top"></iframe>
+<iframe class="mainContent" src="../../js/liveeditor/chapter_one/part_two/live_editor_frame.html" width="100%" height="80%" style="float:top"></iframe>
 </body>
 </HTML>
+    <?php
+}else{
+    header('refresh:0,../../index.php');
+}
+?>

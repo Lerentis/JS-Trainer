@@ -145,42 +145,42 @@ if($user->data['is_registered']){
                     <div class="large-4 small-6 columns" id="second-step">
                         <img src="http://placehold.it/1000x1000&amp;text=Thumbnail">
                         <div class="panel">
-                            <h5><a href="chapter/chapter1/tutorial_chapter1.html">Cours JS Part 1</a></h5>
+                            <h5><a href="chapter/chapter1/tutorial_chapter1.php">Cours JS Part 1</a></h5>
                             <h6 class="subheader">0%</h6>
                         </div>
                     </div>
                     <div class="large-4 small-6 columns">
                         <img src="http://placehold.it/500x500&amp;text=Thumbnail">
                         <div class="panel">
-                            <h5><a href="chapter/chapter1/live_editor_chapter1_part1.html">Cours JS Part 2</a></h5>
+                            <h5><a href="chapter/chapter1/live_editor_chapter1_part1.php">Cours JS Part 2</a></h5>
                             <h6 class="subheader">0%</h6>
                         </div>
                     </div>
                     <div class="large-4 small-6 columns">
                         <img src="http://placehold.it/500x500&amp;text=Thumbnail">
                         <div class="panel">
-                            <h5><a href="chapter/chapter1/live_editor_chapter1_part1.html">Cours JS Part 3</a></h5>
+                            <h5><a href="chapter/chapter1/live_editor_chapter1_part1.php">Cours JS Part 3</a></h5>
                             <h6 class="subheader">0%</h6>
                         </div>
                     </div>
                     <div class="large-4 small-6 columns">
                         <img src="http://placehold.it/500x500&amp;text=Thumbnail">
                         <div class="panel">
-                            <h5><a href="chapter/chapter1/live_editor_chapter1_part1.html">Cours JS Part 4</a></h5>
+                            <h5><a href="chapter/chapter1/live_editor_chapter1_part1.php">Cours JS Part 4</a></h5>
                             <h6 class="subheader">0%</h6>
                         </div>
                     </div>
                     <div class="large-4 small-6 columns">
                         <img src="http://placehold.it/500x500&amp;text=Thumbnail">
                         <div class="panel">
-                            <h5><a href="chapter/chapter1/live_editor_chapter1_part1.html">Cours JS Part 5</a></h5>
+                            <h5><a href="chapter/chapter1/live_editor_chapter1_part1.php">Cours JS Part 5</a></h5>
                             <h6 class="subheader">0%</h6>
                         </div>
                     </div>
                     <div class="large-4 small-6 columns">
                         <img src="http://placehold.it/500x500&amp;text=Thumbnail">
                         <div class="panel">
-                            <h5><a href="chapter/chapter1/live_editor_chapter1_part1.html">Cours JS Part 6</a></h5>
+                            <h5><a href="chapter/chapter1/live_editor_chapter1_part1.php">Cours JS Part 6</a></h5>
                             <h6 class="subheader">0%</h6>
                         </div>
                     </div>
@@ -264,7 +264,6 @@ if($user->data['is_registered']){
 </html>
 <?php
 }else{
-    echo "not logged in!";
-    header('refresh:2,../index.php');
+    header('refresh:0,../index.php');
 }
 ?>

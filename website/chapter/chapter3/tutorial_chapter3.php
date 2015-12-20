@@ -1,4 +1,19 @@
-<!doctype html>
+<?php
+ini_set('display_errors',1); ini_set('display_startup_errors',1);
+
+define('IN_PHPBB', true);
+$phpbb_root_path = '/usr/share/phpBB3/';
+$phpEx = substr(strrchr(__FILE__, '.'), 1);
+include($phpbb_root_path . 'common.' . $phpEx);
+
+// Start session management
+$user->session_begin();
+$auth->acl($user->data);
+$user->setup();
+
+if($user->data['is_registered']){
+
+?>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
 <html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
 <head>
@@ -11,7 +26,7 @@
     <script src="../../js/foundation.min.js"></script>
     <script src="../../js/js_trainer.js"></script>
     <script src="../../js/vendor/jquery.cookie.js"></script>
-    <script>document.title = "Javascript Tutorial One for " + (getCoockieValue("username"))</script>
+    <script>document.title = "Javascript Tutorial Two for " + (getCoockieValue("username"))</script>
 </head>
 <body>
 <div class="row">
@@ -111,110 +126,55 @@
         <div class="split">
             <br>
         </div>
-        <h1>Welcome to your first Tutorial on Javascript</h1>
+        <h1>Variables and Data Types</h1>
         <div class="split">
             <br>
         </div>
         <article>
-            In this chapter you will learn the basics on how Javascript interacts with your browser.<br>
-            You will need nothing else besides your browser, a cup of coffee and your brain ... Well a working mouse and keyboard would be handy,too ;-)
-            Without further explanation, let's jump in our first little program: Hello World.
-        </article>
-        <div class="split">
-            <br>
-        </div>
-        <article>
-            <h3>Like seen so many times ... "Hello world!" or how can I include JavaScript</h3>
-            As seen in other programming tutorials, your first lines of code will greet you with an alert window in your browser saying "Hello World".
-            To do so we use a little function called <span class="impor">alert()</span>. This function works in nearly all Browsers and creates a popup with a given text. <br>
-            To use this function you can type the JavaScript-code within a script-html tag:<br><br>
+            Welcome back. I'm glad you made it to the second Chapter. <br>
+            In this Chapter we will have a closer look on what we did the last time, but first some theories on variables. <br>
 
-            <div class="panel">
-                <p><img  height="15" width="15" hspace="20">
-                    <span class="script">&lt;script&gt;</span>alert(<span class="string"> "STRING"</span>);<span class="script">&lt;&#47;script&gt;</span>
-                </p>
-            </div>
-            <br>
-            <div class="panel">
-                <img src="../../img/bulb-146443_960_720.png" height="15" width="15" hspace="20"><span> The type attribut with <span class="impor"> type=text/javascript</span> inside the script tag is optional in html 5 but required in html 4.x .</span>
-            </div>
-            <br>
-            The example below shows how you write the code. Fell free to play around with the Live Editor Example. <br><br>
-            <div class="panel">
-                <p><img src="../../img/bulb-146443_960_720.png" height="15" width="15" hspace="20"> Don't forget the semicolon after the closing bracket.</p>
-            </div>
-        </article>
+            <h3>Variables</h3>
+            Maybe you remember the term variable from math class. You have a charakter wich can take different values. But the same charakter can be reused multiple times in a calculation with the same value. Programming code can be very long. Reusing is a god concept keeping complicated code a little less complicatet. You declare a varable with the keyword var.
+
+            CODE GOES HERE
 
 
-        <div class="split">
-            <br>
-        </div>
-        <div class="row">
-            <div class="small-3 columns small-centered">
-                <a  href="live_editor_chapter1_part1.html" target="_blank">
-                    <div class="button primary round radius text-center expand">
-                        Try It!
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="split">
-            <br>
-        </div>
-        <span>
-            <h3>A little less annoying - the write()-function</h3>
-            There you go :D your first line of JS, and it wasn't that hard, or was it?<br>
-            But this may be the line of code which can drive you insane on a webpage showing the cute little adds you do not wand to read.***img*** So is there a way showing something
-            like this without a popup?<br>
-            Another way to print something on a blank website is the <span class="impor">write()</span> function of the object <span class="impor">document</span>.<br>
-            You can call the function with the "." (point-operator). Like you may already now the struktur to call a member function from an object is <span class="impor">"object.funkction()"</span> or with our new function within a script tag:<br><br>
+            <h3>Oh, there are different types of variables!</h3>
+            Java Script handles Data Types implicit, but that does not mean they don't exist here as well. Some of you might ask now what are even Data Types?
+            Data Types are some what an agreement on which form a given variable or data has to be, to perform something with them. There are 5 basic Data Types in Java Script: <br>
+            <ul>
+                <br>
+                <ul>
+                    <li>Number</li>
+                    <li>String</li>
+                    <li>array</li>
+                    <li>object</li>
+                    <li>Boolean</li>
+                    <li>null</li>
+                    <li>undefined</li>
+                    <li>symbol(new since 20115)</li>
+                    <li>Host Object</li>
+                    <li>objectFunction</li>
+                    <li>Object</li>
+                </ul>
+            </ul>
+            <h3>Why data types? or they can't be all the same.</h3>
+            In school you have mathematics and language lessosns. You can't use the same rules for numbers an words. The same goes for a programming language. A program has to know if it should add two numbers or concatenate two words, which are called strings in computer languages.
 
-            <div class="panel">
-                <p><img  height="15" width="15" hspace="20">
-                    <span class="script">&lt;script&gt;</span> document.<span class="string2">write</span>(<span class="string">"Hello World"</span>); <span class="script">&lt;&#47;script&gt;</span> <br>
-                </p>
-            </div>
-            You can try it out on your own here:
+            CODE GOES HERE
+
+            <h3>Dynamic type binding or var realy means variable</h3>
+
+            Java isn't Javascript. Types are a god way demonstrating it. In Java you have to declare your variable type at the beginning. If you try to store a word in a variable of kind integer, wich only stores whole numbers, you get a wrong type error. Javascript ist way more flexible. Once your variable is a String, the other time the same variable is a number, next time you'll met it as a boolean object. Sounds nice but is also a way of tiny little nasty errors wich can make you nearly insane. What may be really helbfull ist the function typeof. It allows you to check the type of a variable. I guess you didn't foreseen this ;)
+
+            CODE GOES HERE
+
+Next time we'll see what a fuction is and how we declare it.
+
+
 
         </article>
-        <div class="split">
-            <br>
-        </div>
-            <div class="row">
-                  <div class="small-3 columns small-centered">
-                      <a  href="live_editor_chapter1_part2.html" target="_blank">
-                          <div class="button primary round radius text-center expand">
-                              Try It!
-                          </div>
-                      </a>
-                  </div>
-              </div>
-        <div class="split">
-            <br>
-        </div>
-        <article>
-            In the next chapter we are gonna have a closer look at some Data Types, Functions and Operations. <br>
-            You can take on the next Chapter here or take a short Test, to see if you got everything right.
-        </article>
-        <div class="split">
-            <br>
-        </div>
-
-            <div class="row">
-                <div class="columns pagination-centered">
-                    <ul class="button-group round ">
-                        <li>
-                            <a href="#" class="button secondary" >Test Knowledge</a>
-                        </li>
-
-                        <li>
-                            <a href="../chapter2/tutorial_chapter2.html" class="button secondary">Next Chapter</a>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-
         <footer class="row">
             <div class="large-12 columns">
                 <hr>
@@ -249,3 +209,8 @@
 </script>
 </body>
 </html>
+    <?php
+}else{
+    header('refresh:0,../../index.php');
+}
+?>
