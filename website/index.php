@@ -17,7 +17,7 @@
             <nav class="top-bar" data-topbar>
                 <ul class="title-area">
                     <li class="name">
-                        <h1><a href="index.html">Learn JavaScript and QT5 within minutes</a></h1>
+                        <h1><a href="index.php">Learn JavaScript within minutes</a></h1>
                     </li>
                     <li class="toggle-topbar menu-icon">
                         <a href="#"><span>menu</span></a>
@@ -27,11 +27,11 @@
                     <ul class="right">
                         <li class="divider"></li>
                         <li>
-                            <a href="login.html">Login</a>
+                            <a href="login.php">Login</a>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="register.html">Register</a>
+                            <a href="register.php">Register</a>
                         </li>
                     </ul>
                 </section>
@@ -120,7 +120,7 @@
                         <p>Sign up today and write your own JavaScript tomorrow</p>
                     </div>
                     <div class="large-3 columns">
-                        <a href="register.html" class="radius button right">Register</a>
+                        <a href="register.php" class="radius button right">Register</a>
                     </div>
                 </div>
             </div>

@@ -1,17 +1,28 @@
-<!doctype html>
+<?php
+ini_set('display_errors',1); ini_set('display_startup_errors',1);
+
+define('IN_PHPBB', true);
+$phpbb_root_path = '/usr/share/phpBB3/';
+$phpEx = substr(strrchr(__FILE__, '.'), 1);
+include($phpbb_root_path . 'common.' . $phpEx);
+
+// Start session management
+$user->session_begin();
+$auth->acl($user->data);
+$user->setup();
+
+if(!$user->data['is_registered']){
+
+?>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
 <html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="../../css/foundation.css" />
-    <script src="../../js/vendor/modernizr.js"></script>
-    <script src="../../js/vendor/jquery.js"></script>
-    <script src="../../js/foundation.min.js"></script>
-    <script src="../../js/js_trainer.js"></script>
-    <script src="../../js/vendor/jquery.cookie.js"></script>
-    <script>document.title = "Javascript Tutorial One for " + (getCoockieValue("username"))</script>
+    <title>Register</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
 </head>
 <body>
 <div class="row">
@@ -21,7 +32,7 @@
                 <nav class="top-bar" data-topbar>
                     <ul class="title-area">
                         <li class="name">
-                            <h1><a href="../../user.html">Learn JavaScript and QT5 within minutes</a></h1>
+                            <h1><a href="index.php">Learn JavaScript within minutes</a></h1>
                         </li>
                         <li class="toggle-topbar menu-icon">
                             <a href="#"><span>menu</span></a>
@@ -111,110 +122,39 @@
         <div class="split">
             <br>
         </div>
-        <h1>Welcome to your first Tutorial on Javascript</h1>
-        <div class="split">
-            <br>
-        </div>
-        <article>
-            In this chapter you will learn the basics on how Javascript interacts with your browser.<br>
-            You will need nothing else besides your browser, a cup of coffee and your brain ... Well a working mouse and keyboard would be handy,too ;-)
-            Without further explanation, let's jump in our first little program: Hello World.
-        </article>
-        <div class="split">
-            <br>
-        </div>
-        <article>
-            <h3>Like seen so many times ... "Hello world!" or how can I include JavaScript</h3>
-            As seen in other programming tutorials, your first lines of code will greet you with an alert window in your browser saying "Hello World".
-            To do so we use a little function called <span class="impor">alert()</span>. This function works in nearly all Browsers and creates a popup with a given text. <br>
-            To use this function you can type the JavaScript-code within a script-html tag:<br><br>
-
-            <div class="panel">
-                <p><img  height="15" width="15" hspace="20">
-                    <span class="script">&lt;script&gt;</span>alert(<span class="string"> "STRING"</span>);<span class="script">&lt;&#47;script&gt;</span>
-                </p>
+        <form data-abide action="php/handle_register.php">
+            <div class="large-6 columns">
+                <label>First Name </label>
+                    <input type="text" name="firstname" placeholder="first name" />
             </div>
-            <br>
-            <div class="panel">
-                <img src="../../img/bulb-146443_960_720.png" height="15" width="15" hspace="20"><span> The type attribut with <span class="impor"> type=text/javascript</span> inside the script tag is optional in html 5 but required in html 4.x .</span>
+            <div class="large-6 columns">
+                <label>Last Name </label>
+                    <input type="text" name="lastname" placeholder="last name" />
             </div>
-            <br>
-            The example below shows how you write the code. Fell free to play around with the Live Editor Example. <br><br>
-            <div class="panel">
-                <p><img src="../../img/bulb-146443_960_720.png" height="15" width="15" hspace="20"> Don't forget the semicolon after the closing bracket.</p>
+            <div class="large-6 columns">
+                <label>Email Address*</label>
+                <input type="email" name="email" id="email" placeholder="email" required />
             </div>
-        </article>
-
-
-        <div class="split">
-            <br>
-        </div>
-        <div class="row">
-            <div class="small-3 columns small-centered">
-                <a  href="live_editor_chapter1_part1.html" target="_blank">
-                    <div class="button primary round radius text-center expand">
-                        Try It!
-                    </div>
-                </a>
+            <div class="large-6 columns">
+                <label>Confirm Email* </label>
+                <input type="email" name="emailconfirm" placeholder="email" required data-equalto="email" />
+                <small class="error" data-error-message="">Emails did not match </small>
             </div>
-        </div>
-        <div class="split">
-            <br>
-        </div>
-        <span>
-            <h3>A little less annoying - the write()-function</h3>
-            There you go :D your first line of JS, and it wasn't that hard, or was it?<br>
-            But this may be the line of code which can drive you insane on a webpage showing the cute little adds you do not wand to read.***img*** So is there a way showing something
-            like this without a popup?<br>
-            Another way to print something on a blank website is the <span class="impor">write()</span> function of the object <span class="impor">document</span>.<br>
-            You can call the function with the "." (point-operator). Like you may already now the struktur to call a member function from an object is <span class="impor">"object.funkction()"</span> or with our new function within a script tag:<br><br>
-
-            <div class="panel">
-                <p><img  height="15" width="15" hspace="20">
-                    <span class="script">&lt;script&gt;</span> document.<span class="string2">write</span>(<span class="string">"Hello World"</span>); <span class="script">&lt;&#47;script&gt;</span> <br>
-                </p>
+            <div class="large-6 columns">
+                <label>Password*</label>
+                <input type="password" name="password" placeholder="password" id="password" required />
+                <small class="error" data-error-message="">Password did not match the requirements </small>
+                <medium class="input">Password should be at least 8 characters; Contain at least three character types: lowercase letters, uppercase letters, numbers, punctuation; Do not include your username.</medium>
             </div>
-            You can try it out on your own here:
-
-        </article>
-        <div class="split">
-            <br>
-        </div>
-            <div class="row">
-                  <div class="small-3 columns small-centered">
-                      <a  href="live_editor_chapter1_part2.html" target="_blank">
-                          <div class="button primary round radius text-center expand">
-                              Try It!
-                          </div>
-                      </a>
-                  </div>
-              </div>
-        <div class="split">
-            <br>
-        </div>
-        <article>
-            In the next chapter we are gonna have a closer look at some Data Types, Functions and Operations. <br>
-            You can take on the next Chapter here or take a short Test, to see if you got everything right.
-        </article>
-        <div class="split">
-            <br>
-        </div>
-
-            <div class="row">
-                <div class="columns pagination-centered">
-                    <ul class="button-group round ">
-                        <li>
-                            <a href="#" class="button secondary" >Test Knowledge</a>
-                        </li>
-
-                        <li>
-                            <a href="../chapter2/tutorial_chapter2.html" class="button secondary">Next Chapter</a>
-                        </li>
-                    </ul>
-
-                </div>
+            <div class="large-6 columns">
+                <label>Confirm Password*</label>
+                <input type="password" name="passwordconfirm" placeholder="password" required data-equalto="password" />
+                <small class="error" data-error-message="">Passwords must match.</small>
             </div>
-
+            <div class="large-6 columns right-align">
+                <input type="submit" formmethod="post" class="button expand" value="Register"/>
+            </div>
+        </form>
         <footer class="row">
             <div class="large-12 columns">
                 <hr>
@@ -242,6 +182,8 @@
         </footer>
     </div>
 </div>
+<script src="js/vendor/jquery.js"></script>
+<script src="js/foundation.min.js"></script>
 <script>
     $(document).foundation();
     var doc = document.documentElement;
@@ -249,3 +191,8 @@
 </script>
 </body>
 </html>
+    <?php
+}else{
+    header('refresh:1,../user.php');
+}
+?>
