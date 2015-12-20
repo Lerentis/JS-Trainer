@@ -47,48 +47,28 @@ if($user->data['is_registered']){
                         <ul class="right">
                             <li class="divider"></li>
                             <li class="has-dropdown">
-                                <a href="#">Main Item 1</a>
+                                <a href="#">Select Chapter</a>
                                 <ul class="dropdown">
-                                    <li><label>Section Name</label></li>
-                                    <li class="has-dropdown">
-                                        <a class="" href="#">Has Dropdown, Level 1</a>
-                                        <ul class="dropdown">
-                                            <li>
-                                                <a href="#">Dropdown Options</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Dropdown Options</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Level 2</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Subdropdown Option</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Subdropdown Option</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Subdropdown Option</a>
-                                            </li>
-                                        </ul>
+                                    <li><label>Startes</label></li>
+                                    <li>
+                                        <a href="chapter/chapter1/tutorial_chapter1.php">Lesson 1</a>
                                     </li>
                                     <li>
-                                        <a href="#">Dropdown Option</a>
+                                        <a href="chapter/chapter2/tutorial_chapter2.php">Lesson 2</a>
                                     </li>
                                     <li>
-                                        <a href="#">Dropdown Option</a>
+                                        <a href="chapter/chapter3/tutorial_chapter3.php">Lesson 3</a>
                                     </li>
                                     <li class="divider"></li>
-                                    <li><label>Section Name</label></li>
+                                    <li><label>Advanced</label></li>
                                     <li>
-                                        <a href="#">Dropdown Option</a>
+                                        <a href="#">Lesson 4</a>
                                     </li>
                                     <li>
-                                        <a href="#">Dropdown Option</a>
+                                        <a href="#">Lesson 5</a>
                                     </li>
                                     <li>
-                                        <a href="#">Dropdown Option</a>
+                                        <a href="#">Lesson 6</a>
                                     </li>
                                     <li class="divider"></li>
                                     <li>
@@ -97,8 +77,31 @@ if($user->data['is_registered']){
                                 </ul>
                             </li>
                             <li class="divider"></li>
-                            <li>
-                                <a href="#">Main Item 2</a>
+                            <li class="has-dropdown">
+                                <a href="#">Select Quizes</a>
+                                <ul class="dropdown">
+                                    <li><label>Startes</label></li>
+                                    <li>
+                                        <a href="#">Quiz 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Quiz 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Quiz 3</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li><label>Advanced</label></li>
+                                    <li>
+                                        <a href="#">Quiz 4</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Quiz 5</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Quiz 6</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="divider"></li>
                             <li class="has-dropdown">
@@ -220,7 +223,7 @@ if($user->data['is_registered']){
                     <div class="large-6 columns">
                         <ul class="inline-list right">
                             <li>
-                                <a href="#">Link 1</a>
+                                <a href="impressum.php">Impressum</a>
                             </li>
                             <li>
                                 <a href="#">Link 2</a>
