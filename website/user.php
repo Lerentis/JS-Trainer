@@ -25,7 +25,6 @@ if($user->data['is_registered']){
     <script src="js/vendor/modernizr.js"></script>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
-    <script src="js/js_trainer.js"></script>
     <script src="js/foundation/foundation.joyride.js"></script>
     <script src="js/vendor/jquery.cookie.js"></script>
     <title> <?php echo "Hello " . $user->data['username']; ?> </title>
@@ -38,7 +37,7 @@ if($user->data['is_registered']){
                 <nav class="top-bar" data-topbar>
                     <ul class="title-area">
                         <li class="name">
-                            <h1><a href="user.php">Learn JavaScript and QT5 within minutes</a></h1>
+                            <h1><a href="user.php">Learn JavaScript within minutes</a></h1>
                         </li>
                         <li class="toggle-topbar menu-icon">
                             <a href="#"><span>menu</span></a>

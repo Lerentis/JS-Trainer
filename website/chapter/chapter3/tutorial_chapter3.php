@@ -24,7 +24,6 @@ if($user->data['is_registered']){
     <script src="../../js/vendor/modernizr.js"></script>
     <script src="../../js/vendor/jquery.js"></script>
     <script src="../../js/foundation.min.js"></script>
-    <script src="../../js/js_trainer.js"></script>
     <script src="../../js/vendor/jquery.cookie.js"></script>
     <script>document.title = "Javascript Tutorial Two for " + (getCoockieValue("username"))</script>
 </head>
@@ -36,7 +35,7 @@ if($user->data['is_registered']){
                 <nav class="top-bar" data-topbar>
                     <ul class="title-area">
                         <li class="name">
-                            <h1><a href="../../user.html">Learn JavaScript and QT5 within minutes</a></h1>
+                            <h1><a href="../../user.html">Learn JavaScript within minutes</a></h1>
                         </li>
                         <li class="toggle-topbar menu-icon">
                             <a href="#"><span>menu</span></a>
