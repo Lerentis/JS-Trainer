@@ -48,11 +48,11 @@ $user_row = array(
     if($user_id = user_add($user_row,$cp_data=false)){
         $state = "user successfully registered";
         $auth->login($data['firstname'],$data['password']);
-        header('refresh:2,../user.html');
+        header('refresh:2,../user.php');
     }
     else{
         $state = "registration faild";
-        header('refresh:2,../register.html');
+        header('refresh:2,../register.php');
     }
 ?>
 
@@ -73,7 +73,7 @@ $user_row = array(
                 <nav class="top-bar" data-topbar>
                     <ul class="title-area">
                         <li class="name">
-                            <h1><a href="../index.html">Learn JavaScript and QT5 within minutes</a></h1>
+                            <h1><a href="../index.php">Learn JavaScript and QT5 within minutes</a></h1>
                         </li>
                         <li class="toggle-topbar menu-icon">
                             <a href="#"><span>menu</span></a>

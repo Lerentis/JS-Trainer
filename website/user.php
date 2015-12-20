@@ -1,4 +1,20 @@
-<!doctype html>
+<?php
+ini_set('display_errors',1); ini_set('display_startup_errors',1);
+
+define('IN_PHPBB', true);
+$phpbb_root_path = '/usr/share/phpBB3/';
+$phpEx = substr(strrchr(__FILE__, '.'), 1);
+include($phpbb_root_path . 'common.' . $phpEx);
+
+// Start session management
+$user->session_begin();
+$auth->acl($user->data);
+$user->setup();
+
+if($user->data['is_registered']){
+
+?>
+
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
 <html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
 <head>
@@ -12,7 +28,7 @@
     <script src="js/js_trainer.js"></script>
     <script src="js/foundation/foundation.joyride.js"></script>
     <script src="js/vendor/jquery.cookie.js"></script>
-    <script>document.title = "Hello " + (getCoockieValue("username"))</script>
+    <title> <?php echo "Hello " . $user->data['username']; ?> </title>
 </head>
 <body>
 <div class="row">
@@ -22,7 +38,7 @@
                 <nav class="top-bar" data-topbar>
                     <ul class="title-area">
                         <li class="name">
-                            <h1><a href="user.html">Learn JavaScript and QT5 within minutes</a></h1>
+                            <h1><a href="user.php">Learn JavaScript and QT5 within minutes</a></h1>
                         </li>
                         <li class="toggle-topbar menu-icon">
                             <a href="#"><span>menu</span></a>
@@ -116,7 +132,7 @@
             <div class="large-4 small-12 columns">
                 <img src="http://placehold.it/500x500&amp;text=Logo">
                 <div class="hide-for-small panel">
-                    <h3>Hello Again <script>document.write(getCoockieValue("username"))</script></h3>
+                    <h3>Hello Again <?php echo $user->data['username']; ?></h3>
                     <h5 class="subheader">Looks like you completed 0% of all lessons so far. Try one and maybe you like it.</h5>
                 </div><a href="#">
                 <div class="panel callout radius" id="first-step">
@@ -136,14 +152,14 @@
                     <div class="large-4 small-6 columns">
                         <img src="http://placehold.it/500x500&amp;text=Thumbnail">
                         <div class="panel">
-                            <h5><a href="chapter/chapter2/tutorial_chapter2.html">Cours JS Part 2</a></h5>
+                            <h5><a href="chapter/chapter1/live_editor_chapter1_part1.html">Cours JS Part 2</a></h5>
                             <h6 class="subheader">0%</h6>
                         </div>
                     </div>
                     <div class="large-4 small-6 columns">
                         <img src="http://placehold.it/500x500&amp;text=Thumbnail">
                         <div class="panel">
-                            <h5><a href="chapter/chapter3/tutorial_chapter3.html">Cours JS Part 3</a></h5>
+                            <h5><a href="chapter/chapter1/live_editor_chapter1_part1.html">Cours JS Part 3</a></h5>
                             <h6 class="subheader">0%</h6>
                         </div>
                     </div>
@@ -246,3 +262,9 @@
 </script>
 </body>
 </html>
+<?php
+}else{
+    echo "not logged in!";
+    header('refresh:2,../index.php');
+}
+?>
