@@ -1,7 +1,7 @@
 <?php
 ini_set('display_errors',1); ini_set('display_startup_errors',1);
 
-define('IN_PHPBB', true);
+define('IN_PHPBB', TRUE);
 define('FORUM_ADD',TRUE);
 define('IN_PORTAL',TRUE);
 $phpbb_root_path = '/usr/share/phpBB3/';
@@ -40,18 +40,13 @@ $user_row = array(
     'user_regdate'          => time()
 );
 
-//
-//// Register user...
-
-
-
     if($user_id = user_add($user_row,$cp_data=false)){
-        $state = "user successfully registered";
+        $state =  $data['firstname'] . " successfully registered";
         $auth->login($data['firstname'],$data['password']);
         header('refresh:2,../user.php');
     }
     else{
-        $state = "registration faild";
+        $state = "registration failed";
         header('refresh:2,../register.php');
     }
 ?>
