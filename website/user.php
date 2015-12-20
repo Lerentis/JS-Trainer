@@ -125,7 +125,17 @@ if($user->data['is_registered']){
         </div>
         <div class="row">
             <div class="large-4 small-12 columns">
-                <img src="http://placehold.it/500x500&amp;text=Logo">
+                <?php
+                    if(empty($user->data['user_avatar'])){
+                ?>
+                        <img src="http://placehold.it/500x500&amp;text=Avatar">
+                <?php
+                    } else {
+                ?>
+                      <img src="http://127.0.0.1/download/file.php?avatar= <?php echo $user->data['user_avatar']; ?>" height="500" width="500">
+                <?php
+                    }
+                ?>
                 <div class="hide-for-small panel">
                     <h3>Hello Again <?php echo $user->data['username']; ?></h3>
                     <h5 class="subheader">Looks like you completed 0% of all lessons so far. Try one and maybe you like it.</h5>
