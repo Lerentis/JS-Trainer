@@ -1,4 +1,20 @@
-<!doctype html>
+<?php
+ini_set('display_errors',1); ini_set('display_startup_errors',1);
+
+define('IN_PHPBB', true);
+$phpbb_root_path = '/usr/share/phpBB3/';
+$phpEx = substr(strrchr(__FILE__, '.'), 1);
+include($phpbb_root_path . 'common.' . $phpEx);
+
+// Start session management
+$user->session_begin();
+$auth->acl($user->data);
+$user->setup();
+
+if($user->data['is_registered']){
+
+?>
+
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
 <html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
 <head>
@@ -201,7 +217,7 @@
         </article>
         <aricle>
             <h3>Undefined doesn't mean empty</h3>
-            I've you only declare a variable but doesn't use the equal sign to sign a value to it typeof will return undefined. Javascript doesn't know which type the variable has. I've you use the quotation marks to indicate a string but doesn't type any character, you really initialise a empty variable of type string but this variable knows that it is a string. Also you could sign undefine to a variable and it's of type undefine.
+            I've you only declare a variable but doesn't use the equal sign to sign a value to it typeof will return undefined. Javascript doesn't know which type the variable has. I've you use the quotation marks to indicate a string but doesn't type any character, you really initialise a empty variable of type string but this variable knows that it is a string. Also you could sign undefined to a variable and it's of type undefine.
         </aricle>
         <article>
             <h3>Null, nothing but with type object</h3>
