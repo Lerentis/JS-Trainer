@@ -160,35 +160,35 @@ if($user->data['is_registered']){
                     <div class="large-4 small-6 columns">
                         <img src="http://placehold.it/500x500&amp;text=Thumbnail">
                         <div class="panel">
-                            <h5><a href="chapter/chapter1/live_editor_chapter1_part1.php">Cours JS Part 2</a></h5>
+                            <h5><a href="chapter/chapter2/tutorial_chapter2.php">Cours JS Part 2</a></h5>
                             <h6 class="subheader">0%</h6>
                         </div>
                     </div>
                     <div class="large-4 small-6 columns">
                         <img src="http://placehold.it/500x500&amp;text=Thumbnail">
                         <div class="panel">
-                            <h5><a href="chapter/chapter1/live_editor_chapter1_part1.php">Cours JS Part 3</a></h5>
+                            <h5><a href="chapter/chapter3/tutorial_chapter3.php">Cours JS Part 3</a></h5>
                             <h6 class="subheader">0%</h6>
                         </div>
                     </div>
                     <div class="large-4 small-6 columns">
                         <img src="http://placehold.it/500x500&amp;text=Thumbnail">
                         <div class="panel">
-                            <h5><a href="chapter/chapter1/live_editor_chapter1_part1.php">Cours JS Part 4</a></h5>
+                            <h5><a href="chapter/chapter4/tutorial_chapter4.php">Cours JS Part 4</a></h5>
                             <h6 class="subheader">0%</h6>
                         </div>
                     </div>
                     <div class="large-4 small-6 columns">
                         <img src="http://placehold.it/500x500&amp;text=Thumbnail">
                         <div class="panel">
-                            <h5><a href="chapter/chapter1/live_editor_chapter1_part1.php">Cours JS Part 5</a></h5>
+                            <h5><a href="chapter/chapter5/tutorial_chapter5.php">Cours JS Part 5</a></h5>
                             <h6 class="subheader">0%</h6>
                         </div>
                     </div>
                     <div class="large-4 small-6 columns">
                         <img src="http://placehold.it/500x500&amp;text=Thumbnail">
                         <div class="panel">
-                            <h5><a href="chapter/chapter1/live_editor_chapter1_part1.php">Cours JS Part 6</a></h5>
+                            <h5><a href="chapter/chapter6/tutorial_chapter6.php">Cours JS Part 6</a></h5>
                             <h6 class="subheader">0%</h6>
                         </div>
                     </div>

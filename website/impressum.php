@@ -148,7 +148,7 @@
                         <div class="large-6 columns">
                             <ul class="inline-list right">
                                 <li>
-                                    <a href="#">Link 1</a>
+                                    <a href="impressum.php">Impressum</a>
                                 </li>
                                 <li>
                                     <a href="#">Link 2</a>
