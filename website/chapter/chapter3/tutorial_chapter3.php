@@ -225,13 +225,71 @@ if($user->data['is_registered']){
 
             <article>
                 <h3>String Operators</h3>
+                The + and the += operator can also be used with strings. You can concatenate two different Strings with this operator.
+                <br>
+                CODE GOES HERE
             </article>
 
             <article>
                 <h3>Strings, Numbers and the + Operator</h3>
+                If you use the + and the += operator between string an number variable things doesn't turn out as you might expect.
+                <br>
+                CODE GOES HERE
+                <br>
+                If you want to use a number which is saved as a string type you have to typecast the variable first.
+                <br>
+                CODE GOES HERE
+
             </article>
             <article>
                 <h3>Comparison and Logical Operators</h3>
+                If you want to test two variables you have to use the coparison and logical operators.
+
+                <table style="70%">
+                    <tr>
+                        <th>Operator</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>==</td>
+                        <td>equal to</td>
+                    </tr>
+                    <tr>
+                        <td>===</td>
+                        <td>equal value and equal type</td>
+                    </tr>
+                    <tr>
+                        <td>!=</td>
+                        <td>not equal</td>
+                    </tr>
+                    <tr>
+                        <td>></td>
+                        <td>greater than</td>
+                    </tr>
+                    <tr>
+                        <td><</td>
+                        <td>less than</td>
+                    </tr>
+                    <tr>
+                        <td>>=</td>
+                        <td>greater than or equal to</td>
+                    </tr>
+                    <tr>
+                        <td><=</td>
+                        <td>less than or equal to</td>
+                    </tr>
+                    <tr>
+                        <td>?</td>
+                        <td>ternary operator</td>
+                    </tr>
+                </table>
+
+                This is a whole bunch of new fun stuff and enough for this chapter.
+            </article>
+
+            <article>
+                <h3>Coming soon ...</h3>
+                We will play around with the logical operators and a construct called loops. Like the name suggest they are structures which allows you to redo a similar task again and again.
             </article>
 
         </article>

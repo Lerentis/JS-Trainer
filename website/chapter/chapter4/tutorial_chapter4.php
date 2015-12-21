@@ -124,12 +124,21 @@ if($user->data['is_registered']){
         <div class="split">
             <br>
         </div>
-        <h1>Javascript operators</h1>
+        <h1>Loops a round thing</h1>
         <div class="split">
             <br>
         </div>
         <article>
 
+            <article>
+                <h3></h3>
+            </article>
+            <article>
+                <h3></h3>
+            </article>
+            <article>
+                <h3></h3>
+            </article>
         </article>
         <footer class="row">
             <div class="large-12 columns">
