@@ -58,6 +58,10 @@ class db{
         return 6;
     }
 
+    function getLessonsLeft(){
+
+    }
+
 }
 
 ?>

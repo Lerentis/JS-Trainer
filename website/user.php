@@ -30,6 +30,7 @@ if($user->data['is_registered']){
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
     <script src="js/foundation/foundation.joyride.js"></script>
+    <script src="js/foundation/foundation.slider.js"></script>
     <script src="js/vendor/jquery.cookie.js"></script>
     <title> <?php echo "Hello " . $user->data['username']; ?> </title>
 </head>
@@ -145,11 +146,16 @@ if($user->data['is_registered']){
                 ?>
                 <div class="hide-for-small panel">
                     <h3>Hello Again <?php echo $user->data['username']; ?></h3>
-                    <h5 class="subheader">Looks like you completed <?php echo $progress['progress'] ?> % of all lessons so far. Try one and maybe you like it.</h5>
-                </div><a href="#">
+                    <h5 class="subheader">Looks like you completed <?php echo $progress['progress'] ?> % of all lessons so far. Keep it up!</h5>
+                </div>
                 <div class="panel callout radius" id="first-step">
-                    <h6>You have <?php $progress['progress'] - $maxLessons ?> lessons to go</h6>
-                </div></a>
+                    <h6>You have <?php echo $progress['progress'] - $maxLessons ?> lessons to go</h6>
+                    <div class="range-slider round" data-slider>
+                        <span class="range-slider-handle" role="slider" tabindex="0"></span>
+                        <span class="range-slider-active-segment"></span>
+                        <input type="hidden">
+                    </div>
+                </div>
             </div>
 
             <div class="large-8 columns">
@@ -271,6 +277,17 @@ if($user->data['is_registered']){
         localStorage['tutorial'] = 'yes';
         $(document).foundation('joyride', 'start');
     }
+    var progress_value = <?php echo $progress['progress'] ?>;
+
+    $(document).foundation({
+        slider: {
+            on_change: function(){
+                $('.range-slider').foundation('slider', 'set_value', progress_value);
+            }
+        }
+    });
+    $('.range-slider').foundation('slider', 'set_value', progress_value);
+
 </script>
 </body>
 </html>
