@@ -35,7 +35,7 @@ if($user->data['is_registered']){
                 <nav class="top-bar" data-topbar>
                     <ul class="title-area">
                         <li class="name">
-                            <h1><a href="user.php">Learn JavaScript within minutes</a></h1>
+                            <h1><a href="../../user.php">Learn JavaScript within minutes</a></h1>
                         </li>
                         <li class="toggle-topbar menu-icon">
                             <a href="#"><span>menu</span></a>
@@ -131,11 +131,11 @@ if($user->data['is_registered']){
         <article>
 
             Chapter 3: Fun with text messages in your page
-            Now we are going to learn oure first usefull lines of code. If you want to change, show or manipulate the text of your side with javascript, you will need a funcion to do so.
+            Now we are going to learn our first useful lines of code. If you want to change, show or manipulate the text of your side with javascript, you will need a function to do so.
 
             window.alert() - or how to annoy the user
 
-            You know them. The tiny little windows wich pop up on a side and want to give you a full workout for your mousetabbing finger. Therefore use them carefully and only when it is really important to cache your users attenttion. It's also a god for debugging uses.
+            You know them. The tiny little windows which pop up on a side and want to give you a full workout for your mousetabbing finger. Therefore use them carefully and only when it is really important to cache your users attention. It's also a god for debugging uses.
 
             CODE GOES HERE
 
@@ -148,7 +148,7 @@ if($user->data['is_registered']){
 
             CODE GOES HERE
 
-            But like mentioned in chapter 1 this would scatter your html tags all over your code and shouldn't be used. Instead you could direktly modify the content of an html tag with the innerHTML() method. This needs an object witch it can modify at first. The document class has three different methods to search a html tag and returns an object.
+            But like mentioned in chapter 1 this would scatter your html tags all over your code and shouldn't be used. Instead you could directly modify the content of an html tag with the innerHTML() method. This needs an object witch it can modify at first. The document class has three different methods to search a html tag and returns an object.
 
             - document.getElementById(id)
             - document.getElementByTagName(name)
@@ -164,7 +164,7 @@ if($user->data['is_registered']){
 
             Maybe you won't make ever any mistake while using javascript. Congratulations and skip the rest from the chapter :D
 
-            For the rest of us there ist a quite hady tool called the debugging tool. Each browser has one. Simply press F12 or click right an klick „inspect Element“. Next the inspector tag you will see a tag called console. With javascript you can directly sennd the output from a variable there. Also you can read error messages if your code simply doesn't work. The nice command is console.log().
+            For the rest of us there ist a quite handy tool called the debugging tool. Each browser has one. Simply press F12 or click right an click „inspect Element“. Next the inspector tag you will see a tag called console. With javascript you can directly send the output from a variable there. Also you can read error messages if your code simply doesn't work. The nice command is console.log().
 
             CODE GOES HERE
 

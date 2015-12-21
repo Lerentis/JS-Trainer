@@ -135,7 +135,7 @@ if($user->data['is_registered']){
         </article>
         <article>
             <h3>Variables</h3>
-            Maybe you remember the term variable from math class. You have a charakter wich can take different values. But the same charakter can be reused multiple times in a calculation with the same value. Programming code can be very long. Reusing is a god concept keeping complicated code a little less complicatet. You declare a varable with the keyword var.
+            Maybe you remember the term variable from math class. You have a character which can take different values. But the same character can be reused multiple times in a calculation with the same value. Programming code can be very long. Reusing is a god concept keeping complicated code a little less complicate. You declare a variable with the keyword var.
 
             CODE GOES HERE
 
@@ -143,7 +143,7 @@ if($user->data['is_registered']){
         <article>
             <h3>Oh, there are different types of variables!</h3>
             Java Script handles Data Types implicit, but that does not mean they don't exist here as well. Some of you might ask now what are even Data Types?
-            Data Types are some what an agreement on which form a given variable or data has to be, to perform something with them. There are 5 basic Data Types in Java Script: <br>
+            Data Types are some what an agreement on which form a given variable or data has to be, to perform something with them. There are 9 basic Data Types in Java Script: <br>
             <ul>
                 <br>
                 <ul>
@@ -156,22 +156,20 @@ if($user->data['is_registered']){
                     <li>undefined</li>
                     <li>symbol(new since 20115)</li>
                     <li>Host Object</li>
-                    <li>object Function</li>
-                    <li>Object</li>
                 </ul>
             </ul>
         </article>
         <article>
-            <h3>Why data types? or they can't be all the same.</h3>
-            In school you have mathematics and language lessosns. You can't use the same rules for numbers an words. The same goes for a programming language. A program has to know if it should add two numbers or concatenate two words, which are called strings in computer languages.
+            <h3>Why data types? Or they can't be all the same.</h3>
+            In school you have mathematics and language lessons. You can't use the same rules for numbers an words. The same goes for a programming language. A program has to know if it should add two numbers or concatenate two words, which are called strings in computer languages.
             <br>
             CODE GOES HERE
             <br>
         </article>
         <article>
-            <h3>Dynamic type binding or var realy means variable</h3>
+            <h3>Dynamic type binding or var really means variable</h3>
 
-            Java isn't Javascript. Types are a god way demonstrating it. In Java you have to declare your variable type at the beginning. If you try to store a word in a variable of kind integer, which only stores whole numbers, you get a wrong type error. Javascript ist way more flexible. Once your variable is a String, the other time the same variable is a number, next time you'll met it as a boolean object. Sounds nice but is also a way of tiny little nasty errors which can make you nearly insane. What may be really helpful ist the operator typeof. It allows you to check the type of a variable. I guess you didn't foreseen this ;)
+            Java isn't Javascript. Types are a god way demonstrating it. In Java you have to declare your variable type at the beginning. If you try to store a word in a variable of kind integer, which only stores whole numbers, you get a wrong type error. Javascript is way more flexible. Once your variable is a String, the other time the same variable is a number, next time you'll meet it as a boolean object. Sounds nice but is also a way of tiny little nasty errors which can make you nearly insane. What may be really helpful ist the operator typeof. It allows you to check the type of a variable. I guess you didn't foreseen this ;)
 
             CODE GOES HERE
         </article>
@@ -209,27 +207,24 @@ if($user->data['is_registered']){
         </article>
         <article>
             <h3>The objects, watch them</h3>
-            { : , : } looks a little bit like an UFO for you? Great, you've got your syntax for creating an object with curly brackets. Inside the round brackets are pairs of name:value separated by a comma.
+            { : , : } looks a little bit like an UFO for you? Great, you've got your syntax for creating an Array object with curly brackets. Inside the round brackets are pairs of name:value separated by a comma.
             <br>
             CODE GOES HERE
             <br>
         </article>
         <aricle>
             <h3>Undefined doesn't mean empty</h3>
-            I've you only declare a variable but doesn't use the equal sign to sign a value to it typeof will return undefined. Javascript doesn't know which type the variable has. I've you use the quotation marks to indicate a string but doesn't type any character, you really initialise a empty variable of type string but this variable knows that it is a string. Also you could sign undefined to a variable and it's of type undefine.
+            I've you only declare a variable but doesn't use the equal sign to sign a value to it typeof will return undefined. Javascript doesn't know which type the variable has. I've you use the quotation marks to indicate a string but doesn't type any character, you really initialise a empty variable of type string but this variable knows that it is a string. Also you could sign undefined to a variable and it's of type undefined.
         </aricle>
         <article>
             <h3>Null, nothing but with type object</h3>
-            And there is null ... Null means really nothing in Javascript but with the type object.
+            And there is null ... Null means really nothing in Javascript but with the type object. Some people say it is kind of a bug in Javascript, but the programmer just got used to it ;-)
         </article>
-
-
         <article>
             <h3>Coming soon ...</h3>
             That's a lot of information but now this chapter is done. Remember those types and go on with the more interesting stuff.
             Next time we'll see what a function is and how we declare it.
         </article>
-
 
         </article>
         <footer class="row">

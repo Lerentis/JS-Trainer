@@ -134,16 +134,16 @@ if($user->data['is_registered']){
 
             Img: Big Why with question mark
 
-            Congratulations, you are able to use a webbrowser an lost your way to this side. Maybe it was an accident but if not you possibly want to learn why for heavens sake you should learn a new language beside html and css. Maybe you've already learned a server based language like php, but, as the word server word suggests, happens on the server. There ist the user, which ist called a client.l If you want to controll his expierience, you should use a client side language. For example you can test data on the server, but the way would be:
+            Congratulations, you are able to use a webbrowser an lost your way to this side. Maybe it was an accident but if not you possibly want to learn why for heavens sake you should learn a new language beside html and css. Maybe you've already learned a server based language like php, but, as the word server word suggests, happens on the server. There ist the user, which ist called a client.l If you want to control his experience, you should use a client side language. For example you can test data on the server, but the way would be:
             client → server →datatesting → server → client .
             With Javascript it looks more like
             client → datatesting → client.
 
             We've skipped the server side.
 
-            Testing  an Inputfield
+            Testing an Inputfield
 
-            We will demonstrate this in a example below. An input field ist testet if it is emty or not. You don't need to understand every single line. Grap what you can. We explain a lot of details later.
+            We will demonstrate this in a example below. An input field ist tested if it is empty or not. You don't need to understand every single line. Grab what you can. We explain a lot of details later.
 
             CODE GOES HERE
 
@@ -157,7 +157,7 @@ if($user->data['is_registered']){
 
             CODE GOES HERE
 
-            Manipulatie html attribute
+            Manipulate html attribute
 
             More fancy stuff can be done with changing attributes. We will now change with a click on an image the image. And will change from night to day. Horray, we are the master of time. At least on a webpage ;)
             Code goes here
@@ -174,7 +174,7 @@ if($user->data['is_registered']){
 
             Manipulate css
 
-            Ok, we can change content and attributes, but the aktual style is done by css. Fortunately javascript enables us to change this language, too.
+            Ok, we can change content and attributes, but the actual style is done by css. Fortunately javascript enables us to change this language, too.
 
 
             CODE GOES HERE

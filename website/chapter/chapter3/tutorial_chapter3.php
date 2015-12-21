@@ -25,7 +25,7 @@ if($user->data['is_registered']){
     <script src="../../js/vendor/jquery.js"></script>
     <script src="../../js/foundation.min.js"></script>
     <script src="../../js/vendor/jquery.cookie.js"></script>
-    <script>document.title = "Javascript Tutorial Two for " + (getCoockieValue("username"))</script>
+    <title> <?php echo "Chapter 3 for " . $user->data['username']; ?> </title>
 </head>
 <body>
 <div class="row">
@@ -35,7 +35,7 @@ if($user->data['is_registered']){
                 <nav class="top-bar" data-topbar>
                     <ul class="title-area">
                         <li class="name">
-                            <h1><a href="../../user.html">Learn JavaScript within minutes</a></h1>
+                            <h1><a href="user.php">Learn JavaScript within minutes</a></h1>
                         </li>
                         <li class="toggle-topbar menu-icon">
                             <a href="#"><span>menu</span></a>
@@ -45,75 +45,74 @@ if($user->data['is_registered']){
                         <ul class="right">
                             <li class="divider"></li>
                             <li class="has-dropdown">
-                                <a href="#">Main Item 1</a>
+                                <a href="#">Select Chapter</a>
                                 <ul class="dropdown">
-                                    <li><label>Section Name</label></li>
-                                    <li class="has-dropdown">
-                                        <a class="" href="#">Has Dropdown, Level 1</a>
-                                        <ul class="dropdown">
-                                            <li>
-                                                <a href="#">Dropdown Options</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Dropdown Options</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Level 2</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Subdropdown Option</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Subdropdown Option</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Subdropdown Option</a>
-                                            </li>
-                                        </ul>
+                                    <li><label>Startes</label></li>
+                                    <li>
+                                        <a href="../chapter1/tutorial_chapter1.php">Lesson 1</a>
                                     </li>
                                     <li>
-                                        <a href="#">Dropdown Option</a>
+                                        <a href="../chapter2/tutorial_chapter2.php">Lesson 2</a>
                                     </li>
                                     <li>
-                                        <a href="#">Dropdown Option</a>
+                                        <a href="../chapter3/tutorial_chapter3.php">Lesson 3</a>
                                     </li>
                                     <li class="divider"></li>
-                                    <li><label>Section Name</label></li>
+                                    <li><label>Advanced</label></li>
                                     <li>
-                                        <a href="#">Dropdown Option</a>
+                                        <a href="../chapter4/tutorial_chapter4.php">Lesson 4</a>
                                     </li>
                                     <li>
-                                        <a href="#">Dropdown Option</a>
+                                        <a href="../chapter5/tutorial_chapter5.php">Lesson 5</a>
                                     </li>
                                     <li>
-                                        <a href="#">Dropdown Option</a>
+                                        <a href="../chapter6/tutorial_chapter6.php">Lesson 6</a>
                                     </li>
                                     <li class="divider"></li>
                                     <li>
-                                        <a href="#">See all →</a>
+                                        <a href="../../user.php">See all →</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="divider"></li>
-                            <li>
-                                <a href="#">Main Item 2</a>
+                            <li class="has-dropdown">
+                                <a href="#">Select Quizes</a>
+                                <ul class="dropdown">
+                                    <li><label>Startes</label></li>
+                                    <li>
+                                        <a href="#">Quiz 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Quiz 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Quiz 3</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li><label>Advanced</label></li>
+                                    <li>
+                                        <a href="#">Quiz 4</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Quiz 5</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Quiz 6</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="divider"></li>
                             <li class="has-dropdown">
-                                <a href="#">Main Item 3</a>
+                                <a href="#"> <?php echo $user->data['username']; ?> </a>
                                 <ul class="dropdown">
                                     <li>
-                                        <a href="#">Dropdown Option</a>
+                                        <a href="http://127.0.0.1:80/memberlist.php?mode=viewprofile&u=<?php echo $user->data['user_id'] ?>">Profile</a>
                                     </li>
                                     <li>
-                                        <a href="#">Dropdown Option</a>
+                                        <a href="http://127.0.0.1:80/ucp.php?i=pm&folder=inbox">Inbox</a>
                                     </li>
                                     <li>
-                                        <a href="#">Dropdown Option</a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <a href="#">See all →</a>
+                                        <a href="../../php/handle_logout.php">Logout</a>
                                     </li>
                                 </ul>
                             </li>
@@ -130,7 +129,7 @@ if($user->data['is_registered']){
             <br>
         </div>
         <article>
-            Now we are starting to make some stuff with the number type we've learn. We can assign a value to a variable but maybe we want to to modify this variable. No long words and starting manipulating numbers wa are jumping in the water.
+            Now we are starting to make some stuff with the number type we've learned. We can assign a value to a variable but maybe we want to to modify this variable. without further ado, let's get started!
 
             <h3>What we have to play around</h3>
 
@@ -171,19 +170,22 @@ if($user->data['is_registered']){
             If you haven't sleep the whole class 1-4 in your school time, you possibly can guess the first four operators. The last three are a little bit more tricky.
             <article>
             <h3>Modulus or thou shall have the rest</h3>
-            At fist, there were only whole numbers and than there was the little point (or in germany comma) which made things complicated. Guess you had slept very well in school and can't remember how division works. You can still divide 6/2 because this is equal to 3. But if you try to divide 7 you can only divide 6/2 but don't know what to do with the remaining one. That's pretty much the modulus operator. It tries how much it can divide the whole numbers and gives you back the rest.
+            At fist, there were only whole numbers and than there was the little point (or in germany comma) which made things complicated. Guess you had slept very well in school and can't remember how division works. You can still divide 6/2 because this is equal to 3. But if you try to divide 7 by 2, you can only divide 6/2 and don't know what to do with the remaining one. That's pretty much the modulus operator. It tries how much it can divide the whole numbers and gives you back the rest.
 
             CODE GOES HERE
             </article>
             <article>
                 <h3>Increment and decrement or up and down</h3>
-                Well, coding is much about loops which we discuss later. Loops need a counter and this is where these two operators enter the scene. You'll need a lot of operators. That means you will type this line of code a lot. Programmers are lazy and instead of typing x = x + 1 you simply type x++. Of course you first initialise x ;)
+                Well, coding is much about loops which we discuss later. Loops need a counter and this is where these two operators enter the scene. You'll need a lot of operators. That means you will type this line of code a lot. Programmers are lazy and instead of typing x = x + 1 you simply type x++. Of course you have to first initialise x ;)
+                The same is possible with decrementing a variable. Instead of x = x - x you can simply write x--.
+                These two operators can be used on the right of a variable as well as on the left of it. In programming we call it "right associative" and "left associative".
+                In small Programs it has no effect where you put these operators but on advanced loops you can get into a situation where you have to increment a variable before a loop is finished. But at first have a look at this example and try to play around a little bit.
 
                 CODE GOES HERE
 
             </article>
             <h3>When the assignment with the operator</h3>
-            There can be times when adding or subtracting 1 isn't enough any more. Maybe you want to at 2 every round or even multiply with 2. In this case of emergency there is a whole bunlde of assignment operator combinations which makes your life a little bit easier.
+            There can be times when adding or subtracting 1 isn't enough any more. Maybe you want to at 2 every round or even multiply with 2. In this case of emergency there is a whole bundle of assignment operator combinations which makes your life a little bit easier.
 
             <table style="width:50%">
                 <tr>
@@ -243,7 +245,7 @@ if($user->data['is_registered']){
             </article>
             <article>
                 <h3>Comparison and Logical Operators</h3>
-                If you want to test two variables you have to use the coparison and logical operators.
+                If you want to test two variables you have to use the caparison and logical operators.
 
                 <table style="70%">
                     <tr>
