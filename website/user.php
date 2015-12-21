@@ -146,10 +146,10 @@ if($user->data['is_registered']){
                 ?>
                 <div class="hide-for-small panel">
                     <h3>Hello Again <?php echo $user->data['username']; ?></h3>
-                    <h5 class="subheader">Looks like you completed <?php echo $progress['progress'] ?> % of all lessons so far. Keep it up!</h5>
+                    <h5 class="subheader">Looks like you completed <?php echo round(100 / $maxLessons  * $progress) ?> % of all lessons so far. Keep it up!</h5>
                 </div>
                 <div class="panel callout radius" id="first-step">
-                    <h6>You have <?php echo $progress['progress'] - $maxLessons ?> lessons to go</h6>
+                    <h6>You have <?php echo $maxLessons - $progress ?> lessons to go</h6>
                     <div class="range-slider round" data-slider>
                         <span class="range-slider-handle" role="slider" tabindex="0"></span>
                         <span class="range-slider-active-segment"></span>
@@ -277,7 +277,7 @@ if($user->data['is_registered']){
         localStorage['tutorial'] = 'yes';
         $(document).foundation('joyride', 'start');
     }
-    var progress_value = <?php echo $progress['progress'] ?>;
+    var progress_value = <?php echo round(100 / $maxLessons  * $progress) ?>;
 
     $(document).foundation({
         slider: {

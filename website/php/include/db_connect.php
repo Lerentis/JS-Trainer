@@ -36,7 +36,7 @@ class db{
 
         //var_dump($result);
 
-        $sql = "SELECT tutorial_id, progress
+        $sql = "SELECT tutorial_finished
                   from user_progress
                   WHERE user_id=?;" ;
 
@@ -48,9 +48,16 @@ class db{
 
         $result = $stmt->get_result();
 
-        $row = $result->fetch_assoc();
+        $row = $result->fetch_all();
 
-        return $row;
+        $progress = 0;
+
+        for($i=0; $i <= count($row[0]) ;$i++){
+
+            $progress+=$row[0][$i];
+        }
+
+        return $progress;
 
     }
 
@@ -58,7 +65,84 @@ class db{
         return 6;
     }
 
-    function getLessonsLeft(){
+    function tutorialCompleted($user_id, $tutorial_id, $correct_answers){
+        $sql = "SELECT user_id
+                  from user_progress
+                  WHERE user_id=? AND tutorial_id=?;" ;
+
+        //insert into user_progress values (1,2,20);
+
+
+        $stmt = $this->conn->prepare($sql);
+
+        $stmt->bind_param('ii', $user_id, $tutorial_id);
+
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+
+        $row = $result->fetch_assoc();
+
+        if($row != NULL){
+
+            if($correct_answers === 100){
+                $sql = "UPDATE user_progress
+                  SET tutorial_finished=TRUE, progress=?
+                  WHERE user_id=? AND tutorial_id=?;" ;
+
+                //update user_progress set tutorial_finished = true;
+
+
+                $stmt = $this->conn->prepare($sql);
+
+                $stmt->bind_param('iii', $correct_answers, $user_id, $tutorial_id);
+
+                return $stmt->execute();
+            }
+
+            $sql = "UPDATE user_progress
+                  SET progress=?
+                  WHERE user_id=? AND tutorial_id=?;" ;
+
+            //update user_progress set tutorial_finished = true;
+
+
+            $stmt = $this->conn->prepare($sql);
+
+            $stmt->bind_param('iii', $correct_answers, $user_id, $tutorial_id);
+
+            return $stmt->execute();
+
+        } else {
+            if($correct_answers === 100){
+                $sql = "INSERT INTO user_progress
+                  (user_id, tutorial_id, progress, tutorial_finished)
+                  VALUES (?,?,?,TRUE);" ;
+
+                //update user_progress set tutorial_finished = true;
+
+
+                $stmt = $this->conn->prepare($sql);
+
+                $stmt->bind_param('iii', $user_id, $tutorial_id, $correct_answers);
+
+                return $stmt->execute();
+            }
+
+            $sql = "INSERT INTO user_progress
+                  (user_id, tutorial_id, progress)
+                  VALUES (?,?,?);" ;
+
+            //insert into user_progress values (1,2,20);
+
+
+            $stmt = $this->conn->prepare($sql);
+
+            $stmt->bind_param('iii', $user_id, $tutorial_id, $correct_answers);
+
+            return $stmt->execute();
+
+        }
 
     }
 
