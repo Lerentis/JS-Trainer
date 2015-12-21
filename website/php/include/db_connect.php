@@ -54,7 +54,7 @@ class db{
 
         for($i=0; $i <= count($row[0]) ;$i++){
 
-            $progress+=$row[0][$i];
+            $progress+=$row[$i][0];
         }
 
         return $progress;
