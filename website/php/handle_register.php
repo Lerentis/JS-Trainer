@@ -19,11 +19,11 @@ $user->setup();
 $state = null;
 
 $data = array(
-    #'username'              => request_var('username',''),
-    'firstname'             => request_var('firstname',''),
-    'lastname'              => request_var('lastname',''),
-    'password'              => request_var('password',''),
-    'email'                 => request_var('email','')
+    #'username'              => $request->variable('username',''),
+    'firstname'             => $request->variable('firstname',''),
+    'lastname'              => $request->variable('lastname',''),
+    'password'              => $request->variable('password',''),
+    'email'                 => $request->variable('email','')
 );
 
 $passwords_manager = $phpbb_container->get('passwords.manager');

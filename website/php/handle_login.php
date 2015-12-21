@@ -13,9 +13,9 @@ $auth->acl($user->data);
 $user->setup();
 
 
-$username=request_var('username','');
+$username=$request->variable('username','');
 
-$password=request_var('password','');
+$password=$request->variable('password','');
 
 $result=$auth->login($username,$password , true);
 
