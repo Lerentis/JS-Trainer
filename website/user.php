@@ -12,6 +12,10 @@ $auth->acl($user->data);
 $user->setup();
 
 if($user->data['is_registered']){
+    include ('php/include/db_connect.php');
+    $db = new db();
+    $progress = $db->getProgress($user->data['user_id']);
+    $maxLessons = $db->getMaxLessons();
 
 ?>
 
@@ -141,10 +145,10 @@ if($user->data['is_registered']){
                 ?>
                 <div class="hide-for-small panel">
                     <h3>Hello Again <?php echo $user->data['username']; ?></h3>
-                    <h5 class="subheader">Looks like you completed 0% of all lessons so far. Try one and maybe you like it.</h5>
+                    <h5 class="subheader">Looks like you completed <?php echo $progress['progress'] ?> % of all lessons so far. Try one and maybe you like it.</h5>
                 </div><a href="#">
                 <div class="panel callout radius" id="first-step">
-                    <h6>You have 99 lessons to go</h6>
+                    <h6>You have <?php $progress['progress'] - $maxLessons ?> lessons to go</h6>
                 </div></a>
             </div>
 

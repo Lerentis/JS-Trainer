@@ -3,12 +3,12 @@ ini_set('display_errors',1); ini_set('display_startup_errors',1);
 
 echo "Test0";
 
-//include ("php/include/db_connect.php");
+include ("php/include/db_connect.php");
 
-//$db = new db();
+$db = new db();
 
-//$res = $db->getProgress(2);
+$res = $db->getProgress(1);
 
-//var_dump($res);
+var_dump($res);
 
 ?>
