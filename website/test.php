@@ -6,7 +6,7 @@ include ("php/include/db_connect.php");
 
 $db = new db();
 
-$res = $db->tutorialCompleted(4,2,100);
+$res = $db->getTotalProgress(1);
 
 var_dump($res);
 

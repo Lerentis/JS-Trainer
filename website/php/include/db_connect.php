@@ -23,7 +23,7 @@ class db{
         $this->conn->close();
     }
 
-    function getProgress($user_id){
+    function getTotalProgress($user_id){
         //Array with the data to insert
 //        $data = array(
 //            'user_id'     => '2'
@@ -144,6 +144,29 @@ class db{
 
         }
 
+    }
+
+    function getProgress($user_id, $tutorial_id){
+
+        $sql = "SELECT progress
+                  from user_progress
+                  WHERE user_id=? AND tutorial_id=?;" ;
+
+        $stmt = $this->conn->prepare($sql);
+
+        $stmt->bind_param('ii', $user_id, $tutorial_id);
+
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+
+        $row = $result->fetch_assoc();
+
+        if($row['progress'] == NULL){
+            return 0;
+        }
+
+        return $row['progress'];
     }
 
 }
