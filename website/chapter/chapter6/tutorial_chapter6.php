@@ -130,6 +130,45 @@ if($user->data['is_registered']){
         </div>
         <article>
 
+            Chapter 3: Fun with text messages in your page
+            Now we are going to learn oure first usefull lines of code. If you want to change, show or manipulate the text of your side with javascript, you will need a funcion to do so.
+
+            window.alert() - or how to annoy the user
+
+            You know them. The tiny little windows wich pop up on a side and want to give you a full workout for your mousetabbing finger. Therefore use them carefully and only when it is really important to cache your users attenttion. It's also a god for debugging uses.
+
+            CODE GOES HERE
+
+            Remember:
+            window.alert() means object.method(). You are using an object of type window and use it's method alert().
+
+            How to manipulate a page more directly
+
+            Instead of presenting every change trough a window you could present your message within a script tag. This ist achieved with the document.write() command.
+
+            CODE GOES HERE
+
+            But like mentioned in chapter 1 this would scatter your html tags all over your code and shouldn't be used. Instead you could direktly modify the content of an html tag with the innerHTML() method. This needs an object witch it can modify at first. The document class has three different methods to search a html tag and returns an object.
+
+            - document.getElementById(id)
+            - document.getElementByTagName(name)
+            - document.getElementByClassName(name)
+
+            Notice: There is no method which allows you to search for the  name value of an html tag.
+
+            How this works you can see here:
+
+            CODE GOES HERE
+
+            Less for the user  more use for you – console.log()
+
+            Maybe you won't make ever any mistake while using javascript. Congratulations and skip the rest from the chapter :D
+
+            For the rest of us there ist a quite hady tool called the debugging tool. Each browser has one. Simply press F12 or click right an klick „inspect Element“. Next the inspector tag you will see a tag called console. With javascript you can directly sennd the output from a variable there. Also you can read error messages if your code simply doesn't work. The nice command is console.log().
+
+            CODE GOES HERE
+
+
         </article>
         <footer class="row">
             <div class="large-12 columns">

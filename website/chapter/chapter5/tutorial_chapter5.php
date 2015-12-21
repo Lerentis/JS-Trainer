@@ -130,6 +130,32 @@ if($user->data['is_registered']){
             </div>
             <article>
 
+                Chapter 2: Javascript implementation or where to put the toolbox
+
+                Remeber basic structure of an html document:
+
+                <html>
+                <head>
+                </head>
+                <body>
+                </body>
+                </html>
+
+                Javascript can be helpfull. But where should you insert your code. At first we introduce the html script tag. It ist needed for interaction between html and javascript. Like most tags the structur ist opening tag and closing tag
+
+                <script></script>
+
+                This tag can be placed in the head or the body tag of the side.You can place it everywhere  and multiple scripttags there. But it is a good idea to keep the code together in one section of your side. You easily lost the track of your code if you scatter it arround. If you place the tag in the body tag, you can improve your page loading speed, because it is not blocked by other script loading.
+
+                CODE GOES HERE
+
+                The above methods closely connect the side with the javascript code. For more seperation between html and javascript you can save your code in external files. This files have the extension .js and no script tag ist allowd in this file. You have to use the src (=source) attribute to insert the external file in your side like this.
+
+                <script src=“externalJavascriptFile.js“></script>
+
+                But for learning advantages we will use  the javascript code inside the html side.
+                Sometimes you may see the style=“text/javascript“ attribute within a script tag. That's nice, but scince html5 javascript is the default script language and therefore the attribute isn't needed anymore. Of course if you don't use html5 you have to indicate, that you are going to use javascript.
+
             </article>
             <footer class="row">
                 <div class="large-12 columns">

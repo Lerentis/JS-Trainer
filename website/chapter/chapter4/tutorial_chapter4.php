@@ -130,15 +130,57 @@ if($user->data['is_registered']){
         </div>
         <article>
 
-            <article>
-                <h3></h3>
-            </article>
-            <article>
-                <h3></h3>
-            </article>
-            <article>
-                <h3></h3>
-            </article>
+            Chapter 1: What can you do with javascript?
+
+            Img: Big Why with question mark
+
+            Congratulations, you are able to use a webbrowser an lost your way to this side. Maybe it was an accident but if not you possibly want to learn why for heavens sake you should learn a new language beside html and css. Maybe you've already learned a server based language like php, but, as the word server word suggests, happens on the server. There ist the user, which ist called a client.l If you want to controll his expierience, you should use a client side language. For example you can test data on the server, but the way would be:
+            client → server →datatesting → server → client .
+            With Javascript it looks more like
+            client → datatesting → client.
+
+            We've skipped the server side.
+
+            Testing  an Inputfield
+
+            We will demonstrate this in a example below. An input field ist testet if it is emty or not. You don't need to understand every single line. Grap what you can. We explain a lot of details later.
+
+            CODE GOES HERE
+
+            Remember the basic structure of most html elements.
+
+            <tagname [[attribute[=value]], ...]> content goes here </tagname>
+
+            Manipulate html tags and content
+
+            And what else? Maybe you've recognised that a pure html side with css is very static, there aren't the fancy boinzing and moving pictures. Well those things can be done, too. But bevore we ar making a new wining motionfull website we are simpling changing the appearing text with a click on a html button.
+
+            CODE GOES HERE
+
+            Manipulatie html attribute
+
+            More fancy stuff can be done with changing attributes. We will now change with a click on an image the image. And will change from night to day. Horray, we are the master of time. At least on a webpage ;)
+            Code goes here
+
+            Remember the basic css syntax
+            Selector1 (tag, .class, #id)[,selector2[,…]
+            {
+            (Declaration) property:value ;
+            [(next Declaration) property1:value; …]
+            }
+
+            Don't forget a semicolon at every end of line!!!!!
+
+
+            Manipulate css
+
+            Ok, we can change content and attributes, but the aktual style is done by css. Fortunately javascript enables us to change this language, too.
+
+
+            CODE GOES HERE
+
+            Your first glimpse on the language are done. Maybe you've already seen the big toolbox you are going to get. Have fun and learn. You could be the one, who saves a page from really bad experience. There are still enough of them in the wild, wild web :D
+
         </article>
         <footer class="row">
             <div class="large-12 columns">
