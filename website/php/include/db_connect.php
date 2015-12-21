@@ -14,6 +14,8 @@ class db{
     function __construct()
     {
         $this->conn = new mysqli(HOST, USER, PASSWORD, DATABASE);
+
+        //echo $this->conn->host_info;
         //$this->conn = new mysql();
         //$this->conn->sql_connect(HOST, USER, PASSWORD, DATABASE, '', false, false);
     }
