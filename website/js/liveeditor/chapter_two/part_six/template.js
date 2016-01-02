@@ -9,16 +9,15 @@ var HTMLiveCodeTemplate = '<!DOCTYPE html>\n\
 			\n\
 		<\/style>\n\
 		<script type="text\/javascript">\n\
-		var str1 = "Hello"; \n\
-		var str2 //Try the single quotation here by yourself\n\
+        var array = ["Saab", "Volvo", "BMW"];\n\
+        var anotherArray = {DarkSide:"Vader" , BrightSide:"Luke"};\n\
 		\n\
 		<\/script>\n\
 	<\/head>\n\n\
 	<body>\n\
 		\n\
-		<script>document.write(str1);</script>\n\
+		<script>document.write(array);</script>\n\
 		<br>\n\
-		<script>document.write(str2);</script>\n\
-		\n\
+		<script>document.write(anotherArray["DarkSide"]);</script>\n\
 	<\/body>\n\
 <\/html>';

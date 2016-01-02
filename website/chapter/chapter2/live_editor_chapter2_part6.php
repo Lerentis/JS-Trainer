@@ -120,7 +120,7 @@ if($user->data['is_registered']){
     var doc = document.documentElement;
     doc.setAttribute('data-useragent', navigator.userAgent);
 </script>
-<iframe class="mainContent" src="../../js/liveeditor/chapter_one/part_one/live_editor_frame.html" width="100%" height="80%" style="float:top"></iframe>
+<iframe class="mainContent" src="../../js/liveeditor/chapter_two/part_six/live_editor_frame.html" width="100%" height="80%" style="float:top"></iframe>
 </body>
 </HTML>
     <?php

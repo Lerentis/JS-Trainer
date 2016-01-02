@@ -158,7 +158,6 @@ if($user->data['is_registered']){
             </div>
         </article>
 
-
         <div class="split">
             <br>
         </div>
