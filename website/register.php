@@ -41,78 +41,12 @@ if(!$user->data['is_registered']){
                     <section class="top-bar-section">
                         <ul class="right">
                             <li class="divider"></li>
-                            <li class="has-dropdown">
-                                <a href="#">Main Item 1</a>
-                                <ul class="dropdown">
-                                    <li><label>Section Name</label></li>
-                                    <li class="has-dropdown">
-                                        <a class="" href="#">Has Dropdown, Level 1</a>
-                                        <ul class="dropdown">
-                                            <li>
-                                                <a href="#">Dropdown Options</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Dropdown Options</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Level 2</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Subdropdown Option</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Subdropdown Option</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Subdropdown Option</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">Dropdown Option</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Dropdown Option</a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li><label>Section Name</label></li>
-                                    <li>
-                                        <a href="#">Dropdown Option</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Dropdown Option</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Dropdown Option</a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <a href="#">See all →</a>
-                                    </li>
-                                </ul>
+                            <li>
+                                <a href="login.php">Login</a>
                             </li>
                             <li class="divider"></li>
                             <li>
-                                <a href="#">Main Item 2</a>
-                            </li>
-                            <li class="divider"></li>
-                            <li class="has-dropdown">
-                                <a href="#">Main Item 3</a>
-                                <ul class="dropdown">
-                                    <li>
-                                        <a href="#">Dropdown Option</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Dropdown Option</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Dropdown Option</a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <a href="#">See all →</a>
-                                    </li>
-                                </ul>
+                                <a href="register.php">Register</a>
                             </li>
                         </ul>
                     </section>
