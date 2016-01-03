@@ -211,7 +211,6 @@ if($user->data['is_registered']){
         <div class="split">
             <br>
         </div>
-
             <div class="row">
                 <div class="columns pagination-centered">
                     <ul class="button-group round ">
@@ -226,7 +225,6 @@ if($user->data['is_registered']){
 
                 </div>
             </div>
-
         <footer class="row">
             <div class="large-12 columns">
                 <hr>

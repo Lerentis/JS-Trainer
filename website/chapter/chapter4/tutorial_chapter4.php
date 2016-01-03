@@ -15,7 +15,8 @@ if($user->data['is_registered']){
 
 ?>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
-<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)"
+      xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -124,64 +125,171 @@ if($user->data['is_registered']){
         <div class="split">
             <br>
         </div>
-        <h1>Loops a round thing</h1>
+        <h1>Chapter 4: What can you do with javascript?</h1>
         <div class="split">
             <br>
         </div>
         <article>
-
-            Chapter 1: What can you do with javascript?
-
-            Img: Big Why with question mark
-
-            Congratulations, you are able to use a webbrowser an lost your way to this side. Maybe it was an accident but if not you possibly want to learn why for heavens sake you should learn a new language beside html and css. Maybe you've already learned a server based language like php, but, as the word server word suggests, happens on the server. There ist the user, which ist called a client.l If you want to control his experience, you should use a client side language. For example you can test data on the server, but the way would be:
-            client → server →datatesting → server → client .
-            With Javascript it looks more like
-            client → datatesting → client.
-
-            We've skipped the server side.
-
-            Testing an Inputfield
-
+            <h3>Wehere to put JavaScript?</h3>
+            <div class="split">
+                <br>
+            </div>
+            <!--Img: Big Why with question mark-->
+            Congratulations, you are able to use a webbrowser an lost your way to this side. Maybe it was an accident but if not you possibly want to learn why for heavens sake you should learn a new language beside html and css. Maybe you've already learned a server based language like php, but, as the word server word suggests, happens on the server. There ist the user, which ist called a client.l If you want to control his experience, you should use a client side language. For example you can test data on the server, but the way would be: <br>
+            client → server → datatesting → server → client . <br>
+            With Javascript it looks more like: <br>
+            client → datatesting → client<br>
+            <div class="split">
+                <br>
+            </div>
+            We are skipping the server side here.
+            <div class="split">
+                <br>
+            </div>
+            </article>
+        <article>
+            <h3>Testing an Inputfield</h3>
+            <div class="split">
+                <br>
+            </div>
             We will demonstrate this in a example below. An input field ist tested if it is empty or not. You don't need to understand every single line. Grab what you can. We explain a lot of details later.
-
-            CODE GOES HERE
-
+            <div class="split">
+                <br>
+            </div>
+            <div class="row">
+                <div class="small-3 columns small-centered">
+                    <a  href="live_editor_chapter4_part1.php" target="_blank">
+                        <div class="button primary round radius text-center expand">
+                            Try It!
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="split">
+                <br>
+            </div>
             Remember the basic structure of most html elements.
-
-            <tagname [[attribute[=value]], ...]> content goes here </tagname>
-
-            Manipulate html tags and content
-
-            And what else? Maybe you've recognised that a pure html side with css is very static, there aren't the fancy boinzing and moving pictures. Well those things can be done, too. But bevore we ar making a new wining motionfull website we are simpling changing the appearing text with a click on a html button.
-
-            CODE GOES HERE
-
-            Manipulate html attribute
-
-            More fancy stuff can be done with changing attributes. We will now change with a click on an image the image. And will change from night to day. Horray, we are the master of time. At least on a webpage ;)
-            Code goes here
-
-            Remember the basic css syntax
-            Selector1 (tag, .class, #id)[,selector2[,…]
-            {
-            (Declaration) property:value ;
-            [(next Declaration) property1:value; …]
-            }
-
-            Don't forget a semicolon at every end of line!!!!!
-
-
-            Manipulate css
-
-            Ok, we can change content and attributes, but the actual style is done by css. Fortunately javascript enables us to change this language, too.
-
-
-            CODE GOES HERE
-
-            Your first glimpse on the language are done. Maybe you've already seen the big toolbox you are going to get. Have fun and learn. You could be the one, who saves a page from really bad experience. There are still enough of them in the wild, wild web :D
-
+            <div class="split">
+                <br>
+            </div>
+            <div class="panel">
+                <p><img  height="15" width="15" hspace="20">
+                    <span class="script">&lt;tagname</span> <span class="keyword"> attribute </span> = <span class="number"> value </span> , ... <span class="script"> > </span>content goes here <span class="script">&lt;/tagname&gt;</span>
+                </p>
+            </div>
+            <div class="split">
+                <br>
+            </div>
         </article>
+        <article>
+            <h3>Manipulate html tags and content</h3>
+            <div class="split">
+                <br>
+            </div>
+            And what else? Maybe you've recognised that a pure html side with css is very static, there aren't the fancy boinzing and moving pictures. Well those things can be done, too. But before we are making a new wining motion full website we are simpling changing the appearing text with a click on a html button.
+            <div class="split">
+                <br>
+            </div>
+            <div class="row">
+                <div class="small-3 columns small-centered">
+                    <a  href="live_editor_chapter4_part2.php" target="_blank">
+                        <div class="button primary round radius text-center expand">
+                            Try It!
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="split">
+                <br>
+            </div>
+        </article>
+        <article>
+            <h3>Manipulate html attribute</h3>
+            <div class="split">
+                <br>
+            </div>
+            More fancy stuff can be done with changing attributes. We will now change with a click on an image the image. And will change from night to day. Horray, we are the master of time. At least on a webpage ;)
+            <div class="split">
+                <br>
+            </div>
+            <div class="row">
+                <div class="small-3 columns small-centered">
+                    <a  href="live_editor_chapter4_part3.php" target="_blank">
+                        <div class="button primary round radius text-center expand">
+                            Try It!
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="split">
+                <br>
+            </div>
+            Remember the basic css syntax:
+            <div class="split">
+                <br>
+            </div>
+
+            <p>
+                <span class="script">Selector1</span> ( <span class="keyword">tag, .class, #id</span>[,<span class="script">selector2</span>[,…] <br>
+                { <br>
+                <span class="script"> (Declaration) </span> <span class="keyword"> property</span>:<span class="number">value</span> ; <br>
+                <span class="script"> (next Declaration) </span> <span class="keyword"> property1</span>:<span class="number">value</span>; ... <br>
+                } <br>
+            </p>
+            <div class="split">
+                <br>
+            </div>
+            Don't forget a semicolon at every end of line!!!!!
+            <div class="split">
+                <br>
+            </div>
+        </article>
+        <article>
+            <h3>Manipulate css</h3>
+            <div class="split">
+                <br>
+            </div>
+            Ok, we can change content and attributes, but the actual style is done by css. Fortunately javascript enables us to change this language, too.
+            <div class="split">
+                <br>
+            </div>
+            <div class="row">
+                <div class="small-3 columns small-centered">
+                    <a  href="live_editor_chapter4_part4.php" target="_blank">
+                        <div class="button primary round radius text-center expand">
+                            Try It!
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="split">
+                <br>
+            </div>
+            </article>
+        <article>
+            <h3>Coming soon ...</h3>
+            <div class="split">
+                <br>
+            </div>
+            Your first glimpse on the language are done. Maybe you've already seen the big toolbox you are going to get. Have fun and learn. You could be the one, who saves a page from really bad experience. There are still enough of them in the wild, wild web :D
+        </article>
+        <div class="split">
+            <br>
+        </div>
+        <div class="row">
+            <div class="columns pagination-centered">
+                <ul class="button-group round ">
+                    <li>
+                        <a href="#" class="button secondary" >Test Knowledge</a>
+                    </li>
+
+                    <li>
+                        <a href="../chapter5/tutorial_chapter5.php" class="button secondary">Next Chapter</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
         <footer class="row">
             <div class="large-12 columns">
                 <hr>
