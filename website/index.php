@@ -44,9 +44,9 @@
     <div class="row">
         <div class="large-12 columns">
             <ul class="example-orbit" data-orbit>
-                <li><img src="http://placehold.it/1000x400&amp;text=[%20img%201%20]"></li>
-                <li><img src="http://placehold.it/1000x400&amp;text=[%20img%202%20]"></li>
-                <li><img src="http://placehold.it/1000x400&amp;text=[%20img%203%20]"></li>
+                <li><img src="img/shoes-js-blue.jpg"></li>
+                <li><img src="img/training.jpg"></li>
+                <li><img src="img/technology.jpg"></li>
             </ul>
         </div>
     </div>
