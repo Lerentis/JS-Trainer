@@ -44,9 +44,9 @@
     <div class="row">
         <div class="large-12 columns">
             <ul class="example-orbit" data-orbit>
-                <li><img src="img/shoes-js-blue.jpg"></li>
-                <li><img src="img/training.jpg"></li>
-                <li><img src="img/technology.jpg"></li>
+                <li><img src="img/shoes-js.png"></li>
+                <li><img src="img/training.png"></li>
+                <li><img src="img/technology.png"></li>
             </ul>
         </div>
     </div>
@@ -68,7 +68,7 @@
                             browser. </p>
                     </div>
                     <div class="large-6 columns">
-                        <img src="http://placehold.it/400x240&text=[img]"/>
+                        <img src="img/coffee.png"/>
                     </div>
                 </div>
                 <p>There are even Video-Games which are partly writen in JavaScript!</p>
@@ -83,7 +83,7 @@
     <hr>
     <div class="row">
         <div class="large-4 columns">
-            <img src="http://placehold.it/400x300&text=[img]"/>
+            <img src="img/icon-909830_960_720.png" width="235"/>
             <h4>What is JavaScript</h4>
 
             <p>JavaScript is a high level, dynamic, untyped, and interpreted programming language. It has been
@@ -93,7 +93,7 @@
                 browsers without plug-ins.</p>
         </div>
         <div class="large-4 columns">
-            <img src="http://placehold.it/400x300&text=[img]"/>
+            <img src="img/js-icon.png" width="282" />
             <h4>Why should you learn</h4>
 
             <p>JavaScript is irreplaceable in modern Web-Technology and can help you to build a WebApp on your own as
@@ -101,7 +101,7 @@
                 even a little bit of programming knowledge can boost your resume by a lot. </p>
         </div>
         <div class="large-4 columns">
-            <img src="http://placehold.it/400x300&text=[img]"/>
+            <img src="img/Wikipedia_logo_svg.png"  width="235"/>
             <h4>Knowledge if free</h4>
 
             <p>We build this platform in the spirit that knowledge is and should be free, so we do not charge anything
