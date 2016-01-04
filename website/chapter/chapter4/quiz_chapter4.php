@@ -81,13 +81,13 @@ if($user->data['is_registered']){
                                 <ul class="dropdown">
                                     <li><label>Startes</label></li>
                                     <li>
-                                        <a href="quiz_chapter1.php">Quiz 1</a>
+                                        <a href="../chapter1/quiz_chapter1.php">Quiz 1</a>
                                     </li>
                                     <li>
-                                        <a href="quiz_chapter2.php">Quiz 2</a>
+                                        <a href="../chapter2/quiz_chapter2.php">Quiz 2</a>
                                     </li>
                                     <li>
-                                        <a href="quiz_chapter3.php">Quiz 3</a>
+                                        <a href="../chapter3/quiz_chapter3.php">Quiz 3</a>
                                     </li>
                                     <li class="divider"></li>
                                     <li><label>Advanced</label></li>
@@ -95,10 +95,11 @@ if($user->data['is_registered']){
                                         <a href="#">Quiz 4</a>
                                     </li>
                                     <li>
-                                        <a href="quiz_chapter5.php">Quiz 5</a>
+                                        <a href="../chapter5/quiz_chapter5.php">Quiz 5</a>
                                     </li>
                                     <li>
-                                        <a href="quiz_chapter6.php">Quiz 6</a>
+                                        <a href="../chapter6/quiz_chapter6.php">Quiz 6</a>
+                                        <a href="../chapter6/quiz_chapter6.php">Quiz 6</a>
                                     </li>
                                 </ul>
                             </li>

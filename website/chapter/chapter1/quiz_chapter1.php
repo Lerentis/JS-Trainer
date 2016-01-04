@@ -26,7 +26,7 @@ if($user->data['is_registered']){
     <script src="../../js/vendor/jquery.js"></script>
     <script src="../../js/foundation.min.js"></script>
     <script src="../../js/vendor/jquery.cookie.js"></script>
-    <title> <?php echo "Chapter 4 Quiz for " . $user->data['username']; ?> </title>
+    <title> <?php echo "Chapter 1 Quiz for " . $user->data['username']; ?> </title>
 </head>
 <body>
 <div class="row">
@@ -84,21 +84,21 @@ if($user->data['is_registered']){
                                         <a href="#">Quiz 1</a>
                                     </li>
                                     <li>
-                                        <a href="#">Quiz 2</a>
+                                        <a href="../chapter2/quiz_chapter2.php">Quiz 2</a>
                                     </li>
                                     <li>
-                                        <a href="#">Quiz 3</a>
+                                        <a href="../chapter3/quiz_chapter3.php">Quiz 3</a>
                                     </li>
                                     <li class="divider"></li>
                                     <li><label>Advanced</label></li>
                                     <li>
-                                        <a href="#">Quiz 4</a>
+                                        <a href="../chapter4/quiz_chapter4.php">Quiz 4</a>
                                     </li>
                                     <li>
-                                        <a href="#">Quiz 5</a>
+                                        <a href="../chapter5/quiz_chapter5.php">Quiz 5</a>
                                     </li>
                                     <li>
-                                        <a href="#">Quiz 6</a>
+                                        <a href="../chapter6/quiz_chapter6.php">Quiz 6</a>
                                     </li>
                                 </ul>
                             </li>
@@ -125,13 +125,13 @@ if($user->data['is_registered']){
         <div class="split">
             <br>
         </div>
-        <h1>Chapter 4: Questions</h1>
+        <h1>Chapter 1: Questions</h1>
         <div class="split">
             <br>
         </div>
 
 
-        <form method="post" action="check_chapter4.php">
+        <form method="post" action="check_chapter1.php">
             <label for="answer[1]" ><b>Question 1:Where ist plain javascript executed?</b></label>
             <br>
             <input type="radio" id="answer[1]" name="answer[1]" value=0 > On the server side.
