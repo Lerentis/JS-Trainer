@@ -15,7 +15,8 @@ if($user->data['is_registered']){
 
 ?>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
-<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)"
+      xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -25,7 +26,7 @@ if($user->data['is_registered']){
     <script src="../../js/vendor/jquery.js"></script>
     <script src="../../js/foundation.min.js"></script>
     <script src="../../js/vendor/jquery.cookie.js"></script>
-    <title> <?php echo "Chapter 1 for " . $user->data['username']; ?> </title>
+    <title> <?php echo "Chapter 4 Quiz for " . $user->data['username']; ?> </title>
 </head>
 <body>
 <div class="row">
@@ -80,7 +81,7 @@ if($user->data['is_registered']){
                                 <ul class="dropdown">
                                     <li><label>Startes</label></li>
                                     <li>
-                                        <a href="#">Quiz 1</a>
+                                        <a href="quiz_chapter1.php">Quiz 1</a>
                                     </li>
                                     <li>
                                         <a href="quiz_chapter2.php">Quiz 2</a>
@@ -91,7 +92,7 @@ if($user->data['is_registered']){
                                     <li class="divider"></li>
                                     <li><label>Advanced</label></li>
                                     <li>
-                                        <a href="quiz_chapter4.php">Quiz 4</a>
+                                        <a href="#">Quiz 4</a>
                                     </li>
                                     <li>
                                         <a href="quiz_chapter5.php">Quiz 5</a>
@@ -124,107 +125,82 @@ if($user->data['is_registered']){
         <div class="split">
             <br>
         </div>
-        <h1>Welcome to your first Tutorial on Javascript</h1>
+        <h1>Chapter 4: Questions</h1>
         <div class="split">
             <br>
         </div>
-        <article>
-            In this chapter you will learn the basics on how Javascript interacts with your browser.<br>
-            You will need nothing else besides your browser, a cup of coffee and your brain ... Well a working mouse and keyboard would be handy,too ;-)
-            Without further explanation, let's jump in our first little program: Hello World.
-        </article>
-        <div class="split">
-            <br>
-        </div>
-        <article>
-            <h3>Like seen so many times ... "Hello world!" or how can I include JavaScript</h3>
-            As seen in other programming tutorials, your first lines of code will greet you with an alert window in your browser saying "Hello World".
-            To do so we use a little function called <span class="impor">alert()</span>. This function works in nearly all Browsers and creates a popup with a given text. <br>
-            To use this function you can type the JavaScript-code within a script-html tag:<br><br>
 
-            <div class="panel">
-                <p><img  height="15" width="15" hspace="20">
-                    <span class="script">&lt;script&gt;</span>alert(<span class="string"> "STRING"</span>);<span class="script">&lt;&#47;script&gt;</span>
-                </p>
-            </div>
-            <br>
-            <div class="panel">
-                <img src="../../img/bulb-146443_960_720.png" height="15" width="15" hspace="20"><span> The type attribut with <span class="impor"> type=text/javascript</span> inside the script tag is optional in html 5 but required in html 4.x .</span>
-            </div>
-            <br>
-            The example below shows how you write the code. Fell free to play around with the Live Editor Example. <br><br>
-            <div class="panel">
-                <p><img src="../../img/bulb-146443_960_720.png" height="15" width="15" hspace="20"> Don't forget the semicolon after the closing bracket.</p>
-            </div>
-        </article>
 
-        <div class="split">
+        <form method="post" action="check_chapter4.php">
+            <label for="answer[1]" ><b>Question 1:Where ist plain javascript executed?</b></label>
             <br>
-        </div>
-        <div class="row">
-            <div class="small-3 columns small-centered">
-                <a  href="live_editor_chapter1_part1.php" target="_blank">
-                    <div class="button primary round radius text-center expand">
-                        Try It!
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="split">
+            <input type="radio" id="answer[1]" name="answer[1]" value=0 > On the server side.
             <br>
-        </div>
-        <article>
-            <h3>A little less annoying - the write()-function</h3>
-            There you go :D your first line of JS, and it wasn't that hard, or was it?<br>
-            But this may be the line of code which can drive you insane on a webpage showing the cute little adds you do not wand to read.***img*** So is there a way showing something
-            like this without a popup?<br>
-            Another way to print something on a blank website is the <span class="impor">write()</span> function of the object <span class="impor">document</span>.<br>
-            You can call the function with the "." (point-operator). Like you may already now the struktur to call a member function from an object is <span class="impor">"object.funkction()"</span> or with our new function within a script tag:<br><br>
+            <input type="radio" name="answer[1]" value=1 > In the browser from the client.
+            <br>
+            <input type="radio" name="answer[1]" value=0 > It's a script language which doesn't need to be executed
+            <br>
+            <input type="radio" name="answer[1]" value=0 > On server an client side.
+            <br>
+            <br>
+            <label for="answer[2]" ><b>Question 2:What can you manipulate with javascript?(multi)</b></label>
+            <br>
+            <input type="radio" id="answer[2]" name="answer[2][0]" value=1 > html attributes, tags and content.
+            <br>
+            <input type="radio" name="answer[2][1]" value=1 > CSS style.
+            <br>
+            <input type="radio" name="answer[2][2]" value=0 > The server.
+            <br>
+            <input type="radio" name="answer[2][3]" value=1 > The logic of a website client based.
+            <br>
+            <br>
+            <label for="answer[6]" ><b>Question 3: Why should you check if an input field ist filled or not?</b></label>
+            <br>
+            <input type="radio" id="answer[6]" name="answer[6]" value=0 > You don't need to chlableeck an input field. It's useless.
+            <br>
+            <input type="radio" name="answer[6]" value=0 > You don't need to check an input field. It's automatically checked.
+            <br>
+            <input type="radio" name="answer[6]" value=1 > If you need the content of this field you should check if it's filled or not.
+            <br>
+            <input type="radio" name="answer[6]" value=0 > That's not possible with Javascript.
+            <br>
+            <br>
+            <label for="answer[7]"><b>Question 4:Which property changes or gets the content of an html tag?</b></label>
+            <br>
+            <input type="radio" id="answer[7]" name="answer[7]" value=1 > element.innerHTML, but you should use element.textContent for security reasons.
+            <br>
+            <input type="radio" name="answer[7]" value=0 > It's html. You can only manipulate html with html.
+            <br>
+            <input type="radio" name="answer[7]" value=0 > innerHTML changes or gets only the text content of an html tag.
+            <br>
+            <input type="radio" name="answer[7]" value=0 > You can get the text content with a css function.
+            <br>
+            <br>
+            <label for="answer[8]"" ><b>Question 5:Which keyword is used to change the appearance with Javascript?</b></label>
+            <br>
+            <input type="radio" id="answer[8]"  name="answer[8]" value=0>We haven't read anything about changing the appearance of an html element.
+            <br>
+            <input type="radio" name="answer[8]" value=0 >You shouldn't change the appearance of a website.
+            <br>
+            <input type="radio" name="answer[8]" value=1 >With style you can change the appearance of an element.
+            <br>
+            <input type="radio" name="answer[8]" value=0 >You can change the appearance only with css.
 
-            <div class="panel">
-                <p><img  height="15" width="15" hspace="20">
-                    <span class="script">&lt;script&gt;</span> document.<span class="string2">write</span>(<span class="string">"Hello World"</span>); <span class="script">&lt;&#47;script&gt;</span> <br>
-                </p>
-            </div>
-            You can try it out on your own here:
 
-        </article>
-        <div class="split">
+
+
+
+
             <br>
-        </div>
-            <div class="row">
-                  <div class="small-3 columns small-centered">
-                      <a  href="live_editor_chapter1_part2.php" target="_blank">
-                          <div class="button primary round radius text-center expand">
-                              Try It!
-                          </div>
-                      </a>
-                  </div>
-              </div>
-        <div class="split">
             <br>
-        </div>
-        <article>
-            In the next chapter we are gonna have a closer look at some Data Types, Functions and Operations. <br>
-            You can take on the next Chapter here or take a short Test, to see if you got everything right.
-        </article>
-        <div class="split">
-            <br>
-        </div>
             <div class="row">
                 <div class="columns pagination-centered">
-                    <ul class="button-group round ">
-                        <li>
-                            <a href="quiz_chapter1.php" class="button secondary" >Test Knowledge</a>
-                        </li>
-
-                        <li>
-                            <a href="../chapter2/tutorial_chapter2.php" class="button secondary">Next Chapter</a>
-                        </li>
-                    </ul>
-
+                    <input type="submit" class="button round" value="Check your answers!">
                 </div>
             </div>
+
+        </form>
+
         <footer class="row">
             <div class="large-12 columns">
                 <hr>

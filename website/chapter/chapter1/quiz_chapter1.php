@@ -26,7 +26,7 @@ if($user->data['is_registered']){
     <script src="../../js/vendor/jquery.js"></script>
     <script src="../../js/foundation.min.js"></script>
     <script src="../../js/vendor/jquery.cookie.js"></script>
-    <title> <?php echo "Chapter 4 for " . $user->data['username']; ?> </title>
+    <title> <?php echo "Chapter 4 Quiz for " . $user->data['username']; ?> </title>
 </head>
 <body>
 <div class="row">
@@ -36,7 +36,7 @@ if($user->data['is_registered']){
                 <nav class="top-bar" data-topbar>
                     <ul class="title-area">
                         <li class="name">
-                            <h1><a href="user.php">Learn JavaScript within minutes</a></h1>
+                            <h1><a href="../../user.php">Learn JavaScript within minutes</a></h1>
                         </li>
                         <li class="toggle-topbar menu-icon">
                             <a href="#"><span>menu</span></a>
@@ -125,16 +125,16 @@ if($user->data['is_registered']){
         <div class="split">
             <br>
         </div>
-        <h1>Loops a round thing</h1>
+        <h1>Chapter 4: Questions</h1>
         <div class="split">
             <br>
         </div>
 
 
         <form method="post" action="check_chapter4.php">
-            <lable for "1" ><b>Question 1:Where ist plain javascript executed?</b></lable>
+            <label for="answer[1]" ><b>Question 1:Where ist plain javascript executed?</b></label>
             <br>
-            <input type="radio" name="answer[1]" value=0 > On the server side.
+            <input type="radio" id="answer[1]" name="answer[1]" value=0 > On the server side.
             <br>
             <input type="radio" name="answer[1]" value=1 > In the browser from the client.
             <br>
@@ -143,17 +143,53 @@ if($user->data['is_registered']){
             <input type="radio" name="answer[1]" value=0 > On server an client side.
             <br>
             <br>
-            <lable for "question2" ><b>Question 2:What can you manipulate with javascript?(multi)</b></lable>
+            <label for="answer[2]" ><b>Question 2:What can you manipulate with javascript?(multi)</b></label>
             <br>
-            <input type="radio" name="answer[2]" value=1 > html attributes, tags and content.
+            <input type="radio" id="answer[2]" name="answer[2][0]" value=1 > html attributes, tags and content.
             <br>
-            <input type="radio" name="answer[3]" value=1 > CSS style.
+            <input type="radio" name="answer[2][1]" value=1 > CSS style.
             <br>
-            <input type="radio" name="answer[4]" value=0 > The server.
+            <input type="radio" name="answer[2][2]" value=0 > The server.
             <br>
-            <input type="radio" name="answer[5]" value=1 > The logic of a side.
+            <input type="radio" name="answer[2][3]" value=1 > The logic of a website client based.
             <br>
             <br>
+            <label for="answer[6]" ><b>Question 3: Why should you check if an input field ist filled or not?</b></label>
+            <br>
+            <input type="radio" id="answer[6]" name="answer[6]" value=0 > You don't need to chlableeck an input field. It's useless.
+            <br>
+            <input type="radio" name="answer[6]" value=0 > You don't need to check an input field. It's automatically checked.
+            <br>
+            <input type="radio" name="answer[6]" value=1 > If you need the content of this field you should check if it's filled or not.
+            <br>
+            <input type="radio" name="answer[6]" value=0 > That's not possible with Javascript.
+            <br>
+            <br>
+            <label for="answer[7]"><b>Question 4:Which property changes or gets the content of an html tag?</b></label>
+            <br>
+            <input type="radio" id="answer[7]" name="answer[7]" value=1 > element.innerHTML, but you should use element.textContent for security reasons.
+            <br>
+            <input type="radio" name="answer[7]" value=0 > It's html. You can only manipulate html with html.
+            <br>
+            <input type="radio" name="answer[7]" value=0 > innerHTML changes or gets only the text content of an html tag.
+            <br>
+            <input type="radio" name="answer[7]" value=0 > You can get the text content with a css function.
+            <br>
+            <br>
+            <label for="answer[8]"" ><b>Question 5:Which keyword is used to change the appearance with Javascript?</b></label>
+            <br>
+            <input type="radio" id="answer[8]"  name="answer[8]" value=0>We haven't read anything about changing the appearance of an html element.
+            <br>
+            <input type="radio" name="answer[8]" value=0 >You shouldn't change the appearance of a website.
+            <br>
+            <input type="radio" name="answer[8]" value=1 >With style you can change the appearance of an element.
+            <br>
+            <input type="radio" name="answer[8]" value=0 >You can change the appearance only with css.
+
+
+
+
+
 
             <br>
             <br>
