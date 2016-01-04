@@ -130,7 +130,7 @@ if($user->data['is_registered']){
             <br>
         </div>
         <article>
-            <h3>Wehere to put JavaScript?</h3>
+            <h3>Where to put JavaScript?</h3>
             <div class="split">
                 <br>
             </div>
@@ -287,7 +287,6 @@ if($user->data['is_registered']){
                         <a href="../chapter5/tutorial_chapter5.php" class="button secondary">Next Chapter</a>
                     </li>
                 </ul>
-
             </div>
         </div>
         <footer class="row">

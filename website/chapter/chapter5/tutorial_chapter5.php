@@ -124,32 +124,81 @@ if($user->data['is_registered']){
             <div class="split">
                 <br>
             </div>
-            <h1>Javascript operators</h1>
+            <h1>Chapter 5: Javascript implementation or where to put the toolbox</h1>
             <div class="split">
                 <br>
             </div>
             <article>
-
-                Chapter 2: Javascript implementation or where to put the toolbox
-
-                Remember basic structure of an html document from the previous examples.
-
+                <h3>The Script tag</h3>
+                <div class="split">
+                    <br>
+                </div>
+                Remember basic structure of an html document from the previous examples.<br>
                 Javascript can be helpful. But where should you insert your code. At first we introduce the html script tag. It ist needed for interaction between html and javascript. Like most tags the structure ist opening tag and closing tag
-
-                <!--<script></script>-->
-
+                <div class="split">
+                    <br>
+                </div>
+                <div class="panel">
+                    <p><img  height="15" width="15" hspace="20">
+                        <span class="script">&lt;script&gt;</span> CODE <span class="script">&lt;&#47;script&gt;</span> <br>
+                    </p>
+                </div>
+                <div class="split">
+                    <br>
+                </div>
                 This tag can be placed in the head or the body tag of the side.You can place it everywhere  and multiple scripttags there. But it is a good idea to keep the code together in one section of your side. You easily lost the track of your code if you scatter it around. If you place the tag in the body tag, you can improve your page loading speed, because it is not blocked by other script loading.
-
-                CODE GOES HERE
-
-                The above methods closely connect the side with the javascript code. For more separation between html and javascript you can save your code in external files. This files have the extension .js and no script tag ist allowed in this file. You have to use the src (=source) attribute to insert the external file in your side like this.
-
-                <!--<script src=“externalJavascriptFile.js“></script>-->
-
-                But for learning advantages we will use  the javascript code inside the html side.
-                Sometimes you may see the style=“text/javascript“ attribute within a script tag. That's nice, but scince html5 javascript is the default script language and therefore the attribute isn't needed anymore. Of course if you don't use html5 you have to indicate, that you are going to use javascript.
-
+                <div class="split">
+                    <br>
+                </div>
+                <div class="row">
+                    <div class="small-3 columns small-centered">
+                        <a  href="live_editor_chapter5_part1.php" target="_blank">
+                            <div class="button primary round radius text-center expand">
+                                Try It!
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="split">
+                    <br>
+                </div>
             </article>
+            <article>
+                <h3>Excluding Javascript</h3>
+                <div class="split">
+                    <br>
+                </div>
+                The above methods closely connect the side with the javascript code. For more separation between html and javascript you can save your code in external files. This files have the extension .js and no script tag ist allowed in this file. You have to use the src (=source) attribute to insert the external file in your side like this.
+                <div class="split">
+                    <br>
+                </div>
+                <div class="panel">
+                    <p><img  height="15" width="15" hspace="20">
+                        <span class="script">&lt;script</span><span class="keyword"> src= </span>"<span class="number">externalJavascriptFile.js</span>"<span class="script"> &gt;</span><span class="script">&lt;&#47;script&gt;</span> <br>
+                    </p>
+                </div>
+                <div class="split">
+                    <br>
+                </div>
+                But for learning advantages we will use the javascript code inside the html side.
+                Sometimes you may see the style=“text/javascript“ attribute within a script tag. That's nice, but since html5 javascript is the default script language and therefore the attribute isn't needed anymore. Of course if you don't use html5 you have to indicate, that you are going to use javascript.
+                <div class="split">
+                    <br>
+                </div>
+            </article>
+            <div class="row">
+                <div class="columns pagination-centered">
+                    <ul class="button-group round ">
+                        <li>
+                            <a href="#" class="button secondary" >Test Knowledge</a>
+                        </li>
+
+                        <li>
+                            <a href="../chapter6/tutorial_chapter6.php" class="button secondary">Next Chapter</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <footer class="row">
                 <div class="large-12 columns">
                     <hr>
