@@ -132,59 +132,59 @@ if($user->data['is_registered']){
 
 
         <form method="post" action="check_chapter1.php">
-            <label for="answer[1]" ><b>Question 1:?</b></label>
+            <label for="answer[1]" ><b>Question 1:What is not a javascript operator?</b></label>
             <br>
-            <input type="radio" id="answer[1]" name="answer[1]" value=0 >
+            <input type="radio" id="answer[1]" name="answer[1]" value=0 >--
             <br>
-            <input type="radio" name="answer[1]" value=1 >
+            <input type="radio" name="answer[1]" value=1 > /%
             <br>
-            <input type="radio" name="answer[1]" value=0 >
+            <input type="radio" name="answer[1]" value=0 >++
             <br>
-            <input type="radio" name="answer[1]" value=0 >
-            <br>
-            <br>
-            <label for="answer[2]" ><b>Question 2:?</b></label>
-            <br>
-            <input type="radio" id="answer[2]" name="answer[2][0]" value=1 >
-            <br>
-            <input type="radio" name="answer[2][1]" value=1 >
-            <br>
-            <input type="radio" name="answer[2][2]" value=0 >
-            <br>
-            <input type="radio" name="answer[2][3]" value=1 >
+            <input type="radio" name="answer[1]" value=0 >%
             <br>
             <br>
-            <label for="answer[3]" ><b>Question 3: ?</b></label>
+            <label for="answer[2]" ><b>Question 2:What's var erg = 23 % 7; ?</b></label>
             <br>
-            <input type="radio" id="answer[3]" name="answer[3]" value=0 >
+            <input type="radio" id="answer[2]" name="answer[2]" value=1 > erg would be 2
             <br>
-            <input type="radio" name="answer[3]" value=0 >
+            <input type="radio" name="answer[2]" value=0 >erg would be 5
             <br>
-            <input type="radio" name="answer[3]" value=1 >
+            <input type="radio" name="answer[2][2]" value=0 > There is no % operator in javascript.
             <br>
-            <input type="radio" name="answer[3]" value=0 >
-            <br>
-            <br>
-            <label for="answer[4]"><b>Question 4:?</b></label>
-            <br>
-            <input type="radio" id="answer[4]" name="answer[4]" value=1 >
-            <br>
-            <input type="radio" name="answer[4]" value=0 >
-            <br>
-            <input type="radio" name="answer[4]" value=0 >
-            <br>
-            <input type="radio" name="answer[4]" value=0 >
+            <input type="radio" name="answer[2][3]" value=0 >erg would be 7.
             <br>
             <br>
-            <label for="answer[5]"" ><b>Question 5:?</b></label>
+            <label for="answer[3]" ><b>Question 3: Instead of typing var x = x*7; you would type?</b></label>
             <br>
-            <input type="radio" id="answer[5]"  name="answer[5]" value=0>
+            <input type="radio" id="answer[3]" name="answer[3]" value=0 >x++
             <br>
-            <input type="radio" name="answer[5]" value=0 >
+            <input type="radio" name="answer[3]" value=0 >var x; x/=7;
             <br>
-            <input type="radio" name="answer[5]" value=1 >
+            <input type="radio" name="answer[3]" value=1 >var y; x*=7;
             <br>
-            <input type="radio" name="answer[5]" value=0 >
+            <input type="radio" name="answer[3]" value=0 >var x; X*=7;
+            <br>
+            <br>
+            <label for="answer[4]"><b>Question 4:Can you use += with strings?</b></label>
+            <br>
+            <input type="radio" id="answer[4]" name="answer[4]" value=0 >Yes, but it would add the values of the strings.
+            <br>
+            <input type="radio" name="answer[4]" value=1 >Yes, but it will concatenate two strings.
+            <br>
+            <input type="radio" name="answer[4]" value=0 >No, you can use this operator only with numbers.
+            <br>
+            <input type="radio" name="answer[4]" value=0 >There is no += operator.
+            <br>
+            <br>
+            <label for="answer[5]"" ><b>Question 5:If var hello = new; and hello+= world; you will get with alert(hello);?</b></label>
+            <br>
+            <input type="radio" id="answer[5]"  name="answer[5]" value=0>a popup with "hello new world".
+            <br>
+            <input type="radio" name="answer[5]" value=0 >a popup with "new world order"
+            <br>
+            <input type="radio" name="answer[5]" value=1 >a popup with "new world"
+            <br>
+            <input type="radio" name="answer[5]" value=0 >a popup with "new hello world"
 
 
 

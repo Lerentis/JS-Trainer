@@ -188,10 +188,6 @@ if($user->data['is_registered']){
             <input type="radio" name="answer[5]" value=0 >You can change the appearance only with css.
 
 
-
-
-
-
             <br>
             <br>
             <div class="row">

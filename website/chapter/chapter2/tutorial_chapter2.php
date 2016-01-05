@@ -171,7 +171,7 @@ if($user->data['is_registered']){
                     <li>Boolean</li>
                     <li>null</li>
                     <li>undefined</li>
-                    <li>symbol(new since 20115)</li>
+                    <li>symbol(new since 2015)</li>
                     <li>Host Object</li>
                 </ul>
             </ul>
