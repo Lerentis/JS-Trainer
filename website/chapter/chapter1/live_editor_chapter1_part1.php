@@ -74,7 +74,7 @@ if($user->data['is_registered']){
                 <ul class="dropdown">
                     <li><label>Startes</label></li>
                     <li>
-                        <a href="../chapter1/quizz_chapter1.php">Quiz 1</a>
+                        <a href="quiz_chapter1.php">Quiz 1</a>
                     </li>
                     <li>
                         <a href="../chapter2/quizz_chapter2.php">Quiz 2</a>
@@ -85,7 +85,7 @@ if($user->data['is_registered']){
                     <li class="divider"></li>
                     <li><label>Advanced</label></li>
                     <li>
-                        <a href="../chapter4/quizz_chapter4.php">Quiz 4</a>
+                        <a href="../chapter4/quiz_chapter4.php">Quiz 4</a>
                     </li>
                     <li>
                         <a href="../chapter5/quizz_chapter5.php">Quiz 5</a>

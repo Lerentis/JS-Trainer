@@ -81,24 +81,24 @@ if($user->data['is_registered']){
                                 <ul class="dropdown">
                                     <li><label>Startes</label></li>
                                     <li>
-                                        <a href="#">Quiz 1</a>
+                                        <a href="../chapter1/quiz_chapter1.php">Quiz 1</a>
                                     </li>
                                     <li>
-                                        <a href="#">Quiz 2</a>
+                                        <a href="../chapter2/quiz_chapter2.php">Quiz 2</a>
                                     </li>
                                     <li>
-                                        <a href="#">Quiz 3</a>
+                                        <a href="../chapter3/quiz_chapter3.php">Quiz 3</a>
                                     </li>
                                     <li class="divider"></li>
                                     <li><label>Advanced</label></li>
                                     <li>
-                                        <a href="#">Quiz 4</a>
+                                        <a href="../chapter4/quiz_chapter4.php">Quiz 4</a>
                                     </li>
                                     <li>
-                                        <a href="#">Quiz 5</a>
+                                        <a href="../chapter5/quiz_chapter5.php">Quiz 5</a>
                                     </li>
                                     <li>
-                                        <a href="#">Quiz 6</a>
+                                        <a href="../chapter6/quiz_chapter6.php">Quiz 6</a>
                                     </li>
                                 </ul>
                             </li>
@@ -171,7 +171,7 @@ if($user->data['is_registered']){
                     <li>Boolean</li>
                     <li>null</li>
                     <li>undefined</li>
-                    <li>symbol(new since 20115)</li>
+                    <li>symbol(new since 2015)</li>
                     <li>Host Object</li>
                 </ul>
             </ul>

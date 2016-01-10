@@ -26,7 +26,7 @@ if($user->data['is_registered']){
     <script src="../../js/vendor/jquery.js"></script>
     <script src="../../js/foundation.min.js"></script>
     <script src="../../js/vendor/jquery.cookie.js"></script>
-    <title> <?php echo "Chapter 4 for " . $user->data['username']; ?> </title>
+    <title> <?php echo "Chapter 1 Quiz for " . $user->data['username']; ?> </title>
 </head>
 <body>
 <div class="row">
@@ -81,7 +81,7 @@ if($user->data['is_registered']){
                                 <ul class="dropdown">
                                     <li><label>Startes</label></li>
                                     <li>
-                                        <a href="../chapter1/quiz_chapter1.php">Quiz 1</a>
+                                        <a href="#">Quiz 1</a>
                                     </li>
                                     <li>
                                         <a href="../chapter2/quiz_chapter2.php">Quiz 2</a>
@@ -125,170 +125,82 @@ if($user->data['is_registered']){
         <div class="split">
             <br>
         </div>
-        <h1>Chapter 4: What can you do with javascript?</h1>
+        <h1>Chapter 1: Questions</h1>
         <div class="split">
             <br>
         </div>
-        <article>
-            <h3>Where to put JavaScript?</h3>
-            <div class="split">
-                <br>
-            </div>
-            <!--Img: Big Why with question mark-->
-            Congratulations, you are able to use a webbrowser an lost your way to this side. Maybe it was an accident but if not you possibly want to learn why for heavens sake you should learn a new language beside html and css. Maybe you've already learned a server based language like php, but, as the word server word suggests, happens on the server. There ist the user, which ist called a client.l If you want to control his experience, you should use a client side language. For example you can test data on the server, but the way would be: <br>
-            client → server → datatesting → server → client . <br>
-            With Javascript it looks more like: <br>
-            client → datatesting → client<br>
-            <div class="split">
-                <br>
-            </div>
-            We are skipping the server side here.
-            <div class="split">
-                <br>
-            </div>
-            </article>
-        <article>
-            <h3>Testing an Inputfield</h3>
-            <div class="split">
-                <br>
-            </div>
-            We will demonstrate this in a example below. An input field ist tested if it is empty or not. You don't need to understand every single line. Grab what you can. We explain a lot of details later.
-            <div class="split">
-                <br>
-            </div>
-            <div class="row">
-                <div class="small-3 columns small-centered">
-                    <a  href="live_editor_chapter4_part1.php" target="_blank">
-                        <div class="button primary round radius text-center expand">
-                            Try It!
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="split">
-                <br>
-            </div>
-            Remember the basic structure of most html elements.
-            <div class="split">
-                <br>
-            </div>
-            <div class="panel">
-                <p><img  height="15" width="15" hspace="20">
-                    <span class="script">&lt;tagname</span> <span class="keyword"> attribute </span> = <span class="number"> value </span> , ... <span class="script"> > </span>content goes here <span class="script">&lt;/tagname&gt;</span>
-                </p>
-            </div>
-            <div class="split">
-                <br>
-            </div>
-        </article>
-        <article>
-            <h3>Manipulate html tags and content</h3>
-            <div class="split">
-                <br>
-            </div>
-            And what else? Maybe you've recognised that a pure html side with css is very static, there aren't the fancy boinzing and moving pictures. Well those things can be done, too. But before we are making a new wining motion full website we are simpling changing the appearing text with a click on a html button.
-            <div class="split">
-                <br>
-            </div>
-            <div class="row">
-                <div class="small-3 columns small-centered">
-                    <a  href="live_editor_chapter4_part2.php" target="_blank">
-                        <div class="button primary round radius text-center expand">
-                            Try It!
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="split">
-                <br>
-            </div>
-        </article>
-        <article>
-            <h3>Manipulate html attribute</h3>
-            <div class="split">
-                <br>
-            </div>
-            More fancy stuff can be done with changing attributes. We will now change with a click on an image the image. And will change from night to day. Horray, we are the master of time. At least on a webpage ;)
-            <div class="split">
-                <br>
-            </div>
-            <div class="row">
-                <div class="small-3 columns small-centered">
-                    <a  href="live_editor_chapter4_part3.php" target="_blank">
-                        <div class="button primary round radius text-center expand">
-                            Try It!
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="split">
-                <br>
-            </div>
-            Remember the basic css syntax:
-            <div class="split">
-                <br>
-            </div>
 
-            <p>
-                <span class="script">Selector1</span> ( <span class="keyword">tag, .class, #id</span>[,<span class="script">selector2</span>[,…] <br>
-                { <br>
-                <span class="script"> (Declaration) </span> <span class="keyword"> property</span>:<span class="number">value</span> ; <br>
-                <span class="script"> (next Declaration) </span> <span class="keyword"> property1</span>:<span class="number">value</span>; ... <br>
-                } <br>
-            </p>
-            <div class="split">
-                <br>
-            </div>
-            Don't forget a semicolon at every end of line!!!!!
-            <div class="split">
-                <br>
-            </div>
-        </article>
-        <article>
-            <h3>Manipulate css</h3>
-            <div class="split">
-                <br>
-            </div>
-            Ok, we can change content and attributes, but the actual style is done by css. Fortunately javascript enables us to change this language, too.
-            <div class="split">
-                <br>
-            </div>
-            <div class="row">
-                <div class="small-3 columns small-centered">
-                    <a  href="live_editor_chapter4_part4.php" target="_blank">
-                        <div class="button primary round radius text-center expand">
-                            Try It!
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="split">
-                <br>
-            </div>
-            </article>
-        <article>
-            <h3>Coming soon ...</h3>
-            <div class="split">
-                <br>
-            </div>
-            Your first glimpse on the language are done. Maybe you've already seen the big toolbox you are going to get. Have fun and learn. You could be the one, who saves a page from really bad experience. There are still enough of them in the wild, wild web :D
-        </article>
-        <div class="split">
+
+        <form method="post" action="check_chapter1.php">
+            <label for="answer[1]" ><b>Question 1:What is not a javascript operator?</b></label>
             <br>
-        </div>
-        <div class="row">
-            <div class="columns pagination-centered">
-                <ul class="button-group round ">
-                    <li>
-                        <a href="quiz_chapter4.php" class="button secondary" >Test Knowledge</a>
-                    </li>
+            <input type="radio" id="answer[1]" name="answer[1]" value=0 >--
+            <br>
+            <input type="radio" name="answer[1]" value=1 > /%
+            <br>
+            <input type="radio" name="answer[1]" value=0 >++
+            <br>
+            <input type="radio" name="answer[1]" value=0 >%
+            <br>
+            <br>
+            <label for="answer[2]" ><b>Question 2:What's var erg = 23 % 7; ?</b></label>
+            <br>
+            <input type="radio" id="answer[2]" name="answer[2]" value=1 > erg would be 2
+            <br>
+            <input type="radio" name="answer[2]" value=0 >erg would be 5
+            <br>
+            <input type="radio" name="answer[2][2]" value=0 > There is no % operator in javascript.
+            <br>
+            <input type="radio" name="answer[2][3]" value=0 >erg would be 7.
+            <br>
+            <br>
+            <label for="answer[3]" ><b>Question 3: Instead of typing var x = x*7; you would type?</b></label>
+            <br>
+            <input type="radio" id="answer[3]" name="answer[3]" value=0 >x++
+            <br>
+            <input type="radio" name="answer[3]" value=0 >var x; x/=7;
+            <br>
+            <input type="radio" name="answer[3]" value=1 >var y; x*=7;
+            <br>
+            <input type="radio" name="answer[3]" value=0 >var x; X*=7;
+            <br>
+            <br>
+            <label for="answer[4]"><b>Question 4:Can you use += with strings?</b></label>
+            <br>
+            <input type="radio" id="answer[4]" name="answer[4]" value=0 >Yes, but it would add the values of the strings.
+            <br>
+            <input type="radio" name="answer[4]" value=1 >Yes, but it will concatenate two strings.
+            <br>
+            <input type="radio" name="answer[4]" value=0 >No, you can use this operator only with numbers.
+            <br>
+            <input type="radio" name="answer[4]" value=0 >There is no += operator.
+            <br>
+            <br>
+            <label for="answer[5]"" ><b>Question 5:If var hello = new; and hello+= world; you will get with alert(hello);?</b></label>
+            <br>
+            <input type="radio" id="answer[5]"  name="answer[5]" value=0>a popup with "hello new world".
+            <br>
+            <input type="radio" name="answer[5]" value=0 >a popup with "new world order"
+            <br>
+            <input type="radio" name="answer[5]" value=1 >a popup with "new world"
+            <br>
+            <input type="radio" name="answer[5]" value=0 >a popup with "new hello world"
 
-                    <li>
-                        <a href="../chapter5/tutorial_chapter5.php" class="button secondary">Next Chapter</a>
-                    </li>
-                </ul>
+
+
+
+
+
+            <br>
+            <br>
+            <div class="row">
+                <div class="columns pagination-centered">
+                    <input type="submit" class="button round" value="Check your answers!">
+                </div>
             </div>
-        </div>
+
+        </form>
+
         <footer class="row">
             <div class="large-12 columns">
                 <hr>
