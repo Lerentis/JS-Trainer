@@ -13,5 +13,5 @@ define("DEFAULT_ROLE", "member");
  
 define("SECURE", FALSE); 
 
-
+define("MAX_LESSIONS", 6);
 ?>

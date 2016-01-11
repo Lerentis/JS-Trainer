@@ -64,7 +64,7 @@ class db{
     }
 
     function getMaxLessons(){
-        return 6;
+        return MAX_LESSIONS;
     }
 
     function tutorialCompleted($user_id, $tutorial_id, $correct_answers){
