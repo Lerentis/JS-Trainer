@@ -178,7 +178,7 @@ var HTMLiveCode = function() {
 
 	return {
 		init: function() {
-			CodeMirror.keyMap.HTMLiveCode = {
+			CodeMirror.keyMap.pcDefault = {
 				fallthrough: ["default"]
 			};
 		
@@ -194,29 +194,16 @@ var HTMLiveCode = function() {
 				tabSize: 4,
 				tabMode: "indent",
 				theme: _editorDefaultSettings.theme,
-				keyMap: "HTMLiveCode",
+				keyMap: "pcDefault",
 				onHighlightComplete: function() {
 					if (!_initialized) {
 						_initialized = true;
 						_codeView = _codeMirrorInstance.getWrapperElement();
-						
-						/*if (localStorage.getItem("htmlivecodeText") !== null) {
-							_codeMirrorInstance.setValue(localStorage.getItem("htmlivecodeText"));
-						} else {*/
-							_codeMirrorInstance.setValue(HTMLiveCodeTemplate);
-						/*}
-
-						if (localStorage.getItem("htmlivecodeSettings") !== null) {
-							_editorStorageSettings = JSON.parse(localStorage.getItem("htmlivecodeSettings"));
-							_settingsController.applySettings();
-						} else {*/
-							localStorage.setItem("htmlivecodeSettings", JSON.stringify(_editorDefaultSettings));
-							_editorStorageSettings = _cloneObject(_editorDefaultSettings);
-						//}
-
+						_codeMirrorInstance.setValue(HTMLiveCodeTemplate);
+						localStorage.setItem("htmlivecodeSettings", JSON.stringify(_editorDefaultSettings));
+						_editorStorageSettings = _cloneObject(_editorDefaultSettings);
 						_resizeController.resizeAreas();
 						_updateViews();
-						//_menuController.init();
 						_resizeController.init();
 					}
 				},
