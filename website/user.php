@@ -113,10 +113,10 @@ if($user->data['is_registered']){
                                 <a href="#"> <?php echo $user->data['username']; ?> </a>
                                 <ul class="dropdown">
                                     <li>
-                                        <a href="http://127.0.0.1:80/memberlist.php?mode=viewprofile&u=<?php echo $user->data['user_id'] ?>">Profile</a>
+                                        <a href="http://forum.test.org/memberlist.php?mode=viewprofile&u=<?php echo $user->data['user_id'] ?>">Profile</a>
                                     </li>
                                     <li>
-                                        <a href="http://127.0.0.1:80/ucp.php?i=pm&folder=inbox">Inbox</a>
+                                        <a href="http://forum.test.org/ucp.php?i=pm&folder=inbox">Inbox</a>
                                     </li>
                                     <li>
                                         <a href="php/handle_logout.php">Logout</a>
@@ -140,7 +140,7 @@ if($user->data['is_registered']){
                 <?php
                     } else {
                 ?>
-                      <img src="http://127.0.0.1/download/file.php?avatar= <?php echo $user->data['user_avatar']; ?>" height="500" width="500">
+                      <img src="http://forum.test.org/download/file.php?avatar= <?php echo $user->data['user_avatar']; ?>" height="500" width="500">
                 <?php
                     }
                 ?>
