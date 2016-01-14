@@ -132,15 +132,15 @@ if($user->data['is_registered']){
 
 
         <form method="post" action="check_chapter1.php">
-            <label for="answer[1]" ><b>Question 1:?</b></label>
+            <label for="answer[1]" ><b>Question 1:What tag is needed to indicate javascript in html?</b></label>
             <br>
-            <input type="radio" id="answer[1]" name="answer[1]" value=0 >
+            <input type="radio" id="answer[1]" name="answer[1]" value=0 >&lt;javascript&gt;&lt;/javascript&gt;
             <br>
-            <input type="radio" name="answer[1]" value=1 >
+            <input type="radio" name="answer[1]" value=0 >&lt;script&gt;&lt;/script&gt; with any html version.
             <br>
-            <input type="radio" name="answer[1]" value=0 >
+            <input type="radio" name="answer[1]" value=1 >&lt;script&gt;&lt;/script&gt; since html version 5.x.
             <br>
-            <input type="radio" name="answer[1]" value=0 >
+            <input type="radio" name="answer[1]" value=1 >&lt;script type=text/javascript&gt;&lt;/script&gt; any html version
             <br>
             <br>
             <label for="answer[2]" ><b>Question 2:?</b></label>

@@ -13,19 +13,14 @@ $user->setup();
 
 if($user->data['is_registered']){
 
-    //var_dump($_POST);
-   $array=$request->variable(answer,array(answer,1),NULL);
+    $array=$request->variable('answer',array(0));
 
-    $array_sum=0;
-
-
-
-    for($i=0;$i<count($array);$i++){
-        $array_sum+=intval($array[$i]);
-    }
+    $max_points=7;
+    $sum=array_sum($array);
+    $percentage=100/$max_points*$sum;
 
     $db = new db();
-    $db->tutorialCompleted($user->data['user_id'],4,$array_sum*10);
+    $db->tutorialCompleted($user->data['user_id'],4,$percentage);
 
 ?>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
@@ -142,7 +137,8 @@ if($user->data['is_registered']){
             <br>
         </div>
         <article>
-            <?php echo "You've got ".$array_sum." points in your Quizz!"?>
+            <?php echo "You've got ".$sum." out of ".$max_points." points in your Quiz!<br>That's ".$percentage."%"?>
+
         </article>
 
 
