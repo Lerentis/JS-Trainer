@@ -32,7 +32,7 @@ if($user->data['is_registered']){
         $sum+=$sum_answer[$i];
 
     if($sum > 0)
-        $percentage=100/$max_points*$sum;
+        $percentage=round(100/$max_points*$sum);
 
     $db = new db();
     $db->tutorialCompleted($user->data['user_id'],4,$percentage);
@@ -49,7 +49,7 @@ if($user->data['is_registered']){
     <script src="../../js/vendor/jquery.js"></script>
     <script src="../../js/foundation.min.js"></script>
     <script src="../../js/vendor/jquery.cookie.js"></script>
-    <title> <?php echo "Quizz 4 for " . $user->data['username']; ?> </title>
+    <title> <?php echo "Evaluation for Quiz 5 for " . $user->data['username']; ?> </title>
 
     <script>
         <?php
@@ -182,40 +182,40 @@ if($user->data['is_registered']){
             <br>
             <br>
             <h3>What you answered:</h3>
-            <p><b>Question 1:Where ist plain javascript executed?</b></p>
+            <p><b>Question 1: Can you use a function without an object?</b></p>
             <ul>
-                <li  id="answer1[0]" hidden> On the server side.</li>
-                <li  id="answer1[1]" hidden> In the browser from the client.</li>
-                <li  id="answer1[2]" hidden> It's a script language which doesn't need to be executed</li>
-                <li  id="answer1[3]" hidden> On server an client side.</li>
+                <li  id="answer1[0]" hidden> Yes, if you use alert(), than it is a function without an object. </li>
+                <li  id="answer1[1]" hidden> No, because you use window as an default object if no object is specified. </li>
+                <li  id="answer1[2]" hidden> Javascript isn't an object oriented programming language. Objects doesn't exist. </li>
+                <li  id="answer1[3]" hidden> You have to type document before a function. There is only this object.</li>
             </ul>
-            <p><b>Question 2:What can you manipulate with javascript?</b></p>
+            <p><b>Question 2: Which functions do you know to print text?</b></p>
             <ul>
-                <li  id="answer2[0]" hidden> html attributes, tags and content. </li>
-                <li  id="answer2[1]" hidden> CSS style.</li>
-                <li  id="answer2[2]" hidden> The server.</li>
-                <li  id="answer2[3]" hidden> The logic of a website client based. </li>
+                <li  id="answer2[0]" hidden> alert() from object window. </li>
+                <li  id="answer2[1]" hidden> write() from object document. </li>
+                <li  id="answer2[2]" hidden> post() from object window. </li>
+                <li  id="answer2[3]" hidden> log() from object window.  </li>
             </ul>
-            <p><b>Question 2:What can you manipulate with javascript?</b></p>
+            <p><b>Question 3: What does the . do?</b></p>
             <ul>
-                <li  id="answer3[0]" hidden> html attributes, tags and content. </li>
-                <li  id="answer3[1]" hidden> You don't need to check an input field. It's automatically checked.</li>
-                <li  id="answer3[2]" hidden> If you need the content of this field you should check if it's filled or not.</li>
-                <li  id="answer3[3]" hidden> That's not possible with Javascript. </li>
+                <li  id="answer3[0]" hidden> It's only a separator without meaning.  </li>
+                <li  id="answer3[1]" hidden> This is a common typo. The . isn't used in Javascript. </li>
+                <li  id="answer3[2]" hidden> It's indicating that the following belongs to the left side.</li>
+                <li  id="answer3[3]" hidden> The . concatenates two strings. </li>
             </ul>
-            <p><b>Question 4:Which property changes or gets the content of an html tag?</b></p>
+            <p><b>Question 4: Which methods allow you to select a html element?</b></p>
             <ul>
-                <li  id="answer4[0]" hidden> element.innerHTML, but you should use element.textContent for security reasons. <br></li>
-                <li  id="answer4[1]" hidden> It's html. You can only manipulate html with html. </li>
-                <li  id="answer4[2]" hidden> innerHTML changes or gets only the text content of an html tag. </li>
-                <li  id="answer4[3]" hidden>  You can get the text content with a css function.  </li>
+                <li  id="answer4[0]" hidden> document.getElementById(id)  <br></li>
+                <li  id="answer4[1]" hidden> document.getElementsByName[Index](name)  </li>
+                <li  id="answer4[2]" hidden> document.getElementByClassName[Index](name)  </li>
+                <li  id="answer4[3]" hidden> You can't select an html tag with javascript   </li>
             </ul>
-            <p><b>Question 5:Which keyword is used to change the appearance with Javascript?</b></p>
+            <p><b>Question 5:How can you print messages inside the console tag from the debugger.</b></p>
             <ul>
-                <li  id="answer5[0]" hidden> We haven't read anything about changing the appearance of an html element. </li>
-                <li  id="answer5[1]" hidden> You shouldn't change the appearance of a website. </li>
-                <li  id="answer5[2]" hidden> With style you can change the appearance of an element. </li>
-                <li  id="answer5[3]" hidden> You can change the appearance only with css. </li>
+                <li  id="answer5[0]" hidden> log.console() </li>
+                <li  id="answer5[1]" hidden> You can only print on your website.  </li>
+                <li  id="answer5[2]" hidden> console.log()</li>
+                <li  id="answer5[3]" hidden> log() </li>
             </ul>
 
 

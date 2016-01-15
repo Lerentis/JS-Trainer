@@ -133,7 +133,7 @@ if($user->data['is_registered']){
             <div class="split">
                 <br>
             </div>
-            Now we are going to learn our first useful lines of code. If you want to change, show or manipulate the text of your side with javascript, you will need a function to do so. <br>
+            Now we are going to learn our first useful lines of code. If you want to change, show or manipulate the text of your side with javascript, you can achieve this with a function. <br>
             A function in Javascript follows a simple pattern, where the specific function is called by:
             <div class="split">
                 <br>
@@ -154,7 +154,7 @@ if($user->data['is_registered']){
             <div class="split">
                 <br>
             </div>
-            You know them. The tiny little windows which pop up on a side and want to give you a full workout for your mousetabbing finger. Therefore use them carefully and only when it is really important to cache your users attention. It's also a god for debugging uses.
+            You know them. The tiny little windows which pop up on a side and want to give you a full workout for your mouse tabbing finger. Therefore use them carefully and only when it is really important to cache your users attention. It's also a god for debugging uses.
             <div class="split">
                 <br>
             </div>
@@ -172,6 +172,10 @@ if($user->data['is_registered']){
             </div>
             <span class="impor">Remember:</span><br>
             window.alert() means object.method(). You are using an object of type window and use it's method alert().
+            <div class="split">
+                <br>
+            </div>
+            If you only type alert() in your script, you could assume, that it won't work. But no rule without exception. As default every function becames a function of object windows. This means, that window.alert() and alert() are the same.
             <div class="split">
                 <br>
             </div>

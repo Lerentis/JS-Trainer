@@ -26,7 +26,7 @@ if($user->data['is_registered']){
     <script src="../../js/vendor/jquery.js"></script>
     <script src="../../js/foundation.min.js"></script>
     <script src="../../js/vendor/jquery.cookie.js"></script>
-    <title> <?php echo "Chapter 1 Quiz for " . $user->data['username']; ?> </title>
+    <title> <?php echo "Chapter 5 Quiz for " . $user->data['username']; ?> </title>
 </head>
 <body>
 <div class="row">
@@ -125,72 +125,66 @@ if($user->data['is_registered']){
         <div class="split">
             <br>
         </div>
-        <h1>Chapter 1: Questions</h1>
+        <h1>Chapter 6: Questions</h1>
         <div class="split">
             <br>
         </div>
 
 
-        <form method="post" action="check_chapter1.php">
-            <label for="answer[1]" ><b>Question 1:?</b></label>
+        <form method="post" action="check_chapter6.php">
+            <label for="answer[1]" ><b>Question 1: Can you use a function without an object?</b></label>
             <br>
-            <input type="radio" id="answer[1]" name="answer[1]" value=0 >
+            <input type="checkbox" id="answer[1]" name="answer1[0]" value=-1 >Yes, if you use alert(), than it is a function without an object.
             <br>
-            <input type="radio" name="answer[1]" value=1 >
+            <input type="checkbox" name="answer1[1]" value=1 >No, because you use window as an default object if no object is specified.
             <br>
-            <input type="radio" name="answer[1]" value=0 >
+            <input type="checkbox" name="answer1[2]" value=-1 >Javascript isn't an object oriented programming language. Objects doesn't exist.
             <br>
-            <input type="radio" name="answer[1]" value=0 >
-            <br>
-            <br>
-            <label for="answer[2]" ><b>Question 2:?</b></label>
-            <br>
-            <input type="radio" id="answer[2]" name="answer[2][0]" value=1 >
-            <br>
-            <input type="radio" name="answer[2][1]" value=1 >
-            <br>
-            <input type="radio" name="answer[2][2]" value=0 >
-            <br>
-            <input type="radio" name="answer[2][3]" value=1 >
+            <input type="checkbox" name="answer1[3]" value=-1 >You have to type document before a function. There is only this object.
             <br>
             <br>
-            <label for="answer[3]" ><b>Question 3: ?</b></label>
+            <label for="answer[2]" ><b>Question 2: Which functions do you know to print text?</b></label>
             <br>
-            <input type="radio" id="answer[3]" name="answer[3]" value=0 >
+            <input type="checkbox" id="answer[2]" name="answer2[0]" value=1 >alert() from object window.
             <br>
-            <input type="radio" name="answer[3]" value=0 >
+            <input type="checkbox" name="answer2[1]" value=1 >write() from object document.
             <br>
-            <input type="radio" name="answer[3]" value=1 >
+            <input type="checkbox" name="answer2[2]" value=-1 >post() from object window.
             <br>
-            <input type="radio" name="answer[3]" value=0 >
-            <br>
-            <br>
-            <label for="answer[4]"><b>Question 4:?</b></label>
-            <br>
-            <input type="radio" id="answer[4]" name="answer[4]" value=1 >
-            <br>
-            <input type="radio" name="answer[4]" value=0 >
-            <br>
-            <input type="radio" name="answer[4]" value=0 >
-            <br>
-            <input type="radio" name="answer[4]" value=0 >
+            <input type="checkbox" name="answer2[3]" value=1 >log() from object window.
             <br>
             <br>
-            <label for="answer[5]"" ><b>Question 5:?</b></label>
+            <label for="answer[3]" ><b>Question 3: What does the . do?</b></label>
             <br>
-            <input type="radio" id="answer[5]"  name="answer[5]" value=0>
+            <input type="checkbox" id="answer[3]" name="answer3[0]" value=-1 >It's only a separator without meaning.
             <br>
-            <input type="radio" name="answer[5]" value=0 >
+            <input type="checkbox" name="answer3[1]" value=-1 > This is a common typo. The . isn't used in Javascript.
             <br>
-            <input type="radio" name="answer[5]" value=1 >
+            <input type="checkbox" name="answer3[2]" value=1 >It's indicating that the following belongs to the
             <br>
-            <input type="radio" name="answer[5]" value=0 >
-
-
-
-
-
-
+            <input type="checkbox" name="answer3[3]" value=-1 >The . concatenates two strings
+            <br>
+            <br>
+            <label for="answer[4]"><b>Question 4:Which methods allow you to select a html element?</b></label>
+            <br>
+            <input type="checkbox" id="answer[4]" name="answer4[0]" value=1 >document.getElementById(id)
+            <br>
+            <input type="checkbox" name="answer4[1]" value=1 >document.getElementsByName[Index](name)
+            <br>
+            <input type="checkbox" name="answer4[2]" value=1 >document.getElementByClassName[Index](name)
+            <br>
+            <input type="checkbox" name="answer4[3]" value=-1 >You can't select an html tag with javascript
+            <br>
+            <br>
+            <label for="answer[5]"" ><b>Question 5:How can you print messages inside the console tag from the debugger?</b></label>
+            <br>
+            <input type="checkbox" id="answer[5]"  name="answer5[0]" value=-1>log.console()
+            <br>
+            <input type="checkbox" name="answer5[1]" value=-1 >You can only print on your website.
+            <br>
+            <input type="checkbox" name="answer5[2]" value=1 >console.log()
+            <br>
+            <input type="checkbox" name="answer5[3]" value=-1 >log()
             <br>
             <br>
             <div class="row">

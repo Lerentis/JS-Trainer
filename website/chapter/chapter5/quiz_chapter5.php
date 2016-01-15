@@ -131,66 +131,28 @@ if($user->data['is_registered']){
         </div>
 
 
-        <form method="post" action="check_chapter1.php">
+        <form method="post" action="check_chapter5.php">
             <label for="answer[1]" ><b>Question 1:What tag is needed to indicate javascript in html?</b></label>
             <br>
-            <input type="radio" id="answer[1]" name="answer[1]" value=0 >&lt;javascript&gt;&lt;/javascript&gt;
+            <input type="checkbox" id="answer[1]" name="answer1[0]" value=-1 >&lt;javascript&gt;&lt;/javascript&gt;
             <br>
-            <input type="radio" name="answer[1]" value=0 >&lt;script&gt;&lt;/script&gt; with any html version.
+            <input type="checkbox" name="answer1[1]" value=-1 >&lt;script&gt;&lt;/script&gt; with any html version.
             <br>
-            <input type="radio" name="answer[1]" value=1 >&lt;script&gt;&lt;/script&gt; since html version 5.x.
+            <input type="checkbox" name="answer1[2]" value=1 >&lt;script&gt;&lt;/script&gt; since html version 5.x.
             <br>
-            <input type="radio" name="answer[1]" value=1 >&lt;script type=text/javascript&gt;&lt;/script&gt; any html version
-            <br>
-            <br>
-            <label for="answer[2]" ><b>Question 2:?</b></label>
-            <br>
-            <input type="radio" id="answer[2]" name="answer[2][0]" value=1 >
-            <br>
-            <input type="radio" name="answer[2][1]" value=1 >
-            <br>
-            <input type="radio" name="answer[2][2]" value=0 >
-            <br>
-            <input type="radio" name="answer[2][3]" value=1 >
+            <input type="checkbox" name="answer1[3]" value=1 >&lt;script type=text/javascript&gt;&lt;/script&gt; any html version
             <br>
             <br>
-            <label for="answer[3]" ><b>Question 3: ?</b></label>
+            <label for="answer[2]" ><b>Question 2:Which attribute can incluede an external Javascript field?</b></label>
             <br>
-            <input type="radio" id="answer[3]" name="answer[3]" value=0 >
+            <input type="checkbox" id="answer[2]" name="answer2[0]" value=1 >src
             <br>
-            <input type="radio" name="answer[3]" value=0 >
+            <input type="checkbox" name="answer2[1]" value=-1 >src()
             <br>
-            <input type="radio" name="answer[3]" value=1 >
+            <input type="checkbox" name="answer2[2]" value=-1 >type
             <br>
-            <input type="radio" name="answer[3]" value=0 >
+            <input type="checkbox" name="answer2[3]" value=-1 >type()
             <br>
-            <br>
-            <label for="answer[4]"><b>Question 4:?</b></label>
-            <br>
-            <input type="radio" id="answer[4]" name="answer[4]" value=1 >
-            <br>
-            <input type="radio" name="answer[4]" value=0 >
-            <br>
-            <input type="radio" name="answer[4]" value=0 >
-            <br>
-            <input type="radio" name="answer[4]" value=0 >
-            <br>
-            <br>
-            <label for="answer[5]"" ><b>Question 5:?</b></label>
-            <br>
-            <input type="radio" id="answer[5]"  name="answer[5]" value=0>
-            <br>
-            <input type="radio" name="answer[5]" value=0 >
-            <br>
-            <input type="radio" name="answer[5]" value=1 >
-            <br>
-            <input type="radio" name="answer[5]" value=0 >
-
-
-
-
-
-
             <br>
             <br>
             <div class="row">

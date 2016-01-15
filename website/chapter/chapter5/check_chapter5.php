@@ -1,4 +1,4 @@
-check_chapter4.php<?php
+<?php
 ini_set('display_errors',1); ini_set('display_startup_errors',1);
 
 define('IN_PHPBB', true);
@@ -13,8 +13,9 @@ $user->setup();
 
 if($user->data['is_registered']){
 
-    $question=5;
-    $max_points=7;
+    $question=2;
+    $max_points=3;
+    $tutorial=5;
 
     for($i=1;$i<=$question; $i++){
         $array_name =$i;
@@ -35,7 +36,7 @@ if($user->data['is_registered']){
         $percentage=100/$max_points*$sum;
 
     $db = new db();
-    $db->tutorialCompleted($user->data['user_id'],4,$percentage);
+    $db->tutorialCompleted($user->data['user_id'],$tutorial,$percentage);
 
 ?>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
@@ -182,43 +183,20 @@ if($user->data['is_registered']){
             <br>
             <br>
             <h3>What you answered:</h3>
-            <p><b>Question 1:Where ist plain javascript executed?</b></p>
+            <p><b>Question 1:What tag is needed to indicate javascript in html?</b></p>
             <ul>
-                <li  id="answer1[0]" hidden> On the server side.</li>
-                <li  id="answer1[1]" hidden> In the browser from the client.</li>
-                <li  id="answer1[2]" hidden> It's a script language which doesn't need to be executed</li>
-                <li  id="answer1[3]" hidden> On server an client side.</li>
+                <li  id="answer1[0]" hidden> &lt;javascript&gt;&lt;/javascript&gt;</li>
+                <li  id="answer1[1]" hidden> &lt;script&gt;&lt;/script&gt; with any html version.</li>
+                <li  id="answer1[2]" hidden> &lt;script&gt;&lt;/script&gt; since html version 5.x.</li>
+                <li  id="answer1[3]" hidden> &lt;script type=text/javascript&gt;&lt;/script&gt; any html version</li>
             </ul>
-            <p><b>Question 2:What can you manipulate with javascript?</b></p>
+            <p><b>Question 2:Which attribute can incluede an external Javascript field?</b></p>
             <ul>
-                <li  id="answer2[0]" hidden> html attributes, tags and content. </li>
-                <li  id="answer2[1]" hidden> CSS style.</li>
-                <li  id="answer2[2]" hidden> The server.</li>
-                <li  id="answer2[3]" hidden> The logic of a website client based. </li>
+                <li  id="answer2[0]" hidden> src</li>
+                <li  id="answer2[1]" hidden> src()</li>
+                <li  id="answer2[2]" hidden> type</li>
+                <li  id="answer2[3]" hidden> type() </li>
             </ul>
-            <p><b>Question 2:What can you manipulate with javascript?</b></p>
-            <ul>
-                <li  id="answer3[0]" hidden> html attributes, tags and content. </li>
-                <li  id="answer3[1]" hidden> You don't need to check an input field. It's automatically checked.</li>
-                <li  id="answer3[2]" hidden> If you need the content of this field you should check if it's filled or not.</li>
-                <li  id="answer3[3]" hidden> That's not possible with Javascript. </li>
-            </ul>
-            <p><b>Question 4:Which property changes or gets the content of an html tag?</b></p>
-            <ul>
-                <li  id="answer4[0]" hidden> element.innerHTML, but you should use element.textContent for security reasons. <br></li>
-                <li  id="answer4[1]" hidden> It's html. You can only manipulate html with html. </li>
-                <li  id="answer4[2]" hidden> innerHTML changes or gets only the text content of an html tag. </li>
-                <li  id="answer4[3]" hidden>  You can get the text content with a css function.  </li>
-            </ul>
-            <p><b>Question 5:Which keyword is used to change the appearance with Javascript?</b></p>
-            <ul>
-                <li  id="answer5[0]" hidden> We haven't read anything about changing the appearance of an html element. </li>
-                <li  id="answer5[1]" hidden> You shouldn't change the appearance of a website. </li>
-                <li  id="answer5[2]" hidden> With style you can change the appearance of an element. </li>
-                <li  id="answer5[3]" hidden> You can change the appearance only with css. </li>
-            </ul>
-
-
 
         </article>
 
