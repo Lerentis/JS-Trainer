@@ -13,10 +13,25 @@ $user->setup();
 
 if($user->data['is_registered']){
 
-    $array=$request->variable('answer',array(0));
-
+    $question=5;
     $max_points=7;
-    $sum=array_sum($array);
+
+    for($i=1;$i<=$question; $i++){
+        $array_name =$i;
+        $answer[$i] = $request->variable('answer' . $array_name, array(0));
+    }
+
+    $sum=0;
+    $percentage=0;
+
+
+    for($i = 1; $i<=count($answer); $i++)
+        $sum_answer[$i]=array_sum($answer[$i]);
+
+    for($i = 1; $i<=count($sum_answer); $i++)
+        $sum+=$sum_answer[$i];
+
+    if($sum > 0)
     $percentage=100/$max_points*$sum;
 
     $db = new db();
@@ -35,8 +50,32 @@ if($user->data['is_registered']){
     <script src="../../js/foundation.min.js"></script>
     <script src="../../js/vendor/jquery.cookie.js"></script>
     <title> <?php echo "Quizz 4 for " . $user->data['username']; ?> </title>
+
+    <script>
+        <?php
+        echo "var js_array=[];\n";
+            for($i=1;$i<=count($answer); $i++) {
+                $json_array[$i] = json_encode($answer[$i]);
+                $name = "js_array[".$i."]=";
+                echo $name.$json_array[$i] . ";\n";
+            }
+        ?>
+
+        function changeQuiz() {
+            for(var question in js_array) {
+                for (var answer in js_array[question]) {
+                    console.log('x:' + answer);
+                    document.getElementById('answer'+question+'[' + answer + ']').hidden = false;
+                    if (js_array[question][answer] != 1)
+                        document.getElementById('answer'+question+'[' + answer + ']').style.color = "red";
+                    else
+                        document.getElementById('answer'+question+'[' + answer + ']').style.color = "green";
+                }
+            }
+        }
+    </script>
 </head>
-<body>
+<body onload="changeQuiz()">
 <div class="row">
     <div class="large-12 columns">
         <div class="row">
@@ -137,7 +176,49 @@ if($user->data['is_registered']){
             <br>
         </div>
         <article>
-            <?php echo "You've got ".$sum." out of ".$max_points." points in your Quiz!<br>That's ".$percentage."%"?>
+            <h3>Your result:</h3>
+            <?php echo "You've got ".$sum." out of ".$max_points." points in your Quiz!<br>That's ".$percentage."% correct"?>
+
+            <br>
+            <br>
+            <h3>What you answered:</h3>
+            <p><b>Question 1:Where ist plain javascript executed?</b></p>
+            <ul>
+                <li  id="answer1[0]" hidden> On the server side.</li>
+                <li  id="answer1[1]" hidden> In the browser from the client.</li>
+                <li  id="answer1[2]" hidden> It's a script language which doesn't need to be executed</li>
+                <li  id="answer1[3]" hidden> On server an client side.</li>
+            </ul>
+            <p><b>Question 2:What can you manipulate with javascript?</b></p>
+            <ul>
+                <li  id="answer2[0]" hidden> html attributes, tags and content. </li>
+                <li  id="answer2[1]" hidden> CSS style.</li>
+                <li  id="answer2[2]" hidden> The server.</li>
+                <li  id="answer2[3]" hidden> The logic of a website client based. </li>
+            </ul>
+            <p><b>Question 2:What can you manipulate with javascript?</b></p>
+            <ul>
+                <li  id="answer3[0]" hidden> html attributes, tags and content. </li>
+                <li  id="answer3[1]" hidden> You don't need to check an input field. It's automatically checked.</li>
+                <li  id="answer3[2]" hidden> If you need the content of this field you should check if it's filled or not.</li>
+                <li  id="answer3[3]" hidden> That's not possible with Javascript. </li>
+            </ul>
+            <p><b>Question 4:Which property changes or gets the content of an html tag?</b></p>
+            <ul>
+                <li  id="answer4[0]" hidden> element.innerHTML, but you should use element.textContent for security reasons. <br></li>
+                <li  id="answer4[1]" hidden> It's html. You can only manipulate html with html. </li>
+                <li  id="answer4[2]" hidden> innerHTML changes or gets only the text content of an html tag. </li>
+                <li  id="answer4[3]" hidden>  You can get the text content with a css function.  </li>
+            </ul>
+            <p><b>Question 5:Which keyword is used to change the appearance with Javascript?</b></p>
+            <ul>
+                <li  id="answer5[0]" hidden> We haven't read anything about changing the appearance of an html element. </li>
+                <li  id="answer5[1]" hidden> You shouldn't change the appearance of a website. </li>
+                <li  id="answer5[2]" hidden> With style you can change the appearance of an element. </li>
+                <li  id="answer5[3]" hidden> You can change the appearance only with css. </li>
+            </ul>
+
+
 
         </article>
 

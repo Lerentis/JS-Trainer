@@ -133,59 +133,59 @@ if($user->data['is_registered']){
 
 
         <form method="post" action="check_chapter4.php">
-            <label for="answer[1]" ><b>Question 1:Where ist plain javascript executed?</b></label>
+            <label for="answer1" ><b>Question 1:Where ist plain javascript executed?</b></label>
             <br>
-            <input type="checkbox" id="answer[1]" name="answer[1]" value=0 > On the server side.
+            <input type="checkbox" id="answer1" name="answer1[0]" value=-1 > On the server side.
             <br>
-            <input type="checkbox" name="answer[1]" value=1 > In the browser from the client.
+            <input type="checkbox" name="answer1[1]" value=1 > In the browser from the client.
             <br>
-            <input type="checkbox" name="answer[1]" value=0 > It's a script language which doesn't need to be executed
+            <input type="checkbox" name="answer1[2]" value=-1 > It's a script language which doesn't need to be executed
             <br>
-            <input type="checkbox" name="answer[1]" value=0 > On server an client side.
+            <input type="checkbox" name="answer1[3]" value=-1 > On server an client side.
             <br>
             <br>
-            <label for="answer[2]" ><b>Question 2:What can you manipulate with javascript?(multi)</b></label>
+            <label for="answer2" ><b>Question 2:What can you manipulate with javascript?(multi)</b></label>
             <br>
-            <input type="checkbox" id="answer[2]" name="answer[2]" value=1 > html attributes, tags and content.
+            <input type="checkbox" id="answer2" name="answer2[0]" value=1 > html attributes, tags and content.
             <br>
-            <input type="checkbox" name="answer[3]" value=1 > CSS style.
+            <input type="checkbox" name="answer2[1]" value=1 > CSS style.
             <br>
-            <input type="checkbox" name="answer[4]" value=0 > The server.
+            <input type="checkbox" name="answer2[2]" value=-1 > The server.
             <br>
-            <input type="checkbox" name="answer[5]" value=1 > The logic of a website client based.
+            <input type="checkbox" name="answer2[3]" value=1 > The logic of a website client based.
             <br>
             <br>
             <label for="answer[3]" ><b>Question 3: Why should you check if an input field ist filled or not?</b></label>
             <br>
-            <input type="checkbox" id="answer[3]" name="answer[6]" value=0 > You don't need to chlableeck an input field. It's useless.
+            <input type="checkbox" id="answer[3]" name="answer3[0]" value=-1 > You don't need to check an input field. It's useless.
             <br>
-            <input type="checkbox" name="answer[6]" value=0 > You don't need to check an input field. It's automatically checked.
+            <input type="checkbox" name="answer3[1]" value=-1 > You don't need to check an input field. It's automatically checked.
             <br>
-            <input type="checkbox" name="answer[6]" value=1 > If you need the content of this field you should check if it's filled or not.
+            <input type="checkbox" name="answer3[2]" value=1 > If you need the content of this field you should check if it's filled or not.
             <br>
-            <input type="checkbox" name="answer[6]" value=0 > That's not possible with Javascript.
+            <input type="checkbox" name="answer3[3]" value=-1 > That's not possible with Javascript.
             <br>
             <br>
             <label for="answer[4]"><b>Question 4:Which property changes or gets the content of an html tag?</b></label>
             <br>
-            <input type="checkbox"  name="answer[4]" id="answer[7]" value=1 > element.innerHTML, but you should use element.textContent for security reasons.
+            <input type="checkbox"  name="answer4[0]" id="answer[]" value=1 > element.innerHTML, but you should use element.textContent for security reasons.
             <br>
-            <input type="checkbox" name="answer[7]" value=0 > It's html. You can only manipulate html with html.
+            <input type="checkbox" name="answer4[1]" value=-1 > It's html. You can only manipulate html with html.
             <br>
-            <input type="checkbox" name="answer[7]" value=0 > innerHTML changes or gets only the text content of an html tag.
+            <input type="checkbox" name="answer4[2]" value=-1 > innerHTML changes or gets only the text content of an html tag.
             <br>
-            <input type="checkbox" name="answer[7]" value=0 > You can get the text content with a css function.
+            <input type="checkbox" name="answer4[3]" value=-1 > You can get the text content with a css function.
             <br>
             <br>
             <label for="answer[5]"" ><b>Question 5:Which keyword is used to change the appearance with Javascript?</b></label>
             <br>
-            <input type="checkbox" id="answer[5]"  name="answer[8]" value=0>We haven't read anything about changing the appearance of an html element.
+            <input type="checkbox" id="answer[5]"  name="answer5[0]" value=-1>We haven't read anything about changing the appearance of an html element.
             <br>
-            <input type="checkbox" name="answer[8]" value=0 >You shouldn't change the appearance of a website.
+            <input type="checkbox" name="answer5[1]" value=-1 >You shouldn't change the appearance of a website.
             <br>
-            <input type="checkbox" name="answer[8]" value=1 >With style you can change the appearance of an element.
+            <input type="checkbox" name="answer5[2]" value=1 >With style you can change the appearance of an element.
             <br>
-            <input type="checkbox" name="answer[8]" value=0 >You can change the appearance only with css.
+            <input type="checkbox" name="answer5[3]" value=-1 >You can change the appearance only with css.
 
 
             <br>
