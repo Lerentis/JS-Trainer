@@ -1,11 +1,11 @@
-<?php
+check_chapter4.php<?php
 ini_set('display_errors',1); ini_set('display_startup_errors',1);
 
 define('IN_PHPBB', true);
 $phpbb_root_path = '/usr/share/phpBB3/';
 $phpEx = substr(strrchr(__FILE__, '.'), 1);
 include($phpbb_root_path . 'common.' . $phpEx);
-
+include('../../php/include/db_connect.php');
 // Start session management
 $user->session_begin();
 $auth->acl($user->data);
@@ -13,10 +13,33 @@ $user->setup();
 
 if($user->data['is_registered']){
 
+    $question=5;
+    $max_points=7;
+
+    for($i=1;$i<=$question; $i++){
+        $array_name =$i;
+        $answer[$i] = $request->variable('answer' . $array_name, array(0));
+    }
+
+    $sum=0;
+    $percentage=0;
+
+
+    for($i = 1; $i<=count($answer); $i++)
+        $sum_answer[$i]=array_sum($answer[$i]);
+
+    for($i = 1; $i<=count($sum_answer); $i++)
+        $sum+=$sum_answer[$i];
+
+    if($sum > 0)
+        $percentage=100/$max_points*$sum;
+
+    $db = new db();
+    $db->tutorialCompleted($user->data['user_id'],4,$percentage);
+
 ?>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
-<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)"
-      xmlns="http://www.w3.org/1999/html">
+<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -26,9 +49,33 @@ if($user->data['is_registered']){
     <script src="../../js/vendor/jquery.js"></script>
     <script src="../../js/foundation.min.js"></script>
     <script src="../../js/vendor/jquery.cookie.js"></script>
-    <title> <?php echo "Chapter 1 Quiz for " . $user->data['username']; ?> </title>
+    <title> <?php echo "Quizz 4 for " . $user->data['username']; ?> </title>
+
+    <script>
+        <?php
+        echo "var js_array=[];\n";
+            for($i=1;$i<=count($answer); $i++) {
+                $json_array[$i] = json_encode($answer[$i]);
+                $name = "js_array[".$i."]=";
+                echo $name.$json_array[$i] . ";\n";
+            }
+        ?>
+
+        function changeQuiz() {
+            for(var question in js_array) {
+                for (var answer in js_array[question]) {
+                    console.log('x:' + answer);
+                    document.getElementById('answer'+question+'[' + answer + ']').hidden = false;
+                    if (js_array[question][answer] != 1)
+                        document.getElementById('answer'+question+'[' + answer + ']').style.color = "red";
+                    else
+                        document.getElementById('answer'+question+'[' + answer + ']').style.color = "green";
+                }
+            }
+        }
+    </script>
 </head>
-<body>
+<body onload="changeQuiz()">
 <div class="row">
     <div class="large-12 columns">
         <div class="row">
@@ -84,21 +131,21 @@ if($user->data['is_registered']){
                                         <a href="#">Quiz 1</a>
                                     </li>
                                     <li>
-                                        <a href="../chapter2/quiz_chapter2.php">Quiz 2</a>
+                                        <a href="#">Quiz 2</a>
                                     </li>
                                     <li>
-                                        <a href="../chapter3/quiz_chapter3.php">Quiz 3</a>
+                                        <a href="#">Quiz 3</a>
                                     </li>
                                     <li class="divider"></li>
                                     <li><label>Advanced</label></li>
                                     <li>
-                                        <a href="../chapter4/quiz_chapter4.php">Quiz 4</a>
+                                        <a href="#">Quiz 4</a>
                                     </li>
                                     <li>
-                                        <a href="../chapter5/quiz_chapter5.php">Quiz 5</a>
+                                        <a href="#">Quiz 5</a>
                                     </li>
                                     <li>
-                                        <a href="../chapter6/quiz_chapter6.php">Quiz 6</a>
+                                        <a href="#">Quiz 6</a>
                                     </li>
                                 </ul>
                             </li>
@@ -125,81 +172,93 @@ if($user->data['is_registered']){
         <div class="split">
             <br>
         </div>
-        <h1>Chapter 1: Questions</h1>
+        <div class="split">
+            <br>
+        </div>
+        <article>
+            <h3>Your result:</h3>
+            <?php echo "You've got ".$sum." out of ".$max_points." points in your Quiz!<br>That's ".$percentage."% correct"?>
+
+            <br>
+            <br>
+            <h3>What you answered:</h3>
+            <p><b>Question 1:Where ist plain javascript executed?</b></p>
+            <ul>
+                <li  id="answer1[0]" hidden> On the server side.</li>
+                <li  id="answer1[1]" hidden> In the browser from the client.</li>
+                <li  id="answer1[2]" hidden> It's a script language which doesn't need to be executed</li>
+                <li  id="answer1[3]" hidden> On server an client side.</li>
+            </ul>
+            <p><b>Question 2:What can you manipulate with javascript?</b></p>
+            <ul>
+                <li  id="answer2[0]" hidden> html attributes, tags and content. </li>
+                <li  id="answer2[1]" hidden> CSS style.</li>
+                <li  id="answer2[2]" hidden> The server.</li>
+                <li  id="answer2[3]" hidden> The logic of a website client based. </li>
+            </ul>
+            <p><b>Question 2:What can you manipulate with javascript?</b></p>
+            <ul>
+                <li  id="answer3[0]" hidden> html attributes, tags and content. </li>
+                <li  id="answer3[1]" hidden> You don't need to check an input field. It's automatically checked.</li>
+                <li  id="answer3[2]" hidden> If you need the content of this field you should check if it's filled or not.</li>
+                <li  id="answer3[3]" hidden> That's not possible with Javascript. </li>
+            </ul>
+            <p><b>Question 4:Which property changes or gets the content of an html tag?</b></p>
+            <ul>
+                <li  id="answer4[0]" hidden> element.innerHTML, but you should use element.textContent for security reasons. <br></li>
+                <li  id="answer4[1]" hidden> It's html. You can only manipulate html with html. </li>
+                <li  id="answer4[2]" hidden> innerHTML changes or gets only the text content of an html tag. </li>
+                <li  id="answer4[3]" hidden>  You can get the text content with a css function.  </li>
+            </ul>
+            <p><b>Question 5:Which keyword is used to change the appearance with Javascript?</b></p>
+            <ul>
+                <li  id="answer5[0]" hidden> We haven't read anything about changing the appearance of an html element. </li>
+                <li  id="answer5[1]" hidden> You shouldn't change the appearance of a website. </li>
+                <li  id="answer5[2]" hidden> With style you can change the appearance of an element. </li>
+                <li  id="answer5[3]" hidden> You can change the appearance only with css. </li>
+            </ul>
+
+
+
+        </article>
+
+
+        <div class="split">
+            <br>
+        </div>
+        <div class="row">
+            <div class="small-3 columns small-centered">
+                <a  href="live_editor_chapter1_part1.php" target="_blank">
+                    <div class="button primary round radius text-center expand">
+                        Try It!
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="split">
+            <br>
+        </div>
+        <article>
+
+        </article>
         <div class="split">
             <br>
         </div>
 
-
-        <form method="post" action="check_chapter1.php">
-            <label for="answer[1]" ><b>Question 1:Which JS function opens a popup window ?</b></label>
-            <br>
-            <input type="checkbox" id="answer[1]" name="answer1[0]" value=-1 >warn()
-            <br>
-            <input type="checkbox" name="answer1[1]" value=1 >alert()
-            <br>
-            <input type="checkbox" name="answer1[2]" value=-1 >about()
-            <br>
-            <input type="checkbox" name="answer1[3]" value=-1 >display()
-            <br>
-            <br>
-            <label for="answer[2]" ><b>Question 2:You have to write a semicolon at the end of a command line in JS?</b></label>
-            <br>
-            <input type="checkbox" id="answer[2]" name="answer2[0]" value=-1 >Not always.
-            <br>
-            <input type="checkbox" name="answer2[1]" value=1 >Yes.
-            <br>
-            <input type="checkbox" name="answer2[2]" value=-1 >No.
-            <br>
-            <input type="checkbox" name="answer2[3]" value=-1 >Yes, but you can also type a comma.
-            <br>
-            <br>
-            <label for="answer[3]" ><b>Question 3: The type attribute needs to be specified as text/javascript?</b></label>
-            <br>
-            <input type="checkbox" id="answer[3]" name="answer3[0]" value=1 > Not if you use html 5.
-            <br>
-            <input type="checkbox" name="answer3[1]" value=1 >If you use html 4.x or less it must be specified.
-            <br>
-            <input type="checkbox" name="answer3[2]" value=-1 >It's optional.
-            <br>
-            <input type="checkbox" name="answer3[3]" value=-1 >There is no value text/javascript for the type attribute.
-            <br>
-            <br>
-            <label for="answer[4]"><b>Question 4:Which function allows you to display text inside a website?</b></label>
-            <br>
-            <input type="checkbox" id="answer[4]" name="answer4[0]" value=-1 > Javascript is only used for debugging issues, therefore there is no way displaying text inside a page.
-            <br>
-            <input type="checkbox" name="answer4[1]" value=1 >With the write() function and a document object.
-            <br>
-            <input type="checkbox" name="answer4[2]" value=-1 >Only the write() function.
-            <br>
-            <input type="checkbox" name="answer4[3]" value=-1 >Every typed text inside a script tag will be displayed on a website.
-            <br>
-            <br>
-            <label for="answer[5]"" ><b>Question 5:Why do you want to learn Javascript?</b></label>
-            <br>
-            <input type="checkbox" id="answer[5]"  name="answer5[0]" value=0>Dunno, it's raining outside.
-            <br>
-            <input type="checkbox" name="answer5[1]" value=0 >There is this terrible thing called an exam ...
-            <br>
-            <input type="checkbox" name="answer5[2]" value=0 >I already know html and css.
-            <br>
-            <input type="checkbox" name="answer5[3]" value=0 >Oh dear, this was an accident. Actually I want to learn neuropsychology.
-
-
-
-
-
-
-            <br>
-            <br>
             <div class="row">
                 <div class="columns pagination-centered">
-                    <input type="submit" class="button round" value="Check your answers!">
+                    <ul class="button-group round ">
+                        <li>
+                            <a href="#" class="button secondary" >Test Knowledge</a>
+                        </li>
+
+                        <li>
+                            <a href="../chapter2/tutorial_chapter2.php" class="button secondary">Next Chapter</a>
+                        </li>
+                    </ul>
+
                 </div>
             </div>
-
-        </form>
 
         <footer class="row">
             <div class="large-12 columns">
