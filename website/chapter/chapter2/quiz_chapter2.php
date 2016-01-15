@@ -125,7 +125,7 @@ if($user->data['is_registered']){
         <div class="split">
             <br>
         </div>
-        <h1>Chapter 1: Questions</h1>
+        <h1>Chapter 2: Questions</h1>
         <div class="split">
             <br>
         </div>
@@ -134,57 +134,57 @@ if($user->data['is_registered']){
         <form method="post" action="check_chapter1.php">
             <label for="answer[1]" ><b>Question 1: What is a variable?</b></label>
             <br>
-            <input type="radio" id="answer[1]" name="answer[1]" value=1 >It saves a value and can be called later if needed multiple times.
+            <input type="checkbox" id="answer[1]" name="answer[1][0]" value=1 >It saves a value and can be called later if needed multiple times.
             <br>
-            <input type="radio" name="answer[1]" value=0 >It's only known in math science.
+            <input type="checkbox" name="answer[1][1]" value=-1 >It's only known in math science.
             <br>
-            <input type="radio" name="answer[1]" value=0 >It's a function.
+            <input type="checkbox" name="answer[1][2]" value=-1 >It's a function.
             <br>
-            <input type="radio" name="answer[1]" value=0 >It's a method.
+            <input type="checkbox" name="answer[1][3]" value=-1 >It's a method.
             <br>
             <br>
             <label for="answer[2]" ><b>Question 2:What is a variable type in javascript?</b></label>
             <br>
-            <input type="radio" id="answer[2]" name="answer[2][0]" value=0 >alphabet
+            <input type="checkbox" id="answer[2]" name="answer[2][0]" value=-1 >alphabet
             <br>
-            <input type="radio" name="answer[2][1]" value=1 >number
+            <input type="checkbox" name="answer[2][1]" value=1 >number
             <br>
-            <input type="radio" name="answer[2][2]" value=1 >String
+            <input type="checkbox" name="answer[2][2]" value=1 >String
             <br>
-            <input type="radio" name="answer[2][3]" value=1 >null
+            <input type="checkbox" name="answer[2][3]" value=1 >null
             <br>
             <br>
             <label for="answer[3]" ><b>Question 3: The + operator can be used with strings and numbers  ?</b></label>
             <br>
-            <input type="radio" id="answer[3]" name="answer[3]" value=0 >Yes and with the same effect.
+            <input type="checkbox" id="answer[3]" name="answer[3][0]" value=-1 >Yes and with the same effect.
             <br>
-            <input type="radio" name="answer[3]" value=0 >No, they are different types of variables and therefore string needs a different operator
+            <input type="checkbox" name="answer[3][1]" value=-1 >No, they are different types of variables and therefore string needs a different operator
             <br>
-            <input type="radio" name="answer[3]" value=1 >Yes, but the effect differs. You can concatenate strings but add number.
+            <input type="checkbox" name="answer[3][2]" value=1 >Yes, but the effect differs. You can concatenate strings but add number.
             <br>
-            <input type="radio" name="answer[3]" value=0 >There is no + operator for strings.
+            <input type="checkbox" name="answer[3][3]" value=-1 >There is no + operator for strings.
             <br>
             <br>
             <label for="answer[4]"><b>Question 4:If a variables type is set it can't be changed?</b></label>
             <br>
-            <input type="radio" id="answer[4]" name="answer[4]" value=0 > Yes, if a type is set you can't change it later.
+            <input type="checkbox" id="answer[4]" name="answer[4][0]" value=-1 > Yes, if a type is set you can't change it later.
             <br>
-            <input type="radio" name="answer[4]" value=1 >Javascript has dynamic type binding. Therefore a variable type can be changed later.
+            <input type="checkbox" name="answer[4][1]" value=1 >Javascript has dynamic type binding. Therefore a variable type can be changed later.
             <br>
-            <input type="radio" name="answer[4]" value=0 >You can change the type but only if you explicit typecast it.
+            <input type="checkbox" name="answer[4][2]" value=-1 >You can change the type but only if you explicit typecast it.
             <br>
-            <input type="radio" name="answer[4]" value=0 >There are no types in javascript.
+            <input type="checkbox" name="answer[4][3]" value=-1 >There are no types in javascript.
             <br>
             <br>
             <label for="answer[5]"" ><b>Question 5: Which keyword is needed to assign a variable?</b></label>
             <br>
-            <input type="radio" id="answer[5]"  name="answer[5]" value=0> You don't need one.
+            <input type="checkbox" id="answer[5]"  name="answer[5][0]" value=-1> You don't need one.
             <br>
-            <input type="radio" name="answer[5]" value=0 > variable
+            <input type="checkbox" name="answer[5][1]" value=-1 > variable
             <br>
-            <input type="radio" name="answer[5]" value=0 > It depends on which type your variable is.
+            <input type="checkbox" name="answer[5][2]" value=-1 > It depends on which type your variable is.
             <br>
-            <input type="radio" name="answer[5]" value=1 > var
+            <input type="checkbox" name="answer[5][3]" value=1 > var
 
 
 

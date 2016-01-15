@@ -15,6 +15,7 @@ if($user->data['is_registered']){
 
     $question=5;
     $max_points=7;
+    $tutorial=4;
 
     for($i=1;$i<=$question; $i++){
         $array_name =$i;
@@ -35,7 +36,7 @@ if($user->data['is_registered']){
         $percentage=100/$max_points*$sum;
 
     $db = new db();
-    $db->tutorialCompleted($user->data['user_id'],4,$percentage);
+    $db->tutorialCompleted($user->data['user_id'],$tutorial,$percentage);
 
 ?>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->

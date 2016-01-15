@@ -15,6 +15,7 @@ if($user->data['is_registered']){
 
     $question=5;
     $max_points=7;
+    $tutorial=2;
 
     for($i=1;$i<=$question; $i++){
         $array_name =$i;
@@ -182,40 +183,40 @@ if($user->data['is_registered']){
             <br>
             <br>
             <h3>What you answered:</h3>
-            <p><b>Question 1:Where ist plain javascript executed?</b></p>
+            <p><b>Question 1: What is a variable?</b></p>
             <ul>
-                <li  id="answer1[0]" hidden> On the server side.</li>
-                <li  id="answer1[1]" hidden> In the browser from the client.</li>
-                <li  id="answer1[2]" hidden> It's a script language which doesn't need to be executed</li>
-                <li  id="answer1[3]" hidden> On server an client side.</li>
+                <li  id="answer1[0]" hidden> It saves a value and can be called later if needed multiple times.</li>
+                <li  id="answer1[1]" hidden> It's only known in math science. </li>
+                <li  id="answer1[2]" hidden> It's a function. </li>
+                <li  id="answer1[3]" hidden> It's a method. </li>
             </ul>
-            <p><b>Question 2:What can you manipulate with javascript?</b></p>
+            <p><b>Question 2:What is a variable type in javascript?</b></p>
             <ul>
-                <li  id="answer2[0]" hidden> html attributes, tags and content. </li>
-                <li  id="answer2[1]" hidden> CSS style.</li>
-                <li  id="answer2[2]" hidden> The server.</li>
-                <li  id="answer2[3]" hidden> The logic of a website client based. </li>
+                <li  id="answer2[0]" hidden> alphabet </li>
+                <li  id="answer2[1]" hidden> number </li>
+                <li  id="answer2[2]" hidden> String </li>
+                <li  id="answer2[3]" hidden> null </li>
             </ul>
-            <p><b>Question 2:What can you manipulate with javascript?</b></p>
+            <p><b>Question 3: The + operator can be used with strings and numbers ?</b></p>
             <ul>
-                <li  id="answer3[0]" hidden> html attributes, tags and content. </li>
-                <li  id="answer3[1]" hidden> You don't need to check an input field. It's automatically checked.</li>
-                <li  id="answer3[2]" hidden> If you need the content of this field you should check if it's filled or not.</li>
-                <li  id="answer3[3]" hidden> That's not possible with Javascript. </li>
+                <li  id="answer3[0]" hidden> Yes and with the same effect.  </li>
+                <li  id="answer3[1]" hidden> No, they are different types of variables and therefore string needs a different operator </li>
+                <li  id="answer3[2]" hidden> Yes, but the effect differs. You can concatenate strings but add number.</li>
+                <li  id="answer3[3]" hidden> There is no + operator for strings. </li>
             </ul>
-            <p><b>Question 4:Which property changes or gets the content of an html tag?</b></p>
+            <p><b>Question 4:If a variables type is set it can't be changed?</b></p>
             <ul>
-                <li  id="answer4[0]" hidden> element.innerHTML, but you should use element.textContent for security reasons. <br></li>
-                <li  id="answer4[1]" hidden> It's html. You can only manipulate html with html. </li>
-                <li  id="answer4[2]" hidden> innerHTML changes or gets only the text content of an html tag. </li>
-                <li  id="answer4[3]" hidden>  You can get the text content with a css function.  </li>
+                <li  id="answer4[0]" hidden> Yes, if a type is set you can't change it later.  <br></li>
+                <li  id="answer4[1]" hidden> Javascript has dynamic type binding. Therefore a variable type can be changed later. </li>
+                <li  id="answer4[2]" hidden> You can change the type but only if you explicit typecast it.  </li>
+                <li  id="answer4[3]" hidden> There are no types in javascript.  </li>
             </ul>
-            <p><b>Question 5:Which keyword is used to change the appearance with Javascript?</b></p>
+            <p><b>Question 5: Which keyword is needed to assign a variable?</b></p>
             <ul>
-                <li  id="answer5[0]" hidden> We haven't read anything about changing the appearance of an html element. </li>
-                <li  id="answer5[1]" hidden> You shouldn't change the appearance of a website. </li>
-                <li  id="answer5[2]" hidden> With style you can change the appearance of an element. </li>
-                <li  id="answer5[3]" hidden> You can change the appearance only with css. </li>
+                <li  id="answer5[0]" hidden> You don't need one. </li>
+                <li  id="answer5[1]" hidden> variable  </li>
+                <li  id="answer5[2]" hidden> It depends on which type your variable is.  </li>
+                <li  id="answer5[3]" hidden> var </li>
             </ul>
 
 
