@@ -125,66 +125,66 @@ if($user->data['is_registered']){
         <div class="split">
             <br>
         </div>
-        <h1>Chapter 1: Questions</h1>
+        <h1>Chapter 3: Questions</h1>
         <div class="split">
             <br>
         </div>
 
 
-        <form method="post" action="check_chapter1.php">
+        <form method="post" action="check_chapter3.php">
             <label for="answer[1]" ><b>Question 1:What is not a javascript operator?</b></label>
             <br>
-            <input type="radio" id="answer[1]" name="answer[1]" value=0 >--
+            <input type="checkbox" id="answer[1]" name="answer1[0]" value=-1 >--
             <br>
-            <input type="radio" name="answer[1]" value=1 > /%
+            <input type="checkbox" name="answer1[1]" value=1 > /%
             <br>
-            <input type="radio" name="answer[1]" value=0 >++
+            <input type="checkbox" name="answer1[2]" value=-1 >++
             <br>
-            <input type="radio" name="answer[1]" value=0 >%
+            <input type="checkbox" name="answer1[3]" value=-1 >%
             <br>
             <br>
             <label for="answer[2]" ><b>Question 2:What's var erg = 23 % 7; ?</b></label>
             <br>
-            <input type="radio" id="answer[2]" name="answer[2]" value=1 > erg would be 2
+            <input type="checkbox" id="answer[2]" name="answer2[0]" value=1 > erg would be 2
             <br>
-            <input type="radio" name="answer[2]" value=0 >erg would be 5
+            <input type="checkbox" name="answer2[1]" value=-1 >erg would be 5
             <br>
-            <input type="radio" name="answer[2][2]" value=0 > There is no % operator in javascript.
+            <input type="checkbox" name="answer2[2]" value=-1 > There is no % operator in javascript.
             <br>
-            <input type="radio" name="answer[2][3]" value=0 >erg would be 7.
+            <input type="checkbox" name="answer2[3]" value=-1 >erg would be 7.
             <br>
             <br>
             <label for="answer[3]" ><b>Question 3: Instead of typing var x = x*7; you would type?</b></label>
             <br>
-            <input type="radio" id="answer[3]" name="answer[3]" value=0 >x++
+            <input type="checkbox" id="answer[3]" name="answer3[0]" value=-1 >x++
             <br>
-            <input type="radio" name="answer[3]" value=0 >var x; x/=7;
+            <input type="checkbox" name="answer3[1]" value=-1 >var x; x/=7;
             <br>
-            <input type="radio" name="answer[3]" value=1 >var y; x*=7;
+            <input type="checkbox" name="answer3[2]" value=1 >var y; x*=7;
             <br>
-            <input type="radio" name="answer[3]" value=0 >var x; X*=7;
+            <input type="checkbox" name="answer3[3]" value=-1 >var x; X*=7;
             <br>
             <br>
             <label for="answer[4]"><b>Question 4:Can you use += with strings?</b></label>
             <br>
-            <input type="radio" id="answer[4]" name="answer[4]" value=0 >Yes, but it would add the values of the strings.
+            <input type="checkbox" id="answer[4]" name="answer4[0]" value=-1 >Yes, but it would add the values of the strings.
             <br>
-            <input type="radio" name="answer[4]" value=1 >Yes, but it will concatenate two strings.
+            <input type="checkbox" name="answer4[1]" value=1 >Yes, but it will concatenate two strings.
             <br>
-            <input type="radio" name="answer[4]" value=0 >No, you can use this operator only with numbers.
+            <input type="checkbox" name="answer4[2]" value=-1 >No, you can use this operator only with numbers.
             <br>
-            <input type="radio" name="answer[4]" value=0 >There is no += operator.
+            <input type="checkbox" name="answer4[3]" value=-1 >There is no += operator.
             <br>
             <br>
             <label for="answer[5]"" ><b>Question 5:If var hello = new; and hello+= world; you will get with alert(hello);?</b></label>
             <br>
-            <input type="radio" id="answer[5]"  name="answer[5]" value=0>a popup with "hello new world".
+            <input type="checkbox" id="answer[5]"  name="answer5[0]" value=-1>a popup with "hello new world".
             <br>
-            <input type="radio" name="answer[5]" value=0 >a popup with "new world order"
+            <input type="checkbox" name="answer5[1]" value=-1 >a popup with "new world order"
             <br>
-            <input type="radio" name="answer[5]" value=1 >a popup with "new world"
+            <input type="checkbox" name="answer5[2]" value=1 >a popup with "new world"
             <br>
-            <input type="radio" name="answer[5]" value=0 >a popup with "new hello world"
+            <input type="checkbox" name="answer5[3]" value=-1 >a popup with "new hello world"
 
 
 

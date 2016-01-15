@@ -14,7 +14,8 @@ $user->setup();
 if($user->data['is_registered']){
 
     $question=5;
-    $max_points=7;
+    $max_points=5;
+    $tutorial=3;
 
     for($i=1;$i<=$question; $i++){
         $array_name =$i;
@@ -35,7 +36,7 @@ if($user->data['is_registered']){
         $percentage=100/$max_points*$sum;
 
     $db = new db();
-    $db->tutorialCompleted($user->data['user_id'],4,$percentage);
+    $db->tutorialCompleted($user->data['user_id'],$tutorial,$percentage);
 
 ?>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
@@ -182,40 +183,40 @@ if($user->data['is_registered']){
             <br>
             <br>
             <h3>What you answered:</h3>
-            <p><b>Question 1:Where ist plain javascript executed?</b></p>
+            <p><b>Question 1:What is not a javascript operator?</b></p>
             <ul>
-                <li  id="answer1[0]" hidden> On the server side.</li>
-                <li  id="answer1[1]" hidden> In the browser from the client.</li>
-                <li  id="answer1[2]" hidden> It's a script language which doesn't need to be executed</li>
-                <li  id="answer1[3]" hidden> On server an client side.</li>
+                <li  id="answer1[0]" hidden> -- </li>
+                <li  id="answer1[1]" hidden> /%</li>
+                <li  id="answer1[2]" hidden> ++</li>
+                <li  id="answer1[3]" hidden> %</li>
             </ul>
-            <p><b>Question 2:What can you manipulate with javascript?</b></p>
+            <p><b>Question 2:What's var erg = 23 % 7; ?</b></p>
             <ul>
-                <li  id="answer2[0]" hidden> html attributes, tags and content. </li>
-                <li  id="answer2[1]" hidden> CSS style.</li>
-                <li  id="answer2[2]" hidden> The server.</li>
-                <li  id="answer2[3]" hidden> The logic of a website client based. </li>
+                <li  id="answer2[0]" hidden> erg would be 2  </li>
+                <li  id="answer2[1]" hidden> erg would be 5 </li>
+                <li  id="answer2[2]" hidden> There is no % operator in javascript. </li>
+                <li  id="answer2[3]" hidden> erg would be 7. </li>
             </ul>
-            <p><b>Question 2:What can you manipulate with javascript?</b></p>
+            <p><b>Question 3: Instead of typing var x = x*7; you would type?</b></p>
             <ul>
-                <li  id="answer3[0]" hidden> html attributes, tags and content. </li>
-                <li  id="answer3[1]" hidden> You don't need to check an input field. It's automatically checked.</li>
-                <li  id="answer3[2]" hidden> If you need the content of this field you should check if it's filled or not.</li>
-                <li  id="answer3[3]" hidden> That's not possible with Javascript. </li>
+                <li  id="answer3[0]" hidden> x++  </li>
+                <li  id="answer3[1]" hidden> var x; x/=7; </li>
+                <li  id="answer3[2]" hidden> var x; x*=7; </li>
+                <li  id="answer3[3]" hidden> var x; X*=7; </li>
             </ul>
-            <p><b>Question 4:Which property changes or gets the content of an html tag?</b></p>
+            <p><b>Question 4:Can you use += with strings?</b></p>
             <ul>
-                <li  id="answer4[0]" hidden> element.innerHTML, but you should use element.textContent for security reasons. <br></li>
-                <li  id="answer4[1]" hidden> It's html. You can only manipulate html with html. </li>
-                <li  id="answer4[2]" hidden> innerHTML changes or gets only the text content of an html tag. </li>
-                <li  id="answer4[3]" hidden>  You can get the text content with a css function.  </li>
+                <li  id="answer4[0]" hidden> Yes, but it would add the values of the strings.  <br></li>
+                <li  id="answer4[1]" hidden> Yes, but it will concatenate two strings.  </li>
+                <li  id="answer4[2]" hidden> No, you can use this operator only with numbers.  </li>
+                <li  id="answer4[3]" hidden> There is no += operator.   </li>
             </ul>
-            <p><b>Question 5:Which keyword is used to change the appearance with Javascript?</b></p>
+            <p><b>Question 5:If var hello = new; and hello+= world; you will get with alert(hello);?</b></p>
             <ul>
-                <li  id="answer5[0]" hidden> We haven't read anything about changing the appearance of an html element. </li>
-                <li  id="answer5[1]" hidden> You shouldn't change the appearance of a website. </li>
-                <li  id="answer5[2]" hidden> With style you can change the appearance of an element. </li>
-                <li  id="answer5[3]" hidden> You can change the appearance only with css. </li>
+                <li  id="answer5[0]" hidden> a popup with "hello new world".  </li>
+                <li  id="answer5[1]" hidden> a popup with "new world order"  </li>
+                <li  id="answer5[2]" hidden> a popup with "new world"  </li>
+                <li  id="answer5[3]" hidden> a popup with "new hello world" </li>
             </ul>
 
 

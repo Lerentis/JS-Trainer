@@ -187,10 +187,6 @@ if($user->data['is_registered']){
             <input type="checkbox" name="answer5[3]" value=1 > var
 
 
-
-
-
-
             <br>
             <br>
             <div class="row">
