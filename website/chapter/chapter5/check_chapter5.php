@@ -129,24 +129,24 @@ if($user->data['is_registered']){
                                 <ul class="dropdown">
                                     <li><label>Startes</label></li>
                                     <li>
-                                        <a href="#">Quiz 1</a>
+                                        <a href="../chapter1/quiz_chapter1.php">Quiz 1</a>
                                     </li>
                                     <li>
-                                        <a href="#">Quiz 2</a>
+                                        <a href="../chapter2/quiz_chapter2.php">Quiz 2</a>
                                     </li>
                                     <li>
-                                        <a href="#">Quiz 3</a>
+                                        <a href="../chapter3/quiz_chapter3.php">Quiz 3</a>
                                     </li>
                                     <li class="divider"></li>
                                     <li><label>Advanced</label></li>
                                     <li>
-                                        <a href="#">Quiz 4</a>
+                                        <a href="../chapter4/quiz_chapter4.php">Quiz 4</a>
                                     </li>
                                     <li>
-                                        <a href="#">Quiz 5</a>
+                                        <a href="quiz_chapter5.php">Quiz 5</a>
                                     </li>
                                     <li>
-                                        <a href="#">Quiz 6</a>
+                                        <a href="../chapter6/quiz_chapter6.php">Quiz 6</a>
                                     </li>
                                 </ul>
                             </li>
@@ -204,15 +204,7 @@ if($user->data['is_registered']){
         <div class="split">
             <br>
         </div>
-        <div class="row">
-            <div class="small-3 columns small-centered">
-                <a  href="live_editor_chapter1_part1.php" target="_blank">
-                    <div class="button primary round radius text-center expand">
-                        Try It!
-                    </div>
-                </a>
-            </div>
-        </div>
+
         <div class="split">
             <br>
         </div>

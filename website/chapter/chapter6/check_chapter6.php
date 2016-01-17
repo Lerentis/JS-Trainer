@@ -14,7 +14,8 @@ $user->setup();
 if($user->data['is_registered']){
 
     $question=5;
-    $max_points=7;
+    $max_points=9;
+    $tutorial=6;
 
     for($i=1;$i<=$question; $i++){
         $array_name =$i;
@@ -35,7 +36,7 @@ if($user->data['is_registered']){
         $percentage=round(100/$max_points*$sum);
 
     $db = new db();
-    $db->tutorialCompleted($user->data['user_id'],4,$percentage);
+    $db->tutorialCompleted($user->data['user_id'],$tutorial,$percentage);
 
 ?>
 <!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
@@ -128,24 +129,24 @@ if($user->data['is_registered']){
                                 <ul class="dropdown">
                                     <li><label>Startes</label></li>
                                     <li>
-                                        <a href="#">Quiz 1</a>
+                                        <a href="../chapter1/quiz_chapter1.php">Quiz 1</a>
                                     </li>
                                     <li>
-                                        <a href="#">Quiz 2</a>
+                                        <a href="../chapter2/quiz_chapter2.php">Quiz 2</a>
                                     </li>
                                     <li>
-                                        <a href="#">Quiz 3</a>
+                                        <a href="../chapter3/quiz_chapter3.php">Quiz 3</a>
                                     </li>
                                     <li class="divider"></li>
                                     <li><label>Advanced</label></li>
                                     <li>
-                                        <a href="#">Quiz 4</a>
+                                        <a href="../chapter4/quiz_chapter4.php">Quiz 4</a>
                                     </li>
                                     <li>
-                                        <a href="#">Quiz 5</a>
+                                        <a href="../chapter5/quiz_chapter5.php">Quiz 5</a>
                                     </li>
                                     <li>
-                                        <a href="#">Quiz 6</a>
+                                        <a href="quiz_chapter6.php">Quiz 6</a>
                                     </li>
                                 </ul>
                             </li>
@@ -226,15 +227,7 @@ if($user->data['is_registered']){
         <div class="split">
             <br>
         </div>
-        <div class="row">
-            <div class="small-3 columns small-centered">
-                <a  href="live_editor_chapter1_part1.php" target="_blank">
-                    <div class="button primary round radius text-center expand">
-                        Try It!
-                    </div>
-                </a>
-            </div>
-        </div>
+       
         <div class="split">
             <br>
         </div>
