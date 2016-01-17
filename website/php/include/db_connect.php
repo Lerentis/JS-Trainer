@@ -38,9 +38,9 @@ class db{
 
         //var_dump($result);
 
-        $sql = "SELECT tutorial_finished
+        $sql = "SELECT count(tutorial_finished)
                   from user_progress
-                  WHERE user_id=?;" ;
+                  WHERE user_id=? AND tutorial_finished=1;" ;
 
         $stmt = $this->conn->prepare($sql);
 
@@ -87,7 +87,7 @@ class db{
 
         if($row != NULL){
 
-            if($correct_answers === 100){
+            if($correct_answers == 100){
                 $sql = "UPDATE user_progress
                   SET tutorial_finished=TRUE, progress=?
                   WHERE user_id=? AND tutorial_id=?;" ;
@@ -103,7 +103,7 @@ class db{
             }
 
             $sql = "UPDATE user_progress
-                  SET progress=?
+                  SET progress=?, tutorial_finished=FALSE
                   WHERE user_id=? AND tutorial_id=?;" ;
 
             //update user_progress set tutorial_finished = true;
@@ -116,7 +116,7 @@ class db{
             return $stmt->execute();
 
         } else {
-            if($correct_answers === 100){
+            if($correct_answers == 100){
                 $sql = "INSERT INTO user_progress
                   (user_id, tutorial_id, progress, tutorial_finished)
                   VALUES (?,?,?,TRUE);" ;

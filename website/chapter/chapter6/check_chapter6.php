@@ -227,7 +227,7 @@ if($user->data['is_registered']){
         <div class="split">
             <br>
         </div>
-       
+
         <div class="split">
             <br>
         </div>
