@@ -13,8 +13,9 @@ $user->setup();
 
 if($user->data['is_registered']){
 
-    $question=5;
-    $max_points=9;
+    $question=$request->variable('quiz',0);
+    $max_points=$request->variable('points',0);
+
     $tutorial=6;
 
     for($i=1;$i<=$question; $i++){

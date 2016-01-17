@@ -13,10 +13,9 @@ $user->setup();
 
 if($user->data['is_registered']){
 
-    var_dump($_POST);
-
     $question=$request->variable('quiz',0);
     $max_points=$request->variable('points',0);
+
     $tutorial=1;
 
     for($i=1;$i<=$question; $i++){
@@ -35,7 +34,7 @@ if($user->data['is_registered']){
         $sum+=$sum_answer[$i];
 
     if($sum > 0)
-        $percentage=100/$max_points*$sum;
+        $percentage=round(100/$max_points*$sum);
 
     $db = new db();
     $db->tutorialCompleted($user->data['user_id'],$tutorial,$percentage);
