@@ -27,8 +27,22 @@ if($user->data['is_registered']){
     <script src="../../js/foundation.min.js"></script>
     <script src="../../js/vendor/jquery.cookie.js"></script>
     <title> <?php echo "Chapter 1 Quiz for " . $user->data['username']; ?> </title>
+    <script>
+        function countValue(){
+            quiz_fields = document.getElementsByTagName('input');
+            count=0;
+
+           for(var i=0; i< quiz_fields.length; i++){
+                if(quiz_fields[i].value==1)
+                    count++;
+           }
+            document.getElementById("points").value=count;
+            var test=document.getElementById("quiz").value= (quiz_fields.length-3)/4;
+
+        }
+    </script>
 </head>
-<body>
+<body onload="countValue()">
 <div class="row">
     <div class="large-12 columns">
         <div class="row">
@@ -185,14 +199,11 @@ if($user->data['is_registered']){
             <input type="checkbox" name="answer5[2]" value=0 >I already know html and css.
             <br>
             <input type="checkbox" name="answer5[3]" value=0 >Oh dear, this was an accident. Actually I want to learn neuropsychology.
-
-
-
-
-
-
             <br>
             <br>
+            <input type="hidden" name="points" id="points" value=0 >
+            <input type="hidden" name="quiz" id="quiz" value=0 >
+
             <div class="row">
                 <div class="columns pagination-centered">
                     <input type="submit" class="button round" value="Check your answers!">
