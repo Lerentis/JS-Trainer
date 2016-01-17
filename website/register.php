@@ -101,13 +101,7 @@ if(!$user->data['is_registered']){
                                 <a href="impressum.php">Impressum</a>
                             </li>
                             <li>
-                                <a href="#">Link 2</a>
-                            </li>
-                            <li>
-                                <a href="#">Link 3</a>
-                            </li>
-                            <li>
-                                <a href="#">Link 4</a>
+                                <a href="datenschutz.php">Datenschutzerklärung</a>
                             </li>
                         </ul>
                     </div>

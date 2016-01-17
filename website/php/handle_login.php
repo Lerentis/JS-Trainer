@@ -48,7 +48,7 @@ else{
                 <nav class="top-bar" data-topbar>
                     <ul class="title-area">
                         <li class="name">
-                            <h1><a href="../index.php">Learn JavaScript within minutes</a></h1>
+                            <h1><a href="../user.php">Learn JavaScript within minutes</a></h1>
                         </li>
                         <li class="toggle-topbar menu-icon">
                             <a href="#"><span>menu</span></a>
@@ -58,48 +58,28 @@ else{
                         <ul class="right">
                             <li class="divider"></li>
                             <li class="has-dropdown">
-                                <a href="#">Main Item 1</a>
+                                <a href="#">Select Chapter</a>
                                 <ul class="dropdown">
-                                    <li><label>Section Name</label></li>
-                                    <li class="has-dropdown">
-                                        <a class="" href="#">Has Dropdown, Level 1</a>
-                                        <ul class="dropdown">
-                                            <li>
-                                                <a href="#">Dropdown Options</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Dropdown Options</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Level 2</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Subdropdown Option</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Subdropdown Option</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Subdropdown Option</a>
-                                            </li>
-                                        </ul>
+                                    <li><label>Startes</label></li>
+                                    <li>
+                                        <a href="../chapter/chapter1/tutorial_chapter1.php">Lesson 1</a>
                                     </li>
                                     <li>
-                                        <a href="#">Dropdown Option</a>
+                                        <a href="../chapter/chapter2/tutorial_chapter2.php">Lesson 2</a>
                                     </li>
                                     <li>
-                                        <a href="#">Dropdown Option</a>
+                                        <a href="../chapter/chapter3/tutorial_chapter3.php">Lesson 3</a>
                                     </li>
                                     <li class="divider"></li>
-                                    <li><label>Section Name</label></li>
+                                    <li><label>Advanced</label></li>
                                     <li>
-                                        <a href="#">Dropdown Option</a>
+                                        <a href="../chapter/chapter4/tutorial_chapter4.php">Lesson 4</a>
                                     </li>
                                     <li>
-                                        <a href="#">Dropdown Option</a>
+                                        <a href="../chapter/chapter5/tutorial_chapter5.php">Lesson 5</a>
                                     </li>
                                     <li>
-                                        <a href="#">Dropdown Option</a>
+                                        <a href="../chapter/chapter6/tutorial_chapter6.php">Lesson 6</a>
                                     </li>
                                     <li class="divider"></li>
                                     <li>
@@ -108,25 +88,44 @@ else{
                                 </ul>
                             </li>
                             <li class="divider"></li>
-                            <li>
-                                <a href="#">Main Item 2</a>
+                            <li class="has-dropdown">
+                                <a href="#">Select Quizes</a>
+                                <ul class="dropdown">
+                                    <li><label>Startes</label></li>
+                                    <li>
+                                        <a href="../chapter/chapter1/quiz_chapter1.php">Quiz 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="../chapter/chapter2/quiz_chapter2.php">Quiz 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="../chapter/chapter3/quiz_chapter3.php">Quiz 3</a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li><label>Advanced</label></li>
+                                    <li>
+                                        <a href="../chapter/chapter4/quiz_chapter4.php">Quiz 4</a>
+                                    </li>
+                                    <li>
+                                        <a href="../chapter/chapter5/quiz_chapter5.php">Quiz 5</a>
+                                    </li>
+                                    <li>
+                                        <a href="../chapter/chapter6/quiz_chapter6.php">Quiz 6</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="divider"></li>
                             <li class="has-dropdown">
-                                <a href="#">Main Item 3</a>
+                                <a href="#"> <?php echo $user->data['username']; ?> </a>
                                 <ul class="dropdown">
                                     <li>
-                                        <a href="#">Dropdown Option</a>
+                                        <a href="http://forum.test.org/memberlist.php?mode=viewprofile&u=<?php echo $user->data['user_id'] ?>">Profile</a>
                                     </li>
                                     <li>
-                                        <a href="#">Dropdown Option</a>
+                                        <a href="http://forum.test.org/ucp.php?i=pm&folder=inbox">Inbox</a>
                                     </li>
                                     <li>
-                                        <a href="#">Dropdown Option</a>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <a href="#">See all →</a>
+                                        <a href="handle_logout.php">Logout</a>
                                     </li>
                                 </ul>
                             </li>
@@ -152,16 +151,10 @@ else{
                     <div class="large-6 columns">
                         <ul class="inline-list right">
                             <li>
-                                <a href="#">Link 1</a>
+                                <a href="../impressum.php">Impressum</a>
                             </li>
                             <li>
-                                <a href="#">Link 2</a>
-                            </li>
-                            <li>
-                                <a href="#">Link 3</a>
-                            </li>
-                            <li>
-                                <a href="#">Link 4</a>
+                                <a href="../datenschutz.php">Datenschutzerklärung</a>
                             </li>
                         </ul>
                     </div>

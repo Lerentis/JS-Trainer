@@ -212,7 +212,7 @@ if($user->data['is_registered']){
                                 <div class="large-10 small-6 columns" id="third-step">
                                     <strong>If you have questions, be sure to visit our forum</strong>
                                     <hr>
-                                    <a href="http://localhost:80" target="_blank">
+                                    <a href="http://forum.test.org" target="_blank">
                                         <div class="panel callout radius medium-text-center">
                                             <h6>Click here to visit it right now</h6>
                                         </div>
@@ -236,13 +236,7 @@ if($user->data['is_registered']){
                                 <a href="impressum.php">Impressum</a>
                             </li>
                             <li>
-                                <a href="#">Link 2</a>
-                            </li>
-                            <li>
-                                <a href="#">Link 3</a>
-                            </li>
-                            <li>
-                                <a href="#">Link 4</a>
+                                <a href="datenschutz.php">Datenschutzerklärung</a>
                             </li>
                         </ul>
                     </div>

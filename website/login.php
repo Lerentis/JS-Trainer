@@ -1,5 +1,4 @@
 <?php
-ini_set('display_errors',1); ini_set('display_startup_errors',1);
 
 define('IN_PHPBB', true);
 $phpbb_root_path = '/usr/share/phpBB3/';
@@ -93,13 +92,7 @@ if(!$user->data['is_registered']){
                                 <a href="impressum.php">Impressum</a>
                             </li>
                             <li>
-                                <a href="#">Link 2</a>
-                            </li>
-                            <li>
-                                <a href="#">Link 3</a>
-                            </li>
-                            <li>
-                                <a href="#">Link 4</a>
+                                <a href="datenschutz.php">Datenschutzerklärung</a>
                             </li>
                         </ul>
                     </div>
