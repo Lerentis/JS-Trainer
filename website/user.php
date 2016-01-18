@@ -159,43 +159,55 @@ if($user->data['is_registered']){
 
             <div class="large-8 columns">
                 <div class="row">
-                    <div class="large-4 small-6 columns" id="second-step">
-                        <img src="http://placehold.it/1000x1000&amp;text=Thumbnail">
+                    <div class="large-4 small-6 columns">
+                        <a href="chapter/chapter1/tutorial_chapter1.php">
+                            <img src="img/1.png">
+                        </a>
                         <div class="panel">
                             <h5><a href="chapter/chapter1/tutorial_chapter1.php">Cours JS Part 1</a></h5>
                             <h6 class="subheader"><?php echo $db->getProgress($user->data['user_id'],1) ?> %</h6>
                         </div>
                     </div>
                     <div class="large-4 small-6 columns">
-                        <img src="http://placehold.it/500x500&amp;text=Thumbnail">
+                        <a href="chapter/chapter2/tutorial_chapter2.php">
+                            <img src="img/2.png">
+                        </a>
                         <div class="panel">
                             <h5><a href="chapter/chapter2/tutorial_chapter2.php">Cours JS Part 2</a></h5>
                             <h6 class="subheader"><?php echo $db->getProgress($user->data['user_id'],2) ?> %</h6>
                         </div>
                     </div>
                     <div class="large-4 small-6 columns">
-                        <img src="http://placehold.it/500x500&amp;text=Thumbnail">
+                        <a href="chapter/chapter3/tutorial_chapter3.php">
+                            <img src="img/3.png">
+                        </a>
                         <div class="panel">
                             <h5><a href="chapter/chapter3/tutorial_chapter3.php">Cours JS Part 3</a></h5>
                             <h6 class="subheader"><?php echo $db->getProgress($user->data['user_id'],3) ?> %</h6>
                         </div>
                     </div>
                     <div class="large-4 small-6 columns">
-                        <img src="http://placehold.it/500x500&amp;text=Thumbnail">
+                        <a href="chapter/chapter4/tutorial_chapter4.php">
+                            <img src="img/4.png">
+                        </a>
                         <div class="panel">
                             <h5><a href="chapter/chapter4/tutorial_chapter4.php">Cours JS Part 4</a></h5>
                             <h6 class="subheader"><?php echo $db->getProgress($user->data['user_id'],4) ?> %</h6>
                         </div>
                     </div>
                     <div class="large-4 small-6 columns">
-                        <img src="http://placehold.it/500x500&amp;text=Thumbnail">
+                        <a href="chapter/chapter5/tutorial_chapter5.php">
+                            <img src="img/5.png">
+                        </a>
                         <div class="panel">
                             <h5><a href="chapter/chapter5/tutorial_chapter5.php">Cours JS Part 5</a></h5>
                             <h6 class="subheader"><?php echo $db->getProgress($user->data['user_id'],5) ?> %</h6>
                         </div>
                     </div>
                     <div class="large-4 small-6 columns">
-                        <img src="http://placehold.it/500x500&amp;text=Thumbnail">
+                        <a href="chapter/chapter6/tutorial_chapter6.php">
+                            <img src="img/6.png">
+                        </a>
                         <div class="panel">
                             <h5><a href="chapter/chapter6/tutorial_chapter6.php">Cours JS Part 6</a></h5>
                             <h6 class="subheader"><?php echo $db->getProgress($user->data['user_id'],6) ?> %</h6>
